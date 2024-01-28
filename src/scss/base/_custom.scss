@@ -1,0 +1,118 @@
+// Your variable overrides
+$body-bg: #0b0b0c;
+$body-color: #fff;
+
+// Bootstrap and its default variables
+$theme-colors: (
+	'gray': #0b0b0c,
+	'gray_light': #1e1e1e,
+	'white': #fff,
+	'purple': #7053ff,
+	'pink': #ff2c60,
+	'blue': #3f94ff,
+	'green': #31b970,
+	'yellow': #fbbf0d,
+	'red': #f24822,
+);
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1100px,
+	xxl: 1140px,
+);
+$font-family-sans-serif: 'SF UI Display', sans-serif;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+.header .dropdown-toggle::after {
+	display: none;
+}
+.header .dropdown-menu.show {
+	background-color: #fff;
+	padding-bottom: 1.875rem;
+	padding-inline: 2.1875rem;
+
+	inset: -4px auto auto 1px !important;
+
+	border: none;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+	a {
+		color: #1e1e1e;
+		padding-block: 0.125rem;
+		position: relative;
+		font-size: 0.875rem;
+		padding-left: 1.25rem;
+		&::before {
+			content: '';
+			display: block;
+			width: 0.9375rem;
+			height: 0.9375rem;
+			background-color: #fbbf0d;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+	}
+	li {
+		&:nth-child(2) {
+			a {
+				&::before {
+					background-color: #3f94ff;
+				}
+			}
+		}
+		&:nth-child(3) {
+			a {
+				&::before {
+					background-color: #ff2c60;
+				}
+			}
+		}
+		&:nth-child(4) {
+			a {
+				&::before {
+					background-color: #31b970;
+				}
+			}
+		}
+		&:nth-child(5) {
+			a {
+				&::before {
+					background-color: #7053ff;
+				}
+			}
+		}
+		&:last-child {
+			a {
+				&::before {
+					background-color: #f24822;
+				}
+			}
+		}
+	}
+}
+// @import '../blocks/**.*scss';
+.btn-header {
+	padding: 15px 30px;
+
+	gap: 10px;
+
+	font-family: 'SF UI Display';
+
+	line-height: normal;
+	border-radius: 80px;
+
+	&.show {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		padding-right: 9.8125rem;
+	}
+}

@@ -67,5 +67,8 @@
 		"uncss": "latest",
 		"usedcss": "latest",
 		"webp-in-css": "latest"
+	},
+	"dependencies": {
+		"bootstrap": "^5.3.2"
 	}
 }
