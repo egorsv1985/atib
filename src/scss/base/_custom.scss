@@ -21,6 +21,7 @@ $container-max-widths: (
 	xl: 1100px,
 	xxl: 1140px,
 );
+
 $font-family-sans-serif: 'SF UI Display', sans-serif;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -100,13 +101,8 @@ $font-family-sans-serif: 'SF UI Display', sans-serif;
 // @import '../blocks/**.*scss';
 .btn-header {
 	padding: 15px 30px;
-
-	gap: 10px;
-
-	font-family: 'SF UI Display';
-
-	line-height: normal;
 	border-radius: 80px;
+	font-family: 'SF UI Display';
 
 	&.show {
 		border-top-left-radius: 10px;
@@ -115,4 +111,25 @@ $font-family-sans-serif: 'SF UI Display', sans-serif;
 		border-bottom-right-radius: 0;
 		padding-right: 9.8125rem;
 	}
+}
+.btn-primary {
+	border: 1px solid #323232;
+	background-color: #1e1e1e;
+	padding: 15px 10px;
+	border-radius: 80px;
+	&:hover {
+		border-color: rgba(255, 255, 255, 0.5);
+	}
+	&:active {
+		border-color: #1e1e1e;
+		background-color: #323232;
+	}
+}
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+	border-color: #1e1e1e;
+	background-color: #323232;
 }
