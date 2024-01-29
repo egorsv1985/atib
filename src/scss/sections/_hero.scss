@@ -1,0 +1,42 @@
+.hero {
+	padding-top: 13.125rem;
+	&__box {
+		background: url('@img/icons/grid.svg') no-repeat 10% 50% / 100% 100%;
+	}
+	&__box-img {
+		width: 130px;
+		height: 130px;
+		&:first-child {
+			left: 5px;
+			top: -60px;
+		}
+		&:nth-child(2) {
+			left: 190px;
+			top: -185px;
+		}
+		&:nth-child(3) {
+			left: 385px;
+			top: -120px;
+		}
+		&:nth-child(4) {
+			left: 225px;
+			top: 30px;
+		}
+		&:nth-child(5) {
+			left: 100px;
+			top: 280px;
+		}
+		&:nth-child(6) {
+			right: 5px;
+			bottom: -105px;
+		}
+		&:nth-child(7) {
+			right: 100px;
+			top: 200px;
+		}
+		&:last-child {
+			left: 195px;
+			bottom: -205px;
+		}
+	}
+}

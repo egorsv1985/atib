@@ -125,6 +125,21 @@ $font-family-sans-serif: 'SF UI Display', sans-serif;
 		background-color: #323232;
 	}
 }
+.btn-secondary {
+	border: 1px solid #72b0ff;
+	background-color: #3f94ff;
+	padding: 15px 10px;
+	border-radius: 80px;
+	max-width: 12.1875rem;
+	&:hover {
+		background-color: #58a2ff;
+		border-color: rgba(255, 255, 255, 0.5);
+	}
+	&:active {
+		border-color: #3f94ff;
+		background-color: #58a2ff;
+	}
+}
 .btn-check:checked + .btn,
 :not(.btn-check) + .btn:active,
 .btn:first-child:active,
