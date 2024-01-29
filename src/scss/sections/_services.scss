@@ -43,4 +43,13 @@
 			font-weight: 500;
 		}
 	}
+	&__development-box {
+		border-radius: 10px;
+
+		box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.1) inset;
+	}
+	&__development-circle {
+		width: 15px;
+		height: 15px;
+	}
 }
