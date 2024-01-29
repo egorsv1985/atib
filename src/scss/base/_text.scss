@@ -21,3 +21,9 @@
 .secondary-text {
 	@include font-size(0.875rem);
 }
+.title {
+	@include font-size(1.125rem);
+	font-weight: 500;
+	border-radius: 20px;
+	padding: 5px 15px;
+}
