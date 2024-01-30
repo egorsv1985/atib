@@ -53,4 +53,4 @@ export const plumberNotify = title => {
 	}
 }
 export const postcssPlugins = postcssConfigModule
-export const useTailwind = false
+export const useTailwind = true

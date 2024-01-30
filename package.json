@@ -20,6 +20,7 @@
 		"cross-env": "latest",
 		"cssnano": "latest",
 		"del": "latest",
+		"flowbite": "^2.2.1",
 		"glob": "latest",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
