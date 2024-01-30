@@ -2,6 +2,12 @@
 export default {
 	content: ['./**/*.html'],
 	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['SF UI Text', 'ui-sans-serif', 'system-ui'],
+				display: ['SF UI Display', 'ui-sans-serif', 'system-ui'],
+			},
+		},
 		colors: {
 			gray: '#0b0b0c',
 			gray_light: '#1e1e1e',

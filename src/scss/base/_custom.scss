@@ -38,7 +38,7 @@ $container-max-widths: (
 
 $font-family-sans-serif: 'SF UI Display', sans-serif;
 
-@import '../node_modules/bootstrap/scss/bootstrap';
+// @import '../node_modules/bootstrap/scss/bootstrap';
 .header .dropdown-toggle::after {
 	display: none;
 }
