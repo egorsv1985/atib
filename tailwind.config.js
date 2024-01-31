@@ -9,27 +9,27 @@ export default {
 			},
 		},
 		colors: {
-			gray: '#0b0b0c',
+			gray_500: '#0b0b0c',
 			gray_light: '#1e1e1e',
 			gray_border: '#323232',
 			txt: '#bdbdc0',
 			white: '#fff',
-			purple: '#7053ff',
+			purple_500: '#7053ff',
 			purple_light: '#7f65ff',
 			purple_border: '#917aff',
-			pink: '#ff2c60',
+			pink_500: '#ff2c60',
 			pink_light: '#ff547e',
 			pink_border: '#ff7194',
-			blue: '#3f94ff',
+			blue_500: '#3f94ff',
 			blue_border: '#72b0ff',
 			blue_light: '#58a2ff',
-			green: '#31b970',
+			green_500: '#31b970',
 			green_light: '#31b970',
 			green_border: '#31b970',
-			yellow: '#fbbf0d',
+			yellow_500: '#fbbf0d',
 			yellow_light: '#ffca2e',
 			yellow_border: '#ffd65e',
-			red: '#f24822',
+			red_500: '#f24822',
 			red_light: '#fb6240',
 			red_border: '#ff7050',
 		},
@@ -38,5 +38,26 @@ export default {
 			center: true,
 		},
 	},
-	plugins: [require('flowbite/plugin')],
+	plugins: [
+		require('flowbite/plugin'),
+		function ({ addComponents }) {
+			addComponents({
+				'.container': {
+					maxWidth: '100%',
+					'@screen sm': {
+						maxWidth: '640px',
+					},
+					'@screen md': {
+						maxWidth: '768px',
+					},
+					'@screen lg': {
+						maxWidth: '1110px',
+					},
+					'@screen xl': {
+						maxWidth: '1110px',
+					},
+				},
+			})
+		},
+	],
 }
