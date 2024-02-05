@@ -1,17 +1,17 @@
 <header class="py-4 header">
 	<div class="container">
 		<div class="flex items-center">
-			<div class="w-1/6">
+			<div class="w-1/6 mr-3">
 				<a href="/" class="block max-w-full text-center">
 					<img src="@img/icons/logo.svg" alt="logo" class="max-w-full" />
 				</a>
 			</div>
-			<div class="w-1/5">
+			<div class="w-1/5 mr-8">
 				<button
 					id="dropdownHoverButton"
 					data-dropdown-toggle="dropdownHover"
 					data-dropdown-trigger="hover"
-					class="header__dropdown bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-[5rem] px-8 py-4 text-center flex items-center"
+					class="header__dropdown gap-2 bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-[5rem] px-8 py-4 text-center flex items-center"
 					type="button"
 				>
 					@@include('../blocks/_square.html')
@@ -22,7 +22,7 @@
 				<!-- Dropdown menu -->
 				@@include('../blocks/_dropdown.html',{})
 			</div>
-			<div class="w-1/6">@@include('../blocks/_social.html',{})</div>
+			<div class="w-[12.6%]">@@include('../blocks/_social.html',{})</div>
 			<div class="w-1/6">@@include('../blocks/_phones.html',{})</div>
 			<div class="w-1/6">
 				<button
@@ -31,6 +31,16 @@
 					class="px-8 py-4 rounded-[80px] border justify-center items-center gap-2.5 inline-flex text-center text-white text-base font-medium font-display border-gray_border bg-gray_light text-nowrap"
 				>
 					Работать с нами
+				</button>
+			</div>
+			<div class="w-1/12">
+				<button
+					type="button"
+					id=""
+					class="flex items-center gap-3 text-base font-medium text-white font-display"
+				>
+					@@include('../blocks/_square-menu.html')
+					<span> Меню </span>
 				</button>
 			</div>
 		</div>
