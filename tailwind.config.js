@@ -8,7 +8,10 @@ export default {
 				display: ['SF UI Display', 'ui-sans-serif', 'system-ui'],
 			},
 		},
-
+		boxShadow: {
+			inset: 'inset 0 4px 10px 0 rgba(255, 255, 255, 0.1)',
+			inner: '0 4px 10px 0 rgba(255, 255, 255, 0.5)',
+		},
 		colors: {
 			gray_500: '#0b0b0c',
 			gray_light: '#1e1e1e',
