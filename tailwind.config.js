@@ -8,6 +8,7 @@ export default {
 				display: ['SF UI Display', 'ui-sans-serif', 'system-ui'],
 			},
 		},
+
 		colors: {
 			gray_500: '#0b0b0c',
 			gray_light: '#1e1e1e',
@@ -51,10 +52,10 @@ export default {
 						maxWidth: '768px',
 					},
 					'@screen lg': {
-						maxWidth: '1110px',
+						maxWidth: '1126px',
 					},
 					'@screen xl': {
-						maxWidth: '1110px',
+						maxWidth: '1126px',
 					},
 				},
 			})
