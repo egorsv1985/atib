@@ -1,42 +1,85 @@
 .hero {
-	padding-top: 13.125rem;
-	&__box {
-		background: url('@img/icons/grid.svg') no-repeat 10% 50% / 100% 100%;
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		background: linear-gradient(
+			0deg,
+			rgb(11, 11, 12) 50%,
+			rgba(11, 11, 12, 0) 97.833%
+		);
+		height: 27vh;
+
+		position: absolute;
+		left: 0;
+		right: 0;
 	}
+	&::before {
+		top: 0;
+	}
+	&::after {
+		bottom: 0;
+	}
+	padding-block: 27vh;
+	&__content {
+		&::before {
+			content: '';
+			display: block;
+			background: url('@img/icons/grid.svg') no-repeat center / cover;
+			position: absolute;
+			top: 1%;
+			right: 30%;
+			width: 57.2%;
+			height: 153%;
+		}
+	}
+	&__box-logo {
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 68px;
+			height: 39px;
+			bottom: -21%;
+			right: -5%;
+			background: url('@img/icons/cursor_logo.svg') no-repeat center / cover;
+		}
+	}
+
 	&__box-img {
 		width: 130px;
 		height: 130px;
 		&:first-child {
-			left: 5px;
-			top: -60px;
+			left: 3%;
+			top: -12%;
 		}
 		&:nth-child(2) {
-			left: 190px;
-			top: -185px;
+			left: 37%;
+			top: -42%;
 		}
 		&:nth-child(3) {
-			left: 385px;
-			top: -120px;
+			right: 6%;
+			top: -27%;
 		}
 		&:nth-child(4) {
-			left: 225px;
-			top: 30px;
+			left: 42%;
+			top: 8%;
 		}
 		&:nth-child(5) {
-			left: 100px;
-			top: 280px;
+			left: 20%;
+			top: 66%;
 		}
 		&:nth-child(6) {
-			right: 5px;
-			bottom: -105px;
+			right: 0%;
+			bottom: -24%;
 		}
 		&:nth-child(7) {
-			right: 100px;
-			top: 200px;
+			right: 17%;
+			top: 46%;
 		}
 		&:last-child {
-			left: 195px;
-			bottom: -205px;
+			left: 37%;
+			bottom: -47%;
 		}
 	}
 }
