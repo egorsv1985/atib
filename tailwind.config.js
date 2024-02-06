@@ -34,7 +34,13 @@ export default {
 			red_light: '#fb6240',
 			red_border: '#ff7050',
 		},
-
+		listStyleType: {
+			none: 'none',
+			disc: 'disc',
+			decimal: 'decimal',
+			square: 'square',
+			roman: 'upper-roman',
+		},
 		container: {
 			center: true,
 		},
