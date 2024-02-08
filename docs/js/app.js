@@ -1,6 +1,3 @@
-
-
-
 // // Предотвращение повторной отправки форм
 // form.addEventListener('submit', () => {
 // 	submitButton.disabled = true
@@ -37,14 +34,13 @@ $(document).ready(function () {
 		arrows: true,
 		cssEase: 'linear',
 		slidesToShow: 2,
-		slidesToScroll: 2,
+		slidesToScroll: 1,
 		appendArrows: $('.slider__controls-btns'),
 		responsive: [
 			{
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1,
 				},
 			},
 		],
@@ -59,14 +55,13 @@ $(document).ready(function () {
 		arrows: true,
 		cssEase: 'linear',
 		slidesToShow: 2,
-		slidesToScroll: 2,
+		slidesToScroll: 1,
 		appendArrows: $('.slider__controls-btns'),
 		responsive: [
 			{
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1,
 				},
 			},
 		],
@@ -81,14 +76,13 @@ $(document).ready(function () {
 		arrows: true,
 		cssEase: 'linear',
 		slidesToShow: 2,
-		slidesToScroll: 2,
+		slidesToScroll: 1,
 		appendArrows: $('.slider__controls-btns'),
 		responsive: [
 			{
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1,
 				},
 			},
 		],
