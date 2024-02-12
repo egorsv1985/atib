@@ -16,4 +16,12 @@
 			z-index: 5;
 		}
 	}
+	&__content {
+		p {
+			margin-bottom: 12px;
+		}
+	}
+	.quote__title {
+		background-position: 1% 0;
+	}
 }
