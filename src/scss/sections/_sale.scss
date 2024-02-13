@@ -1,0 +1,16 @@
+.sale {
+	color: #bdbdc0;
+	.slider__item {
+		display: flex !important;
+	}
+	.slick-active {
+		// background-color: #fbbf0d;
+		color: #fff;
+		.slider__name {
+			// background-color: #0b0b0c;
+		}
+		button {
+			// background-color: #fff;
+		}
+	}
+}
