@@ -69,8 +69,46 @@ $(document).ready(function () {
 		cssEase: 'linear',
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		appendArrows: $('.slider__controls-btns'),
+		appendArrows: $('.sale-slider__controls-btns'),
 		responsive: [
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
+	})
+	$('.reviews__slider').slick({
+		infinite: true,
+		speed: 500,
+		autoplay: false,
+		autoplaySpeed: 100,
+		swipe: true,
+		arrows: true,
+		cssEase: 'linear',
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		appendArrows: $('.reviews-slider__controls-btns'),
+		responsive: [
+			{
+				breakpoint: 1500,
+				settings: {
+					slidesToShow: 4,
+				},
+			},
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 3,
+				},
+			},
 			{
 				breakpoint: 900,
 				settings: {
