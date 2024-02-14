@@ -6,7 +6,7 @@
 			Услуги
 		</div>
 		<h2
-			class="font-bold text-white font-display text-[40px] leading-tight mb-5"
+			class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight mb-5"
 		>
 			Направления работы
 		</h2>
@@ -15,10 +15,10 @@
 			от объёмов, сложности и сроков.
 		</p>
 
-		<div class="grid grid-cols-12 gap-7">
-			<div class="col-span-12 lg:col-span-8">
-				<div class="grid grid-cols-12 gap-7">
-					<div class="col-span-12">
+		<div class="grid grid-cols-3 gap-7">
+			<div class="col-span-3 lg:col-span-2">
+				<div class="grid grid-cols-3 gap-7">
+					<div class="col-span-3">
 						<div
 							class="border bg-gray_light border-gray_border pt-6 pb-11 px-7 services__content rounded-[10px]"
 						>
@@ -27,8 +27,8 @@
 							>
 								Брендинг
 							</div>
-							<div class="grid justify-center grid-cols-12 gap-7">
-								<div class="col-span-12 md:col-span-6">
+							<div class="grid justify-center grid-cols-2 gap-7">
+								<div class="col-span-2 md:col-span-1">
 									<ul
 										class="pl-5 text-lg font-medium leading-tight list-square"
 									>
@@ -70,7 +70,7 @@
 										</li>
 									</ul>
 								</div>
-								<div class="col-span-12 md:col-span-6">
+								<div class="col-span-2 md:col-span-1">
 									<div
 										class="flex gap-4 border justify-between items-center border-gray_border rounded-[10px] shadow-inset p-[30px] -mt-5 mb-[30px]"
 									>
@@ -124,12 +124,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-span-12">
+					<div class="col-span-3">
 						<div
 							class="border px-7 bg-gray_light border-gray_border services__content rounded-[10px]"
 						>
-							<div class="grid grid-cols-12 gap-7">
-								<div class="col-span-12 md:col-span-6">
+							<div class="grid grid-cols-2 gap-7">
+								<div class="col-span-2 md:col-span-1">
 									<div
 										class="px-4 py-1 text-xl font-medium leading-tight text-white border bg-pink_500 border-pink_border rounded-[20px] inline-flex relative -top-4"
 									>
@@ -180,7 +180,7 @@
 										</li>
 									</ul>
 								</div>
-								<div class="col-span-12 md:col-span-6">
+								<div class="col-span-2 md:col-span-1">
 									<div
 										class="grid max-[400px]:grid-cols-1 grid-cols-2 overflow-y-hidden max-h-[300px]"
 									>
@@ -231,63 +231,77 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-span-12 lg:col-span-4">
+			<div class="col-span-3 lg:col-span-1">
 				<div
-					class="border px-7 bg-gray_light border-gray_border services__content rounded-[10px] pb-4"
+					class="border px-7 h-full bg-gray_light border-gray_border services__content rounded-[10px] pb-4"
 				>
 					<div
 						class="px-4 py-1 text-xl font-medium leading-tight text-white border bg-blue_500 border-blue_border rounded-[20px] inline-flex relative -top-4"
 					>
 						Разработка
 					</div>
-					<div
-						class="mb-4 flex flex-col border px-5 py-6 bg-gray_light border-gray_border services__content rounded-[10px]"
-					>
-						<div class="flex items-center justify-between mb-4">
-							<div class="flex items-center gap-2">
-								<div>
-									<img src="@img/icons/figma_small.svg" alt="figma" class="" />
-								</div>
-								<p class="leading-tight text-txt">Project</p>
-							</div>
+					<div class="grid grid-cols-2 gap-4 md:gap-7 lg:gap-4">
+						<div
+							class="col-span-2 md:col-span-1 lg:col-span-2 md:order-1 lg:order-none"
+						>
+							<div
+								class="flex flex-col border px-5 py-6 bg-gray_light border-gray_border services__content rounded-[10px]"
+							>
+								<div class="flex items-center justify-between mb-4">
+									<div class="flex items-center gap-2">
+										<div>
+											<img
+												src="@img/icons/figma_small.svg"
+												alt="figma"
+												class=""
+											/>
+										</div>
+										<p class="leading-tight text-txt">Project</p>
+									</div>
 
-							<div class="flex">
-								<div
-									class="w-4 h-4 border rounded-full bg-green_500 border-green_border"
-								></div>
-								<div
-									class="w-4 h-4 bg-blue-500 border rounded-full border-blue_border"
-								></div>
+									<div class="flex">
+										<div
+											class="w-4 h-4 border rounded-full bg-green_500 border-green_border"
+										></div>
+										<div
+											class="w-4 h-4 bg-blue-500 border rounded-full border-blue_border"
+										></div>
+									</div>
+								</div>
+								<div class="relative pb-16 services__development">
+									<img src="@img/development.png" alt="" class="w-full" />
+								</div>
 							</div>
 						</div>
-						<div class="relative pb-16 services__development">
-							<img src="@img/development.png" alt="" class="w-full" />
+						<div class="col-span-2 md:col-span-1 lg:col-span-2">
+							<ul
+								class="pt-6 pl-5 text-lg font-medium leading-tight list-square"
+							>
+								<li class="mb-2 text-blue_500">
+									<span class="leading-tight text-txt"
+										>Разработка сайтов под ключ</span
+									>
+									<div class="flex gap-2 text-base font-normal leading-tight">
+										<span class="leading-tight text-blue_500">Битрикс</span>
+										<span class="leading-tight text-green_500">ModX</span>
+										<span class="leading-tight text-pink_500">Wordpress</span>
+										<span class="leading-tight text-red_500">Tilda</span>
+									</div>
+								</li>
+								<li class="mb-2 text-blue_500">
+									<span class="leading-tight text-txt">UX/UI дизайн</span>
+								</li>
+								<li class="mb-2 text-blue_500">
+									<span class="leading-tight text-txt">UX/UI аудит</span>
+								</li>
+								<li class="mb-2 text-blue_500">
+									<span class="leading-tight text-txt"
+										>Доработка и поддержка сайтов</span
+									>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<ul class="pt-6 pl-5 text-lg font-medium leading-tight list-square">
-						<li class="mb-2 text-blue_500">
-							<span class="leading-tight text-txt"
-								>Разработка сайтов под ключ</span
-							>
-							<div class="flex gap-2 text-base font-normal leading-tight">
-								<span class="leading-tight text-blue_500">Битрикс</span>
-								<span class="leading-tight text-green_500">ModX</span>
-								<span class="leading-tight text-pink_500">Wordpress</span>
-								<span class="leading-tight text-red_500">Tilda</span>
-							</div>
-						</li>
-						<li class="mb-2 text-blue_500">
-							<span class="leading-tight text-txt">UX/UI дизайн</span>
-						</li>
-						<li class="mb-2 text-blue_500">
-							<span class="leading-tight text-txt">UX/UI аудит</span>
-						</li>
-						<li class="mb-2 text-blue_500">
-							<span class="leading-tight text-txt"
-								>Доработка и поддержка сайтов</span
-							>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>

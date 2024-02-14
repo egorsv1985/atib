@@ -5,7 +5,7 @@
 		>
 			<div class="col-span-12 lg:col-span-6">
 				<h2
-					class="font-bold text-white font-display text-[40px] leading-tight mb-2"
+					class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight mb-2"
 				>
 					Давайте сделаем сильный проект вместе!
 				</h2>
@@ -13,7 +13,7 @@
 					Оставьте свой телефон,и аккаунт-менеджер сориентируетпо порядку работи
 					стоимости
 				</p>
-				<div class="flex gap-4 mb-6">
+				<div class="flex flex-wrap justify-between gap-4 mb-6 sm:justify-start">
 					@@include('../blocks/_messengers.html',{})
 					@@include('../blocks/_phones.html',{})
 				</div>
@@ -23,7 +23,7 @@
 				>
 					Контактное лицо
 				</div>
-				<div class="flex items-center gap-7">
+				<div class="flex flex-wrap items-center gap-7">
 					<div class="flex">
 						<div
 							class="rounded-full border bg-gray_500 border-blue_500 p-1 w-[65px] h-[65px] about__box-img relative"
@@ -67,7 +67,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-span-12 py-3 ms-24 lg:col-span-6 me-14">
+			<div class="col-span-12 py-3 lg:ms-24 lg:col-span-6 lg:me-14">
 				<form class="flex flex-col h-full gap-2" action="#">
 					<div>
 						<label for="name" class="hidden">Ваше имя</label>
