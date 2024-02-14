@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('components/_head.html',{ "title":"Контакты" })
+
+	<body class="bg-gray_500 body">
+		<div class="container wrapper">
+			
+			@@include('components/_header.html',{})
+
+			<main>
+				@@include('sections/_breadcrumb.html',{})
+				@@include('sections/_contacts-page.html',{})
+				@@include('sections/_quote.html',{
+				"img-quote": "adams.png",
+				"alt-quote": "Скон Адамс",
+				"h2-quote": "Красиво оформленное глупое предложение пойдет намного дальше, чем неудачно оформленная замечательная идея",
+				"author-quote": "Скон Адамс",
+				"description-quote": "Американский художник комиксов",
+				})
+			</main>
+			@@include('components/_footer.html',{})
+		</div>
+	</body>
+</html>

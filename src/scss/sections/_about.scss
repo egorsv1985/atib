@@ -1,21 +1,21 @@
 .about {
-	&__box-img {
-		&:nth-child(2) {
-			z-index: 1;
-		}
-		&:nth-child(3) {
-			z-index: 2;
-		}
-		&:nth-child(4) {
-			z-index: 3;
-		}
-		&:nth-child(5) {
-			z-index: 4;
-		}
-		&:nth-child(6) {
-			z-index: 5;
-		}
-	}
+	// &__box-img {
+	// 	&:nth-child(2) {
+	// 		z-index: 1;
+	// 	}
+	// 	&:nth-child(3) {
+	// 		z-index: 2;
+	// 	}
+	// 	&:nth-child(4) {
+	// 		z-index: 3;
+	// 	}
+	// 	&:nth-child(5) {
+	// 		z-index: 4;
+	// 	}
+	// 	&:nth-child(6) {
+	// 		z-index: 5;
+	// 	}
+	// }
 	&__content {
 		p {
 			margin-bottom: 12px;
@@ -23,5 +23,14 @@
 	}
 	.quote__title {
 		background-position: 1% 0;
+	}
+	span{
+		&::before{
+			background-image: url("@img/icons/square.svg") ;
+			left: -6px;
+    bottom: -20px;
+    height: 143%;
+    width: 102%;
+		}
 	}
 }
