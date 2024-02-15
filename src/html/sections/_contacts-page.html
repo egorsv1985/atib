@@ -3,10 +3,21 @@
 		<div class="grid grid-cols-6 gap-7">
 			<div class="flex flex-col col-span-6 pb-6 lg:col-span-3">
 				@@include('../blocks/_title-page.html',{ "title-page":"Контакты" })
-				<p class="text-xl leading-tight text-txt mb-11">
-					Для сотрудничества, оставьте заявку на сайте, или свяжитесь с нами
-					любым удобным способом:
-				</p>
+				<div class="mb-11">
+					@@include('../blocks/_text-section.html', { "text-section": "Для сотрудничества, оставьте заявку на сайте, или свяжитесь с нами	любым удобным способом:"})
+				</div>
+				<div class="flex flex-wrap items-center gap-7">
+					@@include('../blocks/_managers.html',{})				
+					<div class="flex gap-3">
+						<span class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500"><img
+								src="@img/icons/alarm.svg" alt="Пн-Чт: 09:00 - 18:00 Пт: 09:00 - 17:00 Сб-Вс: выходной" /></span>
+						<p class="text-sm font-medium leading-tight text-txt font-display">
+							Пн-Чт: 09:00 - 18:00<br>
+							Пт: 09:00 - 17:00<br>
+							Сб-Вс: выходной<br>
+						</p>
+					</div>
+				</div>
 				<div class="grid grid-cols-6 gap-7">
 					<div class="col-span-6 lg:col-span-3"></div>
 					<div class="col-span-6 lg:col-span-3"></div>

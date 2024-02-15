@@ -4,24 +4,21 @@
 			class="grid grid-cols-12 bg-gray_light border gap-7 border-gray_border rounded-[10px] py-14 px-9"
 		>
 			<div class="col-span-12 lg:col-span-6">
-				<h2
-					class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight mb-2"
-				>
-					Давайте сделаем сильный проект вместе!
-				</h2>
-				<p class="mb-4 text-xl leading-tight text-txt">
-					Оставьте свой телефон,и аккаунт-менеджер сориентируетпо порядку работи
-					стоимости
-				</p>
+				<div class="mb-2 ">
+					@@include('../blocks/_h2-section.html', { "h2-section": "Давайте сделаем сильный проект вместе!"})
+				</div>
+				<div class="mb-4">
+					@@include('../blocks/_text-section.html', { "text-section": "Оставьте свой телефон, и аккаунт-менеджер сориентирует по порядку работы	стоимости"})					
+				</div>			
 				<div class="flex flex-wrap justify-between gap-4 mb-6 sm:justify-start">
 					@@include('../blocks/_messengers.html',{})
 					@@include('../blocks/_phones.html',{})
 				</div>
-
 				<div
-					class="mb-4 text-xl font-bold leading-tight text-white font-display"
+				class="mb-4 "
 				>
-					Контактное лицо
+				@@include('../blocks/_title-contact.html',{"title-contact": "Контактное лицо"})
+					
 				</div>
 				<div class="flex flex-wrap items-center gap-7">
 					@@include('../blocks/_managers.html',{})
