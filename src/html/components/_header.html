@@ -42,15 +42,16 @@
 				</button>
 			</div>
 			<div class="w-1/4 md:w-1/12">
-				<button
-					type="button"
-					id=""
-					class="flex items-center justify-end w-full gap-3 text-base font-medium text-white font-display"
-				>
+				<button data-collapse-toggle="mobile-menu-2" type="button"
+					class="inline-flex items-center justify-end w-full gap-3 p-2 ml-1 font-medium text-white rounded-lg font-display focus:outline-none "
+					aria-controls="mobile-menu-2" aria-expanded="true">
 					@@include('../blocks/_square-menu.html')
-					<span> Меню </span>
+					<span class="">Меню</span>					
 				</button>
+				
 			</div>
 		</div>
+		@@include('../blocks/_menu.html')
+		
 	</div>
 </header>

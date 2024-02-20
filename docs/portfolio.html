@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-	<title>Контакты</title>
+<head>
+	<title>Портфолио</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,10 +39,10 @@
 </head>
 
 
-	<body class="bg-gray_500 body">
-		<div class="container wrapper">
-			
-			<header
+<body class="bg-gray_500 body">
+	<div class="container wrapper">
+
+		<header
 	class="fixed py-4 header z-[9999] left-0 right-0 top-0 before:absolute before:inset-0 before:bg-gray_500 before:transition-opacity before:duration-500 before:ease-out backdrop-blur-lg before:opacity-80 before:-z-10"
 >
 	<div class="container mx-auto px-outer-gutter">
@@ -74,7 +74,7 @@
 				<!-- Dropdown menu -->
 				<div
 	id="dropdownHover"
-	class="text-gray_light z-10 hidden bg-white rounded-[10px]"
+	class="text-gray_light z-10 hidden bg-white rounded-[.625rem]"
 >
 	<div class="grid square">
 	<div class="bg-blue_500 square__item"></div>
@@ -85,49 +85,62 @@
 
 	<span>Услуги</span>
 	<ul
-		class="py-2 text-sm border-0 "
+		class="py-2 text-sm text-gray-700 border-0 dark:text-gray-200"
 		aria-labelledby="dropdownHoverButton"
 	>
-		
+		<li>
+			<a
+				href="/contacts.html"
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				>Контакты</a
+			>
+		</li>
 		<li>
 			<a
 				href="/services-page.html"
-				class="block px-4 py-2 "
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 				>Разработка</a
 			>
-		</li>		
+		</li>
+		<li>
+			<a
+				href="/services-page.html"
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				>Разработка</a
+			>
+		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 "
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 				>Брендинг</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 "
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 				>Разработка</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 "
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 				>Реклама</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 "
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 				>Полиграфия</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 "
+				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
 				>Мобильная разработка</a
 			>
 		</li>
@@ -206,47 +219,27 @@
 				</button>
 			</div>
 			<div class="w-1/4 md:w-1/12">
-				<button data-collapse-toggle="mobile-menu-2" type="button"
-					class="inline-flex items-center justify-end w-full gap-3 p-2 ml-1 font-medium text-white rounded-lg font-display focus:outline-none "
-					aria-controls="mobile-menu-2" aria-expanded="true">
+				<button
+					type="button"
+					id=""
+					class="flex items-center justify-end w-full gap-3 text-base font-medium text-white font-display"
+				>
 					<div class="flex flex-col square-menu">
 	<div class="bg-blue_500 square-menu__item"></div>
 	<div class="bg-red_500 square-menu__item"></div>
 	<div class="bg-yellow_500 square-menu__item"></div>
 </div>
 
-					<span class="">Меню</span>					
+					<span> Меню </span>
 				</button>
-				
 			</div>
 		</div>
-		<nav class="py-4 ">
-	<div class="flex items-center ">		
-		<div class="items-center justify-between hidden w-full " id="mobile-menu-2">
-			<ul class="flex flex-col gap-4 text-xl font-bold leading-tight text-white font-display ">
-
-	<li>
-		<a href="#" class="block text-white ">О студии</a>
-	</li>
-
-	<li>
-		<a href="/portfolio-page.html" class="block text-white ">Портфолио</a>
-	</li>
-	<li>
-		<a href="/contacts.html" class="block text-white ">Контакты</a>
-	</li>
-
-</ul>
-		</div>
-	</div>
-</nav>
-		
 	</div>
 </header>
 
 
-			<main class="pt-24">
-				<nav class="flex pt-24" aria-label="Breadcrumb">
+		<main class="pt-24">
+			<nav class="flex pt-24" aria-label="Breadcrumb">
 	<ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
 		<li class="inline-flex items-center">
 			<a href="#"
@@ -271,61 +264,29 @@
 		</li>
 	</ol>
 </nav>
-				<section class="contacts py-14">
+						
+			<section class="contacts py-14">
 
 	<div class="grid grid-cols-6 gap-7">
 		<div class="flex flex-col col-span-6 pb-6 lg:col-span-3">
-			<h2
-	class="font-bold text-white font-display text-[64px] leading-tight text-balance "
+			<div class="max-w-32">
+
+				<div
+	class="px-4 py-1 text-lg font-medium leading-tight text-white border bg-gray_light border-gray_border rounded-[20px] inline-flex "
 >
 	Контакты
+</div>
+
+			</div>
+			<div class="mb-4">
+				
+<h2 class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight">
+	Расслабься, мы сделаем за тебя всю работу!
 </h2>
-
-			<div class="mb-11">
-				<p class="text-xl leading-tight text-txt">Для сотрудничества, оставьте заявку на сайте, или свяжитесь с нами любым удобным способом:</p>
-
 			</div>
-			<div class="mb-4 text-xl font-bold leading-tight text-white font-display">
-				Менеджеры
-			</div>
-			<div class="flex flex-wrap items-center gap-7 mb-14">
-				<div class="flex">
-					<div class="rounded-full border bg-gray_500 border-blue_500 p-1 w-[65px] h-[65px] about__box-img relative">
-						<img src="./images/team1.png" alt="team" class="rounded-full" />
-					</div>
-					<div class="rounded-full border bg-gray_500 -ml-2 border-purple_500 p-1 w-[65px] h-[65px] about__box-img relative">
-						<img src="./images/team7.png" alt="team" class="rounded-full" />
-					</div>
-				</div>
-				<ul class="flex flex-col gap-2 text-sm leading-tight text-txt">
-					<li class="">
-						<div class="flex gap-2">
-							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
-							<p class="text-sm leading-tight text-txt">Елена</p>
-						</div>
-					</li>
-					<li class="flex gap-3">
-						<div class="flex gap-2">
-							<span class="w-4 h-4 rounded-full border-purple_border bg-purple_500"></span>
-							<p class="text-sm leading-tight text-txt">Полина</p>
-						</div>
-					</li>
-				</ul>
-				<div class="flex gap-3">
-					<span class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500">
-						<img src="./images/icons/alarm.svg" alt="Пн-Чт: 09:00 - 18:00 Пт: 09:00 - 17:00 Сб-Вс: выходной" />
-					</span>
-					<p class="text-sm font-medium leading-tight text-txt font-display">
-						Пн-Чт: 09:00 - 18:00<br>
-						Пт: 09:00 - 17:00<br>
-						Сб-Вс: выходной<br>
-					</p>
-				</div>
-			</div>
-			<div class="grid grid-cols-6 gap-7">
-				<div class="col-span-6 lg:col-span-3"></div>
-				<div class="col-span-6 lg:col-span-3"></div>
-			</div>
+			<p class="text-xl leading-tight text-txt mb-11">
+				Мы поможем вам создать дизайн, который очаровывает и вдохновляет!
+			</p>
 			<h3 class="mb-4 text-xl font-bold leading-tight text-white font-display">
 				Мы в социальных сетях
 			</h3>
@@ -378,8 +339,7 @@
 				</div>
 				<div class="col-span-6 md:col-span-3 lg:col-span-4">
 					<form class="flex gap-3">
-						<label for="upload-file"
-							class="flex items-center w-full h-full gap-3 text-sm text-txt font-display text-balance">
+						<label for="file" class="flex items-center w-full h-full gap-3 text-sm text-txt font-display text-balance">
 							<span
 								class="flex items-center justify-center w-10 h-10 border rounded-full min-w-10 border-gray_border bg-gray_500">
 								<img src="./images/icons/upload-file.svg" alt="загрузите файл" />
@@ -387,7 +347,7 @@
 							<span>Если у вас есть ТЗ, вы можете прислать его нам и мы оценим
 								проект</span>
 						</label>
-						<input class="hidden" aria-describedby="upload_file" id="upload-file" type="file" />
+						<input class="hidden" aria-describedby="upload_file" id="file" type="file" />
 					</form>
 				</div>
 			</div>
@@ -431,6 +391,7 @@
 	</li>
 </ul>
 
+							
 						</div>
 					</div>
 				</div>
@@ -472,9 +433,8 @@
 						<div class="mt-auto">
 							<a href="" class="flex items-center gap-3">
 								<span
-									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500">
-									<img src="./images/icons/mail.svg" alt="mail" />
-								</span>
+									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500"><img
+										src="./images/icons/mail.svg" alt="mail" /></span>
 								<p class="leading-tight text-txt">info@atib.by</p>
 							</a>
 						</div>
@@ -486,41 +446,24 @@
 							Заполнить бриф
 						</h3>
 						<form class="flex items-center gap-3 mt-auto">
-							<label for="file" class="flex items-center w-full h-full gap-3 text-txt">
+							<label for="download" class="flex items-center w-full h-full gap-3 text-txt">
 								<span
-									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500">
-									<img src="./images/icons/download.svg" alt="Заполнить бриф" />
-								</span>
+									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500"><img
+										src="./images/icons/download.svg" alt="Заполнить бриф" /></span>
 								<span>Заполнить бриф</span>
 							</label>
-							<input class="hidden" aria-describedby="upload_file" id="file" type="file" />
+							<input class="hidden" aria-describedby="upload_file" id="download" type="file" />
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </section>
-				<section class="relative pb-32 quote pt-36">
-	
-		<div class="pl-24 quote__title">
-			<h2 class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight mb-5">
-				Красиво оформленное глупое предложение пойдет намного дальше, чем неудачно оформленная замечательная идея
-			</h2>
-			<div class="flex gap-5">
-				<div class="rounded-full">
-					<img src="./images/adams.png" alt="Скон Адамс" class="" />
-				</div>
-				<div class="flex flex-col justify-center gap-1">
-					<p class="text-lg font-medium leading-tight text-txt">Скон Адамс</p>
-					<p class="leading-tight text-txt">Американский художник комиксов</p>
-				</div>
-			</div>
-		</div>
-	
-</section>
-			</main>
-			<footer class="py-3 footer">
+
+		</main>
+		<footer class="py-3 footer">
 	<div class="container">
 		<div class="grid grid-cols-12 py-4 border-t gap-7 border-t-gray_border">
 			<div class="col-span-12 lg:col-span-5">
@@ -583,6 +526,7 @@
 	</div>
 </footer>
 
-		</div>
-	</body>
+	</div>
+</body>
+
 </html>

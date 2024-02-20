@@ -74,7 +74,7 @@
 				<!-- Dropdown menu -->
 				<div
 	id="dropdownHover"
-	class="text-gray_light z-10 hidden bg-white rounded-[.625rem]"
+	class="text-gray_light z-10 hidden bg-white rounded-[10px]"
 >
 	<div class="grid square">
 	<div class="bg-blue_500 square__item"></div>
@@ -85,55 +85,49 @@
 
 	<span>Услуги</span>
 	<ul
-		class="py-2 text-sm text-gray-700 border-0 dark:text-gray-200"
+		class="py-2 text-sm border-0 "
 		aria-labelledby="dropdownHoverButton"
 	>
-		<li>
-			<a
-				href="/contacts.html"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-				>Контакты</a
-			>
-		</li>
+		
 		<li>
 			<a
 				href="/services-page.html"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-4 py-2 "
 				>Разработка</a
 			>
-		</li>
+		</li>		
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-4 py-2 "
 				>Брендинг</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-4 py-2 "
 				>Разработка</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-4 py-2 "
 				>Реклама</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-4 py-2 "
 				>Полиграфия</a
 			>
 		</li>
 		<li>
 			<a
 				href="#"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-4 py-2 "
 				>Мобильная разработка</a
 			>
 		</li>
@@ -212,21 +206,41 @@
 				</button>
 			</div>
 			<div class="w-1/4 md:w-1/12">
-				<button
-					type="button"
-					id=""
-					class="flex items-center justify-end w-full gap-3 text-base font-medium text-white font-display"
-				>
+				<button data-collapse-toggle="mobile-menu-2" type="button"
+					class="inline-flex items-center justify-end w-full gap-3 p-2 ml-1 font-medium text-white rounded-lg font-display focus:outline-none "
+					aria-controls="mobile-menu-2" aria-expanded="true">
 					<div class="flex flex-col square-menu">
 	<div class="bg-blue_500 square-menu__item"></div>
 	<div class="bg-red_500 square-menu__item"></div>
 	<div class="bg-yellow_500 square-menu__item"></div>
 </div>
 
-					<span> Меню </span>
+					<span class="">Меню</span>					
 				</button>
+				
 			</div>
 		</div>
+		<nav class="py-4 ">
+	<div class="flex items-center ">		
+		<div class="items-center justify-between hidden w-full " id="mobile-menu-2">
+			<ul class="flex flex-col gap-4 text-xl font-bold leading-tight text-white font-display ">
+
+	<li>
+		<a href="#" class="block text-white ">О студии</a>
+	</li>
+
+	<li>
+		<a href="/portfolio-page.html" class="block text-white ">Портфолио</a>
+	</li>
+	<li>
+		<a href="/contacts.html" class="block text-white ">Контакты</a>
+	</li>
+
+</ul>
+		</div>
+	</div>
+</nav>
+		
 	</div>
 </header>
 
