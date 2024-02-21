@@ -3,18 +3,19 @@
 @@include('components/_head.html',{ "title":"Название проекта" })
 
 <body class="bg-gray_500 body">
-	<div class="container wrapper">
-
+	<div class="wrapper">
 		@@include('components/_header.html',{})
-
 		<main class="pt-24">
-			@@include('sections/_breadcrumb.html',{})
-			@@include('sections/_case.html',{})
-			@@include('sections/_design-elements.html',{})
+			<div class="container">
+				@@include('sections/_breadcrumb.html',{})
+				@@include('sections/_case.html',{})
+				@@include('sections/_design-elements.html',{})
+			</div>
 			@@include('sections/_result.html',{})
-			@@include('sections/_total.html',{})
-			@@include('sections/_contacts.html',{})
-
+			<div class="container">
+				@@include('sections/_total.html',{})
+				@@include('sections/_contacts.html',{})
+			</div>
 		</main>
 		@@include('components/_footer.html',{})
 	</div>
