@@ -101,6 +101,7 @@ $(document).ready(function () {
 				breakpoint: 1500,
 				settings: {
 					slidesToShow: 4,
+					
 				},
 			},
 			{
