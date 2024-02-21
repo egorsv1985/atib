@@ -3,7 +3,7 @@
 	@@include('../blocks/_title-section.html', { "title-section": "О студии",
 	"color": "gray" })
 	<div class="mb-12">
-		@@include('../blocks/_h2-section.html', { "h2-section": "Мы компания, которая специализируется на создании качественного и эффективного дизайна для веб-сайтов. Мы предоставляем	полный спектр услуг в области веб-дизайна, начиная от разработки концепции и создания дизайн-макетов, до верстки и программирования сайтов."})
+		@@include('../blocks/_h2-section.html', { "h2-section": "Мы компания, которая специализируется на создании качественного и эффективного дизайна для веб-сайтов. Мы предоставляем полный спектр услуг в области веб-дизайна,	начиная от разработки концепции и создания дизайн-макетов, до верстки и программирования сайтов."})
 	</div>
 	<div class="grid grid-cols-12 gap-7 mb-11">
 		<div class="col-span-12 lg:col-span-6">
@@ -183,7 +183,8 @@
 				</li>
 			</ol>
 		</div>
-		<div class="relative col-span-12 pt-3 lg:col-span-6 about__grid">
+		<div
+			class="relative col-span-12 pt-3 lg:col-span-6 pseudo-grid before:absolute before:block  before:-top-[15%] before:left-[17%] before:-bottom-[19%] before:right-0">
 			<h2 class="pl-24 mb-6 text-xl font-bold leading-tight text-white text-balance font-display quote__title">
 				Мы стремимся создавать дизайн, который не только красив, но и удобен в
 				использовании, интуитивно понятен и способствует достижению
@@ -192,9 +193,7 @@
 			<div class="flex gap-5 pl-24">
 				<div class="w-16 h-16 rounded-full bg-blue_500"></div>
 				<div class="flex flex-col justify-center gap-1">
-					<p class="text-lg font-medium leading-tight text-txt">
-						Команда АТИБ
-					</p>
+					<p class="text-lg font-medium leading-tight text-txt"> Команда АТИБ </p>
 					<p class="leading-tight text-txt">Дизайнеры и не только</p>
 				</div>
 			</div>

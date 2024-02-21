@@ -21,18 +21,7 @@
 		bottom: 0;
 	}
 	padding-block: 27vh;
-	&__content {
-		&::before {
-			content: '';
-			display: block;
-			background: url('@img/icons/grid.svg') no-repeat center / cover;
-			position: absolute;
-			top: 1%;
-			right: 30%;
-			width: 57.2%;
-			height: 153%;
-		}
-	}
+
 	&__box-logo {
 		&::before {
 			content: '';

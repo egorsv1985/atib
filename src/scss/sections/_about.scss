@@ -21,18 +21,7 @@
 			margin-bottom: 12px;
 		}
 	}
-	&__grid {
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			background: url('@img/icons/grid.svg') no-repeat center / cover;
-			top: -15%;
-			left: 17%;
-			bottom: -19%;
-			right: 0;
-		}
-	}
+
 	.quote__title {
 		background-position: 1% 0;
 	}
@@ -44,5 +33,11 @@
 			height: 143%;
 			width: 102%;
 		}
+	}
+}
+.pseudo-grid {
+	&::before {
+		background: url('@img/icons/grid.svg') no-repeat center / cover;
+		z-index: -1;
 	}
 }
