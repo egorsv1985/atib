@@ -13,6 +13,7 @@ export default {
 			inner: '0 4px 10px 0 rgba(255, 255, 255, 0.5)',
 			lg: '0 4px 50px 0 rgba(49, 148, 255, 0.2)',
 		},
+		
 		colors: {
 			gray_500: '#0b0b0c',
 			gray_light: '#1e1e1e',
@@ -42,8 +43,7 @@ export default {
 			none: 'none',
 			disc: 'disc',
 			decimal: 'decimal',
-			square: 'square',
-			roman: 'upper-roman',
+			square: 'square',			
 		},
 		container: {
 			center: true,
