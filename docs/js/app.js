@@ -1,6 +1,3 @@
-
-
-
 // // Предотвращение повторной отправки форм
 // form.addEventListener('submit', () => {
 // 	submitButton.disabled = true
