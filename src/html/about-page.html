@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html',{ "title":"О студии" })
+
+<body class="bg-gray_500 body">
+	<div class="wrapper">
+		@@include('components/_header.html',{})
+		<main class="pt-24">
+			<div class="container">
+				@@include('sections/_breadcrumb.html',{})
+				@@include('sections/_about-page.html',{})
+				@@include('sections/_map-page.html',{})
+				@@include('sections/_quote.html',{
+				"img-quote": "jobs.png",
+				"alt-quote": "Артемий Лебедев",
+				"h2-quote": "Мы не обсуждаем дизайн. Мы обсуждаем: решена задача, которая перед нами была поставлена, или не решена",
+				"author-quote": "Артемий Лебедев",
+				"description-quote": "Основатель Apple",
+				"text-size":"3xl",
+				"sm-text-size": "[40px]",
+				})
+			</div>
+			@@include('sections/_reviews.html',{})
+			<div class="container">
+				@@include('sections/_logos.html',{})
+				@@include('sections/_contacts.html',{})
+			</div>
+		</main>
+		@@include('components/_footer.html',{})
+	</div>
+</body>
+
+</html>
