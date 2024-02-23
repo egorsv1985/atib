@@ -1,7 +1,8 @@
-<nav class="py-4 ">
-	<div class="flex items-center ">		
-		<div class="items-center justify-between hidden w-full " id="mobile-menu-2">
-			@@include('_main-menu.html')
-		</div>
+<nav class="grid w-full grid-cols-10 py-4 gap-7" id="mobile-menu-2">
+	<div class="col-span-2">
+		@@include('_main-menu.html')
+	</div>
+	<div class="col-span-10 col-start-6">
+		@@include('_secondary-menu.html')
 	</div>
 </nav>

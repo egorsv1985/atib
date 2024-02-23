@@ -43,8 +43,8 @@
 			<header
 	class="fixed py-4 header z-[9999] left-0 right-0 top-0 before:absolute before:inset-0 before:bg-gray_500 before:transition-opacity before:duration-500 before:ease-out backdrop-blur-lg before:opacity-80 before:-z-10"
 >
-	<div class="container mx-auto px-outer-gutter">
-		<div class="z-40 flex items-center justify-between">
+	<div class="container px-2">
+		<div class="z-40 flex items-center justify-between pb-3 border-b border-b-gray_border">
 			<div class="w-1/3 mr-3 sm:w-1/4 lg:w-1/6 max-[400px]:w-1/2">
 				<a href="/" class="block max-w-full text-center">
 					<img src="./images/icons/logo.svg" alt="logo" class="max-w-full" />
@@ -225,10 +225,9 @@
 				
 			</div>
 		</div>
-		<nav class="py-4 ">
-	<div class="flex items-center ">		
-		<div class="items-center justify-between hidden w-full " id="mobile-menu-2">
-			<ul class="flex flex-col gap-4 text-xl font-bold leading-tight text-white font-display ">
+		<nav class="grid w-full grid-cols-10 py-4 gap-7" id="mobile-menu-2">
+	<div class="col-span-2">
+		<ul class="flex flex-col gap-4 text-xl font-bold leading-tight text-white font-display ">
 
 	<li>
 		<a href="about-page.html" class="block text-white ">О студии</a>
@@ -240,9 +239,33 @@
 	<li>
 		<a href="contacts.html" class="block text-white ">Контакты</a>
 	</li>
-
 </ul>
-		</div>
+	</div>
+	<div class="col-span-10 col-start-6">
+		<div class="">
+	<span class="text-xl font-bold leading-tight text-white font-display">Услуги</span>
+	<ul class="grid grid-flow-row grid-cols-2 grid-rows-3 py-2 text-lg leading-tight text-txt">
+		<li>
+			<a href="#" class="block py-2">Брендинг</a>
+		</li>
+		<li>
+			<a href="#" class="block py-2">Полиграфия</a>
+		</li>
+		<li>
+			<a href="#" class="block py-2">Разработка</a>
+		</li>
+		<li>
+			<a href="#" class="block py-2">Мобильная разработка</a>
+		</li>
+		<li>
+			<a href="#" class="block py-2">Реклама</a>
+		</li>
+		<li>
+			<a href="#"
+				class="block py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Motion-дизайн</a>
+		</li>
+	</ul>
+</div>
 	</div>
 </nav>
 		
