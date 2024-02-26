@@ -11,26 +11,32 @@
 			id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
 			<li class="me-2" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border hover:bg-yellow_500 active::bg-yellow_500 border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
+					class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border relative group overflow-hidden   inline-block border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
 					id="branding-tab" data-tabs-target="#branding" type="button" role="tab" aria-controls="branding"
 					aria-selected="false">
-					Брендинг
+					<span
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow_500 group-hover:h-full opacity-90"></span>
+					<span class="relative group-hover:text-white">Брендинг</span>
 				</button>
 			</li>
 			<li class="me-2" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-blue_border aria-selected:text-white border hover:bg-blue_500 active::bg-blue_500 border-blue_border rounded-[20px] aria-selected:bg-blue_500"
+					class="px-4 py-1 text-lg font-medium leading-tight text-blue_border aria-selected:text-white border relative group overflow-hidden   inline-block border-blue_border rounded-[20px] aria-selected:bg-blue_500"
 					id="dashboard-tab" data-tabs-target="#development" type="button" role="tab" aria-controls="development"
 					aria-selected="false">
-					Разработка
+					<span
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue_500 group-hover:h-full opacity-90"></span>
+					<span class="relative group-hover:text-white">Разработка</span>
 				</button>
 			</li>
 			<li class="me-2" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border hover:bg-pink_500 active::bg-pink_500 border-pink_border rounded-[20px] aria-selected:bg-pink_500"
+					class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border relative group overflow-hidden   inline-block border-pink_border rounded-[20px] aria-selected:bg-pink_500"
 					id="promotion-tab" data-tabs-target="#promotion" type="button" role="tab" aria-controls="promotion"
 					aria-selected="false">
-					Реклама
+					<span
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-pink_500 group-hover:h-full opacity-90"></span>
+					<span class="relative group-hover:text-white">Реклама</span>
 				</button>
 			</li>
 		</ul>

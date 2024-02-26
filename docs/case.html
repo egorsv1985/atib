@@ -64,6 +64,8 @@
 						Услуги
 					</span>
 				</button>
+
+
 				<!-- Dropdown menu -->
 				<div id="dropdownHover" class="text-gray_light z-10 py-4 px-10 dropdown-menu hidden  bg-white rounded-[10px]">
 	<div class="flex items-center gap-2 text-center">
@@ -181,9 +183,14 @@
 
 			</div>
 			<div class="hidden w-1/6 lg:block">
-				<button type="button" id=""
-					class="px-8 py-4  rounded-[80px] border justify-center items-center gap-2.5 inline-flex text-center text-white text-base font-medium font-display border-gray_border bg-gray_light text-nowrap hover:border-white/50 w-full">
-					Работать с нами
+				<button data-modal-target="callback-modal" data-modal-toggle="callback-modal"
+					class="relative items-center justify-start inline-block px-8 py-4 overflow-hidden font-medium transition-all border rounded-full shadow border-gray_border bg-gray_light hover:bg-white group"
+					type="button">
+					<span
+						class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+					<span
+						class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-gray_500">Работать
+						с нами</span>
 				</button>
 			</div>
 			<div class="w-1/4 md:w-1/12">
@@ -327,6 +334,8 @@
 		</div>
 	</div>
 </nav>
+
+
 
 	</div>
 </header>

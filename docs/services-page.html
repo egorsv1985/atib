@@ -65,6 +65,8 @@
 						Услуги
 					</span>
 				</button>
+
+
 				<!-- Dropdown menu -->
 				<div id="dropdownHover" class="text-gray_light z-10 py-4 px-10 dropdown-menu hidden  bg-white rounded-[10px]">
 	<div class="flex items-center gap-2 text-center">
@@ -182,9 +184,14 @@
 
 			</div>
 			<div class="hidden w-1/6 lg:block">
-				<button type="button" id=""
-					class="px-8 py-4  rounded-[80px] border justify-center items-center gap-2.5 inline-flex text-center text-white text-base font-medium font-display border-gray_border bg-gray_light text-nowrap hover:border-white/50 w-full">
-					Работать с нами
+				<button data-modal-target="callback-modal" data-modal-toggle="callback-modal"
+					class="relative items-center justify-start inline-block px-8 py-4 overflow-hidden font-medium transition-all border rounded-full shadow border-gray_border bg-gray_light hover:bg-white group"
+					type="button">
+					<span
+						class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+					<span
+						class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-gray_500">Работать
+						с нами</span>
 				</button>
 			</div>
 			<div class="w-1/4 md:w-1/12">
@@ -329,6 +336,8 @@
 	</div>
 </nav>
 
+
+
 	</div>
 </header>
 
@@ -455,26 +464,32 @@
 			id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
 			<li class="me-2" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border hover:bg-yellow_500 active::bg-yellow_500 border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
+					class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border relative group overflow-hidden   inline-block border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
 					id="branding-tab" data-tabs-target="#branding" type="button" role="tab" aria-controls="branding"
 					aria-selected="false">
-					Брендинг
+					<span
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow_500 group-hover:h-full opacity-90"></span>
+					<span class="relative group-hover:text-white">Брендинг</span>
 				</button>
 			</li>
 			<li class="me-2" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-blue_border aria-selected:text-white border hover:bg-blue_500 active::bg-blue_500 border-blue_border rounded-[20px] aria-selected:bg-blue_500"
+					class="px-4 py-1 text-lg font-medium leading-tight text-blue_border aria-selected:text-white border relative group overflow-hidden   inline-block border-blue_border rounded-[20px] aria-selected:bg-blue_500"
 					id="dashboard-tab" data-tabs-target="#development" type="button" role="tab" aria-controls="development"
 					aria-selected="false">
-					Разработка
+					<span
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue_500 group-hover:h-full opacity-90"></span>
+					<span class="relative group-hover:text-white">Разработка</span>
 				</button>
 			</li>
 			<li class="me-2" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border hover:bg-pink_500 active::bg-pink_500 border-pink_border rounded-[20px] aria-selected:bg-pink_500"
+					class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border relative group overflow-hidden   inline-block border-pink_border rounded-[20px] aria-selected:bg-pink_500"
 					id="promotion-tab" data-tabs-target="#promotion" type="button" role="tab" aria-controls="promotion"
 					aria-selected="false">
-					Реклама
+					<span
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-pink_500 group-hover:h-full opacity-90"></span>
+					<span class="relative group-hover:text-white">Реклама</span>
 				</button>
 			</li>
 		</ul>
@@ -786,8 +801,14 @@
 	</div>
 	<div class="sale__slider slider">
 		<div class="flex flex-col h-auto mr-7 slider__item group/slider__item">
+
 			<div
-				class="rounded-[10px] py-12 ps-7 grow gap-8 flex flex-col pe-6 slider__content border border-yellow_border group-hover/slider__item:bg-yellow_500">
+				class="rounded-[10px] transition-colors duration-300 ease-out overflow-hidden relative py-12 ps-7 grow gap-8 flex flex-col pe-6 slider__content border border-yellow_border ">
+				<span class="absolute border border-yellow_border inset-0 w-full h-full  py-12 ps-7 pe-6 rounded-[10px] -z-10 ">
+					<span
+						class="absolute left-0 w-full h-full -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-[98%] translate-y-[88%] bg-gray-900 border -z-10 group-hover/slider__item:-rotate-180 ease border-yellow_border"></span>
+					
+				</span>
 				<div class="">
 					<div
 						class="px-4 py-1 text-sm mb-8 font-medium leading-tight border bg-yellow_500 border-yellow_border rounded-[20px] inline-flex slider__name group-hover/slider__item:bg-gray_500">
