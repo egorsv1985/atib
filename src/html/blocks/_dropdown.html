@@ -1,69 +1,38 @@
-<div
-	id="dropdownHover"
-	class="text-gray_light z-10 hidden bg-white rounded-[10px]"
->
-	@@include('_square.html')
-	<span>Услуги</span>
-	<ul
-		class="py-2 text-sm border-0 "
-		aria-labelledby="dropdownHoverButton"
-	>
-		
-		<li>
-			<a
-				href="services-page.html"
-				class="block px-4 py-2 "
-				>Разработка</a
-			>
-		</li>		
-		<li>
-			<a
-				href="case.html"
-				class="block px-4 py-2 "
-				>Название проекта</a
-			>
-		</li>		
-		<li>
-			<a
-				href="#"
-				class="block px-4 py-2 "
-				>Брендинг</a
-			>
+<div id="dropdownHover" class="text-gray_light z-10 py-4 px-10 dropdown-menu hidden  bg-white rounded-[10px]">
+	<div class="flex items-center gap-2 text-center">
+		@@include('_square.html')
+		<span>Услуги</span>
+	</div>
+	<ul class="py-2 text-sm border-0 " aria-labelledby="dropdownHoverButton">
+		<li class="mb-2">
+			@@include('_menu-item.html',{
+			"color": "yellow",
+			"item": "Брендинг" })
 		</li>
-		<li>
-			<a
-				href="#"
-				class="block px-4 py-2 "
-				>Разработка</a
-			>
+		<li class="mb-2">
+			@@include('_menu-item.html',{
+			"color": "green",
+			"item": "Полиграфия" })
 		</li>
-		<li>
-			<a
-				href="#"
-				class="block px-4 py-2 "
-				>Реклама</a
-			>
+		<li class="mb-2">
+			@@include('_menu-item.html',{
+			"color": "blue",
+			"item": "Разработка" })
 		</li>
-		<li>
-			<a
-				href="#"
-				class="block px-4 py-2 "
-				>Полиграфия</a
-			>
+		<li class="mb-2">
+			@@include('_menu-item.html',{
+			"color": "purple",
+			"item": "Мобильная разработка" })
 		</li>
-		<li>
-			<a
-				href="#"
-				class="block px-4 py-2 "
-				>Мобильная разработка</a
-			>
+		<li class="mb-2">
+			@@include('_menu-item.html',{
+			"color": "pink",
+			"item": "Реклама" })
 		</li>
-		<li>
-			<a
-				href="#"
-				class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-				>Motion-дизайн</a
-			>
+		<li class="mb-2">
+			@@include('_menu-item.html',{
+			"color": "red",
+			"item": "Motion-дизайн" })
 		</li>
 	</ul>
 </div>
