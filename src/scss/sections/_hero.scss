@@ -20,55 +20,150 @@
 	&::after {
 		bottom: 0;
 	}
-	padding-block: 27vh;
+	// margin-block: 27vh;
 
-	&__box-logo {
-		&::before {
-			content: '';
-			display: block;
-			position: absolute;
-			width: 68px;
-			height: 39px;
-			bottom: -21%;
-			right: -5%;
-			background: url('@img/icons/cursor_logo.svg') no-repeat center / cover;
-		}
-	}
+	// &__box-img {
+	// 	width: 130px;
+	// 	height: 130px;
+	// 	&:first-child {
+	// 		left: 3%;
+	// 		top: -12%;
+	// 	}
+	// 	&:nth-child(2) {
+	// 		left: 37%;
+	// 		top: -42%;
+	// 	}
+	// 	&:nth-child(3) {
+	// 		right: 6%;
+	// 		top: -27%;
+	// 	}
+	// 	&:nth-child(4) {
+	// 		left: 42%;
+	// 		top: 8%;
+	// 	}
 
-	&__box-img {
-		width: 130px;
-		height: 130px;
-		&:first-child {
-			left: 3%;
-			top: -12%;
-		}
-		&:nth-child(2) {
-			left: 37%;
-			top: -42%;
-		}
-		&:nth-child(3) {
-			right: 6%;
-			top: -27%;
-		}
-		&:nth-child(4) {
-			left: 42%;
-			top: 8%;
-		}
-		&:nth-child(5) {
-			left: 20%;
-			top: 66%;
-		}
-		&:nth-child(6) {
-			right: 0%;
-			bottom: -24%;
-		}
-		&:nth-child(7) {
-			right: 17%;
-			top: 46%;
-		}
-		&:last-child {
-			left: 37%;
-			bottom: -47%;
-		}
+	// 	&:nth-child(5) {
+	// 		left: 20%;
+	// 		top: 66%;
+	// 	}
+	// 	&:nth-child(6) {
+	// 		right: 0%;
+	// 		bottom: -24%;
+	// 	}
+	// 	&:nth-child(7) {
+	// 		right: 17%;
+	// 		top: 46%;
+	// 	}
+	// 	&:last-child {
+	// 		left: 37%;
+	// 		bottom: -47%;
+	// 	}
+	// }
+}
+.after\:bg-radial-light:after {
+	background-image: radial-gradient(
+		73% 73% at -12.39% 4.13%,
+		hsla(256, 7%, 97%, 0.09) 0,
+		hsla(256, 7%, 97%, 0) 100%
+	);
+}
+.TechnologyBubble_leftRight0__CP5M9 {
+	animation: TechnologyBubble_leftRightAnimation0__YntKr 20s ease-in-out
+		infinite alternate;
+}
+.TechnologyBubble_leftRight4__CP5M9 {
+	animation: TechnologyBubble_leftRightAnimation4__YntKr 20s ease-in-out
+		infinite alternate;
+}
+@keyframes TechnologyBubble_leftRightAnimation0__YntKr {
+	0% {
+		transform: translate(35%, 4%);
 	}
+	100% {
+		transform: translate(75%, 10%);
+	}
+}
+@keyframes TechnologyBubble_leftRightAnimation4__YntKr {
+	0% {
+		transform: translate(-40%, 8%);
+	}
+	100% {
+		transform: translate(80%);
+	}
+}
+@keyframes translateYAnimation {
+	from {
+		transform: translateY(0%);
+	}
+	to {
+		transform: translateY(-100%);
+	}
+}
+
+.animate-translate {
+	animation: translateYAnimation 20s linear infinite alternate;
+}
+@keyframes moveRight {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes moveDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+.animated-container {
+	display: grid;
+	grid-template-columns: repeat(5, 100px); /* 5 элементов в ряд */
+	gap: 20px; /* расстояние между элементами */
+}
+
+.animated-block {
+	width: 100%;
+	height: 100px;
+	background-color: #4a90e2;
+	animation: moveRight 2s linear infinite, moveDown 3s linear infinite; /* разные скорости анимации для разнообразия */
+}
+@keyframes moveRight {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes moveDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+.animate-translate .animated-bubble:nth-child(1) {
+	animation: moveRight 2s linear infinite;
+}
+
+.animate-translate .animated-bubble:nth-child(2) {
+	animation: moveDown 3s linear infinite;
+}
+
+.animated-bubble {
+	width: 20px;
+	height: 20px;
+	background-color: #ffd700;
+	border: 2px solid #ffd700;
+	border-radius: 50%;
+	margin: 10px;
 }
