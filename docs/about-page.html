@@ -83,7 +83,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
-		<a href="#" class="block ">Брендинг</a>
+		<a href="#" data-hover="Брендинг" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-yellow_border before:text-yellow_500  before:transition-[width] before:duration-500 hover:before:w-full">Брендинг</a>
 	</div>
 
 		</li>
@@ -91,7 +91,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-green_border bg-green_500"></span>
-		<a href="#" class="block ">Полиграфия</a>
+		<a href="#" data-hover="Полиграфия" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-green_border before:text-green_500  before:transition-[width] before:duration-500 hover:before:w-full">Полиграфия</a>
 	</div>
 
 		</li>
@@ -99,7 +99,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
-		<a href="#" class="block ">Разработка</a>
+		<a href="#" data-hover="Разработка" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-blue_border before:text-blue_500  before:transition-[width] before:duration-500 hover:before:w-full">Разработка</a>
 	</div>
 
 		</li>
@@ -107,7 +107,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-purple_border bg-purple_500"></span>
-		<a href="#" class="block ">Мобильная разработка</a>
+		<a href="#" data-hover="Мобильная разработка" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-purple_border before:text-purple_500  before:transition-[width] before:duration-500 hover:before:w-full">Мобильная разработка</a>
 	</div>
 
 		</li>
@@ -115,7 +115,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
-		<a href="#" class="block ">Реклама</a>
+		<a href="#" data-hover="Реклама" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-pink_border before:text-pink_500  before:transition-[width] before:duration-500 hover:before:w-full">Реклама</a>
 	</div>
 
 		</li>
@@ -123,7 +123,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-red_border bg-red_500"></span>
-		<a href="#" class="block ">Motion-дизайн</a>
+		<a href="#" data-hover="Motion-дизайн" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-red_border before:text-red_500  before:transition-[width] before:duration-500 hover:before:w-full">Motion-дизайн</a>
 	</div>
 
 		</li>
@@ -161,26 +161,15 @@
 			</div>
 			<div class="hidden w-1/4 mr-7 lg:w-1/6 md:block">
 				<div class="flex flex-col gap-3 md:gap-1 ">
-	<a
-		href="tel:+375293054700"
-		class="pl-5 leading-tight text-txt"
-		style="background: url(./images/icons/mts.svg) no-repeat left 50% / 13px 15px"
-	>
-		<div class="">
-			<span class="block text-nowrap">+375 (29) 305 47 00</span>
-		</div>
+	<a data-hover="+375 (29) 305 47 00" href="tel:+375293054700"
+		class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt"
+		style="background: url(./images/icons/mts.svg) no-repeat left 50% / 13px 15px"> +375 (29) 305 47 00
 	</a>
-	<a
-		href="tel:+375333054700"
-		class="pl-5 leading-tight text-txt"
-		style="background: url(./images/icons/a1.svg) no-repeat left 50% / 13px 15px"
-	>
-		<div class="">
-			<span class="block text-nowrap">+375 (33) 305 47 00</span>
-		</div>
+	<a data-hover="+375 (33) 305 47 00" href="tel:+375333054700"
+		class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight text-txt"
+		style="background: url(./images/icons/a1.svg) no-repeat left 50% / 13px 15px"> +375 (33) 305 47 00
 	</a>
 </div>
-
 			</div>
 			<div class="hidden w-1/6 lg:block">
 				<button data-modal-target="callback-modal" data-modal-toggle="callback-modal"
@@ -212,16 +201,17 @@
 	<div class="grid grid-cols-10 gap-3 py-4 md:gap-7">
 		<div class="col-span-10 md:col-span-2">
 			<ul class="flex flex-col gap-2 text-xl font-bold leading-tight text-white md:gap-4 font-display ">
-
 	<li>
-		<a href="about-page.html" class="block text-white ">О студии</a>
-	</li>
-
-	<li>
-		<a href="portfolio-page.html" class="block text-white ">Портфолио</a>
+		<a href="about-page.html" data-hover="О студии"
+			class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-blue_500 before:text-blue_500  before:transition-[width] before:duration-500 hover:before:w-full text-white ">О студии</a>
 	</li>
 	<li>
-		<a href="contacts.html" class="block text-white ">Контакты</a>
+		<a href="portfolio-page.html" data-hover="Портфолио"
+			class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-blue_500 before:text-blue_500  before:transition-[width] before:duration-500 hover:before:w-full text-white ">Портфолио</a>
+	</li>
+	<li>
+		<a href="contacts.html" data-hover="Контакты"
+			class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-blue_500 before:text-blue_500 before:transition-[width] before:duration-500 hover:before:w-full text-white ">Контакты</a>
 	</li>
 </ul>
 		</div>
@@ -233,7 +223,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
-		<a href="#" class="block ">Брендинг</a>
+		<a href="#" data-hover="Брендинг" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-yellow_border before:text-yellow_500  before:transition-[width] before:duration-500 hover:before:w-full">Брендинг</a>
 	</div>
 
 		</li>
@@ -241,7 +231,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-green_border bg-green_500"></span>
-		<a href="#" class="block ">Полиграфия</a>
+		<a href="#" data-hover="Полиграфия" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-green_border before:text-green_500  before:transition-[width] before:duration-500 hover:before:w-full">Полиграфия</a>
 	</div>
 
 		</li>
@@ -249,7 +239,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
-		<a href="#" class="block ">Разработка</a>
+		<a href="#" data-hover="Разработка" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-blue_border before:text-blue_500  before:transition-[width] before:duration-500 hover:before:w-full">Разработка</a>
 	</div>
 
 		</li>
@@ -257,7 +247,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-purple_border bg-purple_500"></span>
-		<a href="#" class="block ">Мобильная разработка</a>
+		<a href="#" data-hover="Мобильная разработка" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-purple_border before:text-purple_500  before:transition-[width] before:duration-500 hover:before:w-full">Мобильная разработка</a>
 	</div>
 
 		</li>
@@ -265,7 +255,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
-		<a href="#" class="block ">Реклама</a>
+		<a href="#" data-hover="Реклама" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-pink_border before:text-pink_500  before:transition-[width] before:duration-500 hover:before:w-full">Реклама</a>
 	</div>
 
 		</li>
@@ -273,7 +263,7 @@
 			
 	<div class="flex items-center gap-2">
 		<span class="w-4 h-4 rounded-full border-red_border bg-red_500"></span>
-		<a href="#" class="block ">Motion-дизайн</a>
+		<a href="#" data-hover="Motion-дизайн" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-red_border before:text-red_500  before:transition-[width] before:duration-500 hover:before:w-full">Motion-дизайн</a>
 	</div>
 
 		</li>
@@ -282,26 +272,15 @@
 		</div>
 		<div class="block col-span-10 md:col-span-12 md:hidden">
 			<div class="flex flex-col gap-3 md:gap-1 ">
-	<a
-		href="tel:+375293054700"
-		class="pl-5 leading-tight text-txt"
-		style="background: url(./images/icons/mts.svg) no-repeat left 50% / 13px 15px"
-	>
-		<div class="">
-			<span class="block text-nowrap">+375 (29) 305 47 00</span>
-		</div>
+	<a data-hover="+375 (29) 305 47 00" href="tel:+375293054700"
+		class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt"
+		style="background: url(./images/icons/mts.svg) no-repeat left 50% / 13px 15px"> +375 (29) 305 47 00
 	</a>
-	<a
-		href="tel:+375333054700"
-		class="pl-5 leading-tight text-txt"
-		style="background: url(./images/icons/a1.svg) no-repeat left 50% / 13px 15px"
-	>
-		<div class="">
-			<span class="block text-nowrap">+375 (33) 305 47 00</span>
-		</div>
+	<a data-hover="+375 (33) 305 47 00" href="tel:+375333054700"
+		class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight text-txt"
+		style="background: url(./images/icons/a1.svg) no-repeat left 50% / 13px 15px"> +375 (33) 305 47 00
 	</a>
 </div>
-
 		</div>
 		<div class="block col-span-10 md:col-span-12 md:hidden">
 			<ul class="flex items-center justify-between gap-2 max-w-36">
