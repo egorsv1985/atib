@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['SF UI Text'],
-				display: ['SF UI Display'],
+				SFUIText: ['SF UI Text', 'sans-serif'],
+				display: ['SF UI Display', 'sans-serif'],
 			},
 		},
 		boxShadow: {
@@ -13,7 +13,9 @@ export default {
 			inner: '0 4px 10px 0 rgba(255, 255, 255, 0.5)',
 			lg: '0 4px 50px 0 rgba(49, 148, 255, 0.2)',
 		},
-
+		letterSpacing: {
+			wider: '.04em',
+		},
 		colors: {
 			gray_500: '#0b0b0c',
 			gray_light: '#1e1e1e',

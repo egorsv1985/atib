@@ -1,11 +1,13 @@
-<section class="pt-16 services">
+<section class="py-16 services">
 	<div class="mb-4">
 		@@include('../blocks/_title-section.html', { "title-section": "Услуги", "color": "gray" })
 	</div>
-	<h2 class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight mb-5"> Направления работы </h2>
-	<p class="w-2/3 mb-16 text-xl leading-tight text-txt"> Стоимость каждого проекта рассчитывается индивидуально,
-		в зависимости от объёмов, сложности и сроков. </p>
-
+	<div class="mb-5">
+		@@include('../blocks/_h2-section.html', { "h2-section": "Направления работы" })
+	</div>
+	<div class="w-2/3 mb-16">
+		@@include('../blocks/_text-section.html', { "text-section": "Стоимость каждого проекта рассчитывается индивидуально, в зависимости от объёмов, сложности и сроков." })
+	</div>
 	<div class="grid grid-cols-3 gap-7">
 		<div class="col-span-3 lg:col-span-2">
 			<div class="grid grid-cols-3 gap-7">
@@ -34,7 +36,7 @@
 										<span class="leading-tight text-txt">Презентации</span>
 									</li>
 									<li class="text-yellow_500">
-										<span class="leading-tight text-txt">СММ-дизайн</span>
+										<span class="block mb-1 leading-tight text-txt">СММ-дизайн</span>
 
 										<div class="flex gap-2 text-base font-normal leading-tight">
 											<span class="leading-tight text-pink_500">Instagram</span>
@@ -97,7 +99,7 @@
 								</div>
 								<ul class="pt-6 pl-5 text-lg font-medium leading-tight list-square">
 									<li class="mb-2 text-pink_500">
-										<span class="leading-tight text-txt">Баннеры для таргета</span>
+										<span class="block mb-1 leading-tight text-txt">Баннеры для таргета</span>
 										<div class="flex gap-2 text-base font-normal leading-tight">
 											<span class="leading-tight text-pink_500">Instagram</span>
 											<span class="leading-tight text-blue_500">Vkontakte</span>
@@ -105,7 +107,7 @@
 										</div>
 									</li>
 									<li class="mb-2 text-pink_500">
-										<span class="leading-tight text-txt">Листовки, брошюры и флаеры</span>
+										<span class="block mb-1 leading-tight text-txt">Листовки, брошюры и флаеры</span>
 										<div class="flex gap-2 text-base font-normal leading-tight">
 											<span class="leading-tight text-red_500">Яндекс</span>
 											<span class="leading-tight text-green_500">Google</span>
@@ -141,7 +143,7 @@
 											<div class="rounded-[10px]">
 												<img src="@img/design4.png" alt="design" />
 											</div>
-										</div>									
+										</div>
 									</div>
 									<div class="col-span-1 ml-4">
 										<div class="services__slider2 slider">
@@ -159,7 +161,7 @@
 											</div>
 											<div class="rounded-[10px]">
 												<img src="@img/design4.png" alt="design" />
-											</div>											
+											</div>
 										</div>
 										<!-- <div class="rounded-[10px] md:max-h-36 md:max-w-36 mb-2">
 											<img src="@img/design2.png" alt="design" class="w-full" />
@@ -200,14 +202,15 @@
 								</div>
 							</div>
 							<div class="relative pb-16 ">
-								<img src="@img/development.png" alt="" class="w-full cursor-[url(../images/icons/cursor_development1.svg),_pointer]" />
+								<img src="@img/development.png" alt=""
+									class="w-full cursor-[url(../images/icons/cursor_development1.svg),_pointer]" />
 							</div>
 						</div>
 					</div>
 					<div class="col-span-2 md:col-span-1 lg:col-span-2">
 						<ul class="pt-6 pl-5 text-lg font-medium leading-tight list-square">
 							<li class="mb-2 text-blue_500">
-								<span class="leading-tight text-txt">Разработка сайтов под ключ</span>
+								<span class="block mb-1 leading-tight text-txt">Разработка сайтов под ключ</span>
 								<div class="flex gap-2 text-base font-normal leading-tight">
 									<span class="leading-tight text-blue_500">Битрикс</span>
 									<span class="leading-tight text-green_500">ModX</span>

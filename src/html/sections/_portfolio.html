@@ -1,42 +1,44 @@
-<section class="py-3 portfolio">
+<section class="py-[60px] portfolio">
 	<div class="mb-4">
 		@@include('../blocks/_title-section.html', { "title-section": "Портфолио", "color": "gray" })
 	</div>
-	<h2 class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight mb-5 w-2/3"> Работы, сочетающие
-		красоту и практичность </h2>
-	<p class="w-2/3 text-xl leading-tight mb-11 text-txt"> Наши проекты объединяют в себе эстетику и функциональность для
-		достижения оптимальных результатов. </p>
+	<div class="w-2/3 mb-5">
+		@@include('../blocks/_h2-section.html', { "h2-section": "Работы, сочетающие	красоту и практичность" })
+	</div>
+	<div class="w-2/3 mb-11">
+		@@include('../blocks/_text-section.html', { "text-section": "Наши проекты объединяют в себе эстетику и функциональность для	достижения оптимальных результатов." })
+	</div>	
 	<div class="flex justify-between mb-7">
 		<ul class="flex flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
 			id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-			<li class="me-2" role="presentation">
+			<li class="" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border relative group overflow-hidden   inline-block border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
+					class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border relative group overflow-hidden  inline-block border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
 					id="branding-tab" data-tabs-target="#branding" type="button" role="tab" aria-controls="branding"
 					aria-selected="false">
 					<span
-						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow_500 group-hover:h-full opacity-90"></span>
-					<span class="relative group-hover:text-white">Брендинг</span>
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 -z-[1] bg-yellow_500 group-hover:h-full opacity-90"></span>
+					<span class="group-hover:text-white">Брендинг</span>
 				</button>
 			</li>
-			<li class="me-2" role="presentation">
+			<li class="" role="presentation">
 				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-blue_border aria-selected:text-white border relative group overflow-hidden   inline-block border-blue_border rounded-[20px] aria-selected:bg-blue_500"
+					class="px-4 py-1  text-lg font-medium leading-tight aria-selected:text-white border relative group overflow-hidden text-blue_border  inline-block border-blue_border rounded-[20px] aria-selected:bg-blue_500"
 					id="dashboard-tab" data-tabs-target="#development" type="button" role="tab" aria-controls="development"
 					aria-selected="false">
 					<span
-						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue_500 group-hover:h-full opacity-90"></span>
-					<span class="relative group-hover:text-white">Разработка</span>
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 -z-[1] bg-blue_500 group-hover:h-full opacity-90"></span>
+					<span class="group-hover:text-white">Разработка</span>
 				</button>
 			</li>
-			<li class="me-2" role="presentation">
+			<li class="" role="presentation">
 				<button
 					class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border relative group overflow-hidden   inline-block border-pink_border rounded-[20px] aria-selected:bg-pink_500"
 					id="promotion-tab" data-tabs-target="#promotion" type="button" role="tab" aria-controls="promotion"
 					aria-selected="false">
 					<span
-						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-pink_500 group-hover:h-full opacity-90"></span>
-					<span class="relative group-hover:text-white">Реклама</span>
+						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 -z-[1] bg-pink_500 group-hover:h-full opacity-90"></span>
+					<span class="group-hover:text-white">Реклама</span>
 				</button>
 			</li>
 		</ul>
