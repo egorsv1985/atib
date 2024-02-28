@@ -1,96 +1,123 @@
 .hero {
-	&::before,
-	&::after {
+	&__gradient{
+		
+		&::before,
+		&::after {
 		content: '';
 		display: block;
-		background: linear-gradient(
-			0deg,
-			rgb(11, 11, 12) 50%,
-			rgba(11, 11, 12, 0) 97.833%
-		);
-		height: 27vh;
-
+		
+		z-index: 11;
 		position: absolute;
 		left: 0;
 		right: 0;
 	}
-	&::before {
-		top: 0;
+	&::before {	
+		background: linear-gradient(
+			180deg,
+			rgb(11, 11, 12) 50%,
+			rgba(11, 11, 12, 0) 97.833%
+		);
 	}
 	&::after {
-		bottom: 0;
+		background: linear-gradient(
+			0deg,
+			rgb(11, 11, 12) 50%,
+			rgba(11, 11, 12, 0) 97.833%
+			);
+		}
 	}
-	// margin-block: 27vh;
+}
 
-	// &__box-img {
-	// 	width: 130px;
-	// 	height: 130px;
-	// 	&:first-child {
-	// 		left: 3%;
-	// 		top: -12%;
-	// 	}
-	// 	&:nth-child(2) {
-	// 		left: 37%;
-	// 		top: -42%;
-	// 	}
-	// 	&:nth-child(3) {
-	// 		right: 6%;
-	// 		top: -27%;
-	// 	}
-	// 	&:nth-child(4) {
-	// 		left: 42%;
-	// 		top: 8%;
-	// 	}
+.animate-left-right0 {
+	animation: animate-left-right0 4s ease-in-out infinite alternate;
+}
+.animate-left-right1 {
+	animation: animate-left-right1 4s ease-in-out infinite alternate;
+}
+.animate-left-right2 {
+	animation: animate-left-right2 4s ease-in-out infinite alternate;
+}
+.animate-left-right3 {
+	animation: animate-left-right3 4s ease-in-out infinite alternate;
+}
+.animate-left-right4 {
+	animation: animate-left-right4 4s ease-in-out infinite alternate;
+}
+.animate-left-right5 {
+	animation: animate-left-right5 4s ease-in-out infinite alternate;
+}
+.animate-left-right6 {
+	animation: animate-left-right6 4s ease-in-out infinite alternate;
+}
+.animate-left-right7 {
+	animation: animate-left-right7 4s ease-in-out infinite alternate;
+}
 
-	// 	&:nth-child(5) {
-	// 		left: 20%;
-	// 		top: 66%;
-	// 	}
-	// 	&:nth-child(6) {
-	// 		right: 0%;
-	// 		bottom: -24%;
-	// 	}
-	// 	&:nth-child(7) {
-	// 		right: 17%;
-	// 		top: 46%;
-	// 	}
-	// 	&:last-child {
-	// 		left: 37%;
-	// 		bottom: -47%;
-	// 	}
-	// }
-}
-.after\:bg-radial-light:after {
-	background-image: radial-gradient(
-		73% 73% at -12.39% 4.13%,
-		hsla(256, 7%, 97%, 0.09) 0,
-		hsla(256, 7%, 97%, 0) 100%
-	);
-}
-.TechnologyBubble_leftRight0__CP5M9 {
-	animation: TechnologyBubble_leftRightAnimation0__YntKr 20s ease-in-out
-		infinite alternate;
-}
-.TechnologyBubble_leftRight4__CP5M9 {
-	animation: TechnologyBubble_leftRightAnimation4__YntKr 20s ease-in-out
-		infinite alternate;
-}
-@keyframes TechnologyBubble_leftRightAnimation0__YntKr {
+@keyframes animate-left-right0 {
 	0% {
-		transform: translate(35%, 4%);
+		transform: translate(10%, -10%);
+	}
+	100% {
+		transform: translate(100%, 5%);
+	}
+}
+@keyframes animate-left-right1 {
+	0% {
+		transform: translate(-35%, 2%);
+	}
+	100% {
+		transform: translate(100%, 12%);
+	}
+}
+@keyframes animate-left-right2 {
+	0% {
+		transform: translate(-50%, -20%);
+	}
+	100% {
+		transform: translate(20%, 20%);
+	}
+}
+@keyframes animate-left-right3 {
+	0% {
+		transform: translate(35%);
+	}
+	100% {
+		transform: translate(100%, 20%);
+	}
+}
+@keyframes animate-left-right4 {
+	0% {
+		transform: translate(100%, 3%);
 	}
 	100% {
 		transform: translate(75%, 10%);
 	}
 }
-@keyframes TechnologyBubble_leftRightAnimation4__YntKr {
+@keyframes animate-left-right5 {
 	0% {
-		transform: translate(-40%, 8%);
+		transform: translate(-100%, 4%);
 	}
 	100% {
-		transform: translate(80%);
+		transform: translate(-10%, 10%);
 	}
 }
+@keyframes animate-left-right6 {
+	0% {
+		transform: translate(-85%, -10%);
+	}
+	100% {
+		transform: translate(75%, 30%);
+	}
+}
+@keyframes animate-left-right7 {
+	0% {
+		transform: translate(-60%, -20%);
+	}
+	100% {
+		transform: translate(75%, 10%);
+	}
+}
+
 @keyframes translateYAnimation {
 	from {
 		transform: translateY(0%);
@@ -98,72 +125,4 @@
 	to {
 		transform: translateY(-100%);
 	}
-}
-
-.animate-translate {
-	animation: translateYAnimation 20s linear infinite alternate;
-}
-@keyframes moveRight {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(100%);
-	}
-}
-
-@keyframes moveDown {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(100%);
-	}
-}
-
-.animated-container {
-	display: grid;
-	grid-template-columns: repeat(5, 100px); /* 5 элементов в ряд */
-	gap: 20px; /* расстояние между элементами */
-}
-
-.animated-block {
-	width: 100%;
-	height: 100px;
-	background-color: #4a90e2;
-	animation: moveRight 2s linear infinite, moveDown 3s linear infinite; /* разные скорости анимации для разнообразия */
-}
-@keyframes moveRight {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(100%);
-	}
-}
-
-@keyframes moveDown {
-	0% {
-		transform: translateY(-100%);
-	}
-	100% {
-		transform: translateY(100%);
-	}
-}
-
-.animate-translate .animated-bubble:nth-child(1) {
-	animation: moveRight 2s linear infinite;
-}
-
-.animate-translate .animated-bubble:nth-child(2) {
-	animation: moveDown 3s linear infinite;
-}
-
-.animated-bubble {
-	width: 20px;
-	height: 20px;
-	background-color: #ffd700;
-	border: 2px solid #ffd700;
-	border-radius: 50%;
-	margin: 10px;
 }

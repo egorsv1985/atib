@@ -1,5 +1,9 @@
 .services {
-	
+	.slick-list{
+		max-height: 300px !important;
+		height: 300px !important;
+		
+	}
 	&__development {
 		&::before,
 		&::after {

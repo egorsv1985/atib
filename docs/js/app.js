@@ -1,6 +1,24 @@
 
 
 
+$(document).ready(function () {
+	var translateYValue = 0
+	var animateBox = $('.hero__animation')
+	var animationDuration = 10 // Время анимации в миллисекундах (здесь 3 секунды)
+
+	function animateTranslateY() {
+		translateYValue -= 0.01 // Уменьшаем значение translateY на 0.01
+		if (translateYValue <= -100) translateYValue = 0 // Сбрасываем значение, когда достигнут предел
+		animateBox.css(
+			'transform',
+			'translateY(' + translateYValue.toFixed(2) + '%) translateZ(0px)'
+		) // Применяем новое значение translateY
+		setTimeout(animateTranslateY, animationDuration / 100) // Запускаем функцию анимации с интервалом
+	}
+
+	animateTranslateY() // Запускаем анимацию
+})
+
 // // Предотвращение повторной отправки форм
 // form.addEventListener('submit', () => {
 // 	submitButton.disabled = true
@@ -163,7 +181,6 @@ $(document).ready(function () {
 				breakpoint: 1500,
 				settings: {
 					slidesToShow: 4,
-					
 				},
 			},
 			{
@@ -185,6 +202,30 @@ $(document).ready(function () {
 				},
 			},
 		],
+	})
+	$('.services__slider1').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000, // Интервал автопрокрутки в миллисекундах
+		vertical: true, // Вертикальная ориентация
+		verticalSwiping: true, // Возможность вертикального свайпа
+		infinite: true, // Бесконечная прокрутка
+		arrows: false,
+		centerMode: true,
+		centerPadding: '0',
+	})
+	$('.services__slider2').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000, // Интервал автопрокрутки в миллисекундах
+		vertical: true, // Вертикальная ориентация
+		verticalSwiping: true, // Возможность вертикального свайпа
+		infinite: true, // Бесконечная прокрутка
+		arrows: false,
+		centerMode: true,
+		centerPadding: '0',
 	})
 })
 

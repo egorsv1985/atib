@@ -4,8 +4,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['SF UI Text', 'ui-sans-serif', 'system-ui'],
-				display: ['SF UI Display', 'ui-sans-serif', 'system-ui'],
+				sans: ['SF UI Text'],
+				display: ['SF UI Display'],
 			},
 		},
 		boxShadow: {
@@ -13,7 +13,7 @@ export default {
 			inner: '0 4px 10px 0 rgba(255, 255, 255, 0.5)',
 			lg: '0 4px 50px 0 rgba(49, 148, 255, 0.2)',
 		},
-		
+
 		colors: {
 			gray_500: '#0b0b0c',
 			gray_light: '#1e1e1e',
@@ -43,7 +43,7 @@ export default {
 			none: 'none',
 			disc: 'disc',
 			decimal: 'decimal',
-			square: 'square',			
+			square: 'square',
 		},
 		container: {
 			center: true,

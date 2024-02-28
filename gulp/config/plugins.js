@@ -26,6 +26,8 @@ import rename from 'gulp-rename' // Плагин для переименован
 import terser from 'gulp-terser' // Плагин для минификации JavaScript
 import newer from 'gulp-newer' // Плагин для фильтрации новых файлов
 import pug from 'gulp-pug'
+import ttf2woff2 from 'gulp-ttf2woff2'
+import fonter from 'gulp-fonter'
 
 export const plugins = {
 	gulp,
@@ -54,4 +56,6 @@ export const plugins = {
 	terser,
 	newer,
 	pug,
+	fonter,
+	ttf2woff2,
 }

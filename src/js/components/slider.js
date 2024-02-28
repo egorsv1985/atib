@@ -101,7 +101,6 @@ $(document).ready(function () {
 				breakpoint: 1500,
 				settings: {
 					slidesToShow: 4,
-					
 				},
 			},
 			{
@@ -123,5 +122,29 @@ $(document).ready(function () {
 				},
 			},
 		],
+	})
+	$('.services__slider1').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000, // Интервал автопрокрутки в миллисекундах
+		vertical: true, // Вертикальная ориентация
+		verticalSwiping: true, // Возможность вертикального свайпа
+		infinite: true, // Бесконечная прокрутка
+		arrows: false,
+		centerMode: true,
+		centerPadding: '0',
+	})
+	$('.services__slider2').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 2000, // Интервал автопрокрутки в миллисекундах
+		vertical: true, // Вертикальная ориентация
+		verticalSwiping: true, // Возможность вертикального свайпа
+		infinite: true, // Бесконечная прокрутка
+		arrows: false,
+		centerMode: true,
+		centerPadding: '0',
 	})
 })
