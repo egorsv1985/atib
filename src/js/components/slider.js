@@ -124,27 +124,43 @@ $(document).ready(function () {
 		],
 	})
 	$('.services__slider1').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
+		slidesToShow: 2,
+		slidesToScroll: 2,
 		autoplay: true,
-		autoplaySpeed: 2000, // Интервал автопрокрутки в миллисекундах
-		vertical: true, // Вертикальная ориентация
-		verticalSwiping: true, // Возможность вертикального свайпа
-		infinite: true, // Бесконечная прокрутка
+		autoplaySpeed: 0,
+		speed: 500,
+		cssEase: 'linear',
+		vertical: true, // Вертикальная ориентация для первого слайдера
+		verticalSwiping: true,
+		infinite: true,
 		arrows: false,
 		centerMode: true,
 		centerPadding: '0',
+		pauseOnHover: false,
+		verticalReverse: true,
 	})
+
 	$('.services__slider2').slick({
 		slidesToShow: 2,
-		slidesToScroll: 1,
+		slidesToScroll: 2,
 		autoplay: true,
-		autoplaySpeed: 2000, // Интервал автопрокрутки в миллисекундах
-		vertical: true, // Вертикальная ориентация
-		verticalSwiping: true, // Возможность вертикального свайпа
-		infinite: true, // Бесконечная прокрутка
+		autoplaySpeed: 0,
+		speed: 500,
+		cssEase: 'linear',
+		vertical: true, // Вертикальная ориентация для второго слайдера
+		verticalSwiping: false,
+		infinite: true,
 		arrows: false,
 		centerMode: true,
 		centerPadding: '0',
+		pauseOnHover: false, // Прокрутка не останавливается при наведении
 	})
 })
+
+
+
+
+
+
+
+

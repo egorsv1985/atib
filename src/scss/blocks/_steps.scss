@@ -1,0 +1,28 @@
+.steps {
+	&__list {
+		li {
+			&:hover {
+				&::before {
+					background-image: url('@img/icons/square-steps.svg');
+					left: -2%;
+					bottom: -19%;
+					top: 11%;
+					right: -3%;
+				}
+				& ~ li {
+					svg {
+						fill: #f24822;
+					}
+				}
+				svg {
+					fill: #fbbf0d;
+				}
+			}
+			&:hover {
+				svg {
+					fill: #31b970;
+				}
+			}
+		}
+	}
+}
