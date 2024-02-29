@@ -32,7 +32,7 @@
 				</a>
 			</div>
 			<div class="hidden w-1/2 mr-3 md:mr-7 md:w-1/5 sm:block">
-				<button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+				<button id="menuDropdownButton" data-dropdown-toggle="menuDropdown" data-dropdown-trigger="hover"
 					class="gap-2 bg-white rounded-[5rem] px-8 py-4 text-center flex items-center" type="button">
 					<div class="grid grid-flow-row gap-[3px] grid-cols-2 grid-rows-2">
 	<div class="bg-blue_500  w-[5px] rounded-full h-[5px]"></div>
@@ -45,10 +45,8 @@
 						Услуги
 					</span>
 				</button>
-
-
 				<!-- Dropdown menu -->
-				<div id="dropdownHover" class="text-gray_light z-10 py-4 px-10 dropdown-menu hidden  bg-white rounded-[10px]">
+				<div id="menuDropdown" class="text-gray_light z-10 py-4 px-10 dropdown-menu hidden  bg-white rounded-[10px]">
 	<div class="flex items-center gap-2 text-center">
 		<div class="grid grid-flow-row gap-[3px] grid-cols-2 grid-rows-2">
 	<div class="bg-blue_500  w-[5px] rounded-full h-[5px]"></div>
@@ -59,7 +57,7 @@
 
 		<span>Услуги</span>
 	</div>
-	<ul class="py-2 text-sm border-0 " aria-labelledby="dropdownHoverButton">
+	<ul class="py-2 text-sm border-0 " aria-labelledby="menuDropdownButton">
 		<li class="mb-2">
 			
 	<div class="flex items-center gap-2">
@@ -350,12 +348,9 @@
 			<div
 				class="relative col-span-3 lg:col-span-2 pseudo-grid before:absolute before:block  before:top-[10%] before:left-[52%] before:-bottom-[10%] before:right-0">
 				<div class="">
-					<h2
-	class="font-bold text-white font-display text-5xl sm:text-[64px]  leading-tight text-balance "
->
+					<h2 class="font-bold text-white font-display text-5xl sm:text-[64px]  leading-tight text-balance ">
 	Разработка сайтов и сервисов
 </h2>
-
 				</div>
 			</div>
 			<div class="col-span-3 mt-64 lg:col-span-1">
@@ -368,21 +363,15 @@
 		<div class="grid grid-cols-3 gap-7">
 			<div class="col-span-3 lg:col-span-1">
 				<h4 class="text-lg leading-tight text-txt">Проектов</h4>
-				<h2
-	class="font-bold text-white font-display text-5xl sm:text-[64px]  leading-tight text-balance "
->
+				<h2 class="font-bold text-white font-display text-5xl sm:text-[64px]  leading-tight text-balance ">
 	100+
 </h2>
-
 			</div>
 			<div class="col-span-3 lg:col-span-1">
 				<h4 class="text-lg leading-tight text-txt">Проектов</h4>
-				<h2
-	class="font-bold text-white font-display text-5xl sm:text-[64px]  leading-tight text-balance "
->
+				<h2 class="font-bold text-white font-display text-5xl sm:text-[64px]  leading-tight text-balance ">
 	100+
 </h2>
-
 			</div>
 			<div class="col-span-3 lg:col-span-1">
 				<h4 class="mb-4 text-lg leading-tight text-txt">Сомневаешься?</h4>
@@ -423,8 +412,8 @@
 	</div>
 </section>
 			
-			<section class="py-[60px] portfolio">
-	<div class="mb-4">
+			<section class="py-11 portfolio">
+	<div class="mb-5">
 		<div
 	class="px-4 py-1 text-lg font-medium leading-tight text-white border bg-gray_light border-gray_border rounded-[20px] inline-flex "
 >
@@ -434,139 +423,224 @@
 	</div>
 	<div class="w-2/3 mb-5">
 		
-<h2 class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight">
-	Работы, сочетающие	красоту и практичность
+<h2 class="font-bold text-white text-balance font-display text-3xl sm:text-[40px] leading-tight">
+	Работы, сочетающие красоту и практичность
 </h2>
 	</div>
 	<div class="w-2/3 mb-11">
-		<p class="text-xl leading-tight  text-txt text-balance">Наши проекты объединяют в себе эстетику и функциональность для	достижения оптимальных результатов.</p>
+		<p class="text-xl leading-tight  text-txt text-balance">Наши проекты объединяют в себе эстетику и	функциональность для достижения оптимальных результатов.</p>
 
 	</div>	
 	<div class="flex justify-between mb-7">
-		<ul class="flex flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
-			id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-			<li class="" role="presentation">
-				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border relative group overflow-hidden  inline-block border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
-					id="branding-tab" data-tabs-target="#branding" type="button" role="tab" aria-controls="branding"
-					aria-selected="false">
-					<span
-						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 -z-[1] bg-yellow_500 group-hover:h-full opacity-90"></span>
-					<span class="group-hover:text-white">Брендинг</span>
+		<div class="relative">
+			<div class="items-center hidden gap-4 sm:flex">
+				<ul class="flex  flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
+	aria-labelledby="dropdownTabListButton" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+	<li class="" role="presentation">
+		<button
+			class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border relative group overflow-hidden  inline-block border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
+			id="branding-tab" data-tabs-target="#branding" type="button" role="tab" aria-controls="branding"
+			aria-selected="false">
+			<span
+				class="absolute top-0 left-0 flex w-full h-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow_500 group-hover:h-full opacity-90"></span>
+			<span class="relative z-20 group-hover:text-white group-aria-selected:text-white">Брендинг</span>
+		</button>
+	</li>
+	<li class="" role="presentation">
+		<button
+			class="px-4 py-1  text-lg font-medium leading-tight aria-selected:text-white border relative group overflow-hidden text-blue_border  inline-block border-blue_border rounded-[20px] aria-selected:bg-blue_500"
+			id="dashboard-tab" data-tabs-target="#development" type="button" role="tab" aria-controls="development"
+			aria-selected="false">
+			<span
+				class="absolute top-0 left-0 z-10 flex w-full h-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue_500 group-hover:h-full group-aria-selected:h-full opacity-90"></span>
+			<span class="relative z-20 group-hover:text-white group-aria-selected:text-white ">Разработка</span>
+		</button>
+	</li>
+	<li class="" role="presentation">
+		<button
+			class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border relative group overflow-hidden   inline-block border-pink_border rounded-[20px] aria-selected:bg-pink_500"
+			id="promotion-tab" data-tabs-target="#promotion" type="button" role="tab" aria-controls="promotion"
+			aria-selected="false">
+			<span
+				class="absolute top-0 left-0 z-10 flex w-full h-0 transition-all duration-200 ease-out transform translate-y-0 bg-pink_500 group-hover:h-full opacity-90"></span>
+			<span class="relative z-20 group-hover:text-white group-aria-selected:text-white">Реклама</span>
+		</button>
+	</li>
+</ul>
+			</div>
+			<div class="flex sm:hidden">				
+				<!-- Dropdown button -->
+				<button id="dropdownTabListButton" data-dropdown-toggle="dropdown" data-dropdown-on-hide="true"
+					class="px-4 py-1 text-lg font-medium leading-tight text-white  border relative    inline-block border-white rounded-[20px]" type="button">Портфолио
 				</button>
-			</li>
-			<li class="" role="presentation">
-				<button
-					class="px-4 py-1  text-lg font-medium leading-tight aria-selected:text-white border relative group overflow-hidden text-blue_border  inline-block border-blue_border rounded-[20px] aria-selected:bg-blue_500"
-					id="dashboard-tab" data-tabs-target="#development" type="button" role="tab" aria-controls="development"
-					aria-selected="false">
-					<span
-						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 -z-[1] bg-blue_500 group-hover:h-full opacity-90"></span>
-					<span class="group-hover:text-white">Разработка</span>
-				</button>
-			</li>
-			<li class="" role="presentation">
-				<button
-					class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border relative group overflow-hidden   inline-block border-pink_border rounded-[20px] aria-selected:bg-pink_500"
-					id="promotion-tab" data-tabs-target="#promotion" type="button" role="tab" aria-controls="promotion"
-					aria-selected="false">
-					<span
-						class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 -z-[1] bg-pink_500 group-hover:h-full opacity-90"></span>
-					<span class="group-hover:text-white">Реклама</span>
-				</button>
-			</li>
-		</ul>
-		<div class="flex items-center gap-4 slider__controls-btns"></div>
+				<!-- Dropdown menu -->
+				<div id="dropdown" class="z-10 hidden py-2">
+					<ul class="flex  flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
+	aria-labelledby="dropdownTabListButton" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+	<li class="" role="presentation">
+		<button
+			class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border relative group overflow-hidden  inline-block border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
+			id="branding-tab" data-tabs-target="#branding" type="button" role="tab" aria-controls="branding"
+			aria-selected="false">
+			<span
+				class="absolute top-0 left-0 flex w-full h-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow_500 group-hover:h-full opacity-90"></span>
+			<span class="relative z-20 group-hover:text-white group-aria-selected:text-white">Брендинг</span>
+		</button>
+	</li>
+	<li class="" role="presentation">
+		<button
+			class="px-4 py-1  text-lg font-medium leading-tight aria-selected:text-white border relative group overflow-hidden text-blue_border  inline-block border-blue_border rounded-[20px] aria-selected:bg-blue_500"
+			id="dashboard-tab" data-tabs-target="#development" type="button" role="tab" aria-controls="development"
+			aria-selected="false">
+			<span
+				class="absolute top-0 left-0 z-10 flex w-full h-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue_500 group-hover:h-full group-aria-selected:h-full opacity-90"></span>
+			<span class="relative z-20 group-hover:text-white group-aria-selected:text-white ">Разработка</span>
+		</button>
+	</li>
+	<li class="" role="presentation">
+		<button
+			class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border relative group overflow-hidden   inline-block border-pink_border rounded-[20px] aria-selected:bg-pink_500"
+			id="promotion-tab" data-tabs-target="#promotion" type="button" role="tab" aria-controls="promotion"
+			aria-selected="false">
+			<span
+				class="absolute top-0 left-0 z-10 flex w-full h-0 transition-all duration-200 ease-out transform translate-y-0 bg-pink_500 group-hover:h-full opacity-90"></span>
+			<span class="relative z-20 group-hover:text-white group-aria-selected:text-white">Реклама</span>
+		</button>
+	</li>
+</ul>
+				</div>
+			</div>
+		</div>
+		<div class="items-center hidden gap-4 sm:flex slider__controls-btns"></div>
 	</div>
+
 	<div id="default-tab-content">
 		<div class="hidden" id="branding" role="tabpanel" aria-labelledby="branding-tab">
-			<div class="branding__slider slider">
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
+			<div class=" branding__slider slider">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
 						<div class="flex gap-2 px-4 mb-4">
 							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="mb-3 slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir1.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
 							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/phoenix1.png" alt="phoenix" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix1.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
 							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/phoenix1.png" alt="phoenix" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir2.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
 							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix2.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
 							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir1.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
 							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix1.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
+						Название проекта
+					</p>
+					<p class="text-lg leading-tight text-txt">Деятельность</p>
+				</div>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
+							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
+						</div>
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir2.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
+						</div>
+					</div>
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
+						Название проекта
+					</p>
+					<p class="text-lg leading-tight text-txt">Деятельность</p>
+				</div>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
+							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
+						</div>
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix2.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
+						</div>
+					</div>
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
@@ -575,92 +649,130 @@
 		</div>
 		<div class="hidden" id="development" role="tabpanel" aria-labelledby="development-tab">
 			<div class="development__slider slider">
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
 						<div class="flex gap-2 px-4 mb-4">
-							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="mb-3 slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir1.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/phoenix1.png" alt="phoenix" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix1.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/phoenix1.png" alt="phoenix" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir2.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix2.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir1.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix1.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
+						Название проекта
+					</p>
+					<p class="text-lg leading-tight text-txt">Деятельность</p>
+				</div>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
+							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
+						</div>
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir2.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
+						</div>
+					</div>
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
+						Название проекта
+					</p>
+					<p class="text-lg leading-tight text-txt">Деятельность</p>
+				</div>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
+							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
+						</div>
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix2.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
+						</div>
+					</div>
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
@@ -669,92 +781,130 @@
 		</div>
 		<div class="hidden" id="promotion" role="tabpanel" aria-labelledby="promotion-tab">
 			<div class="promotion__slider slider">
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
 						<div class="flex gap-2 px-4 mb-4">
-							<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="mb-3 slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir1.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/phoenix1.png" alt="phoenix" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix1.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/phoenix1.png" alt="phoenix" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir2.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix2.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir1.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
 				</div>
-				<div class="mr-8 slider__item">
-					<div class="pt-3 rounded-[10px] border border-gray_border">
-						<div class="flex gap-2 px-4">
-							<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
 							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
 						</div>
-						<div class="slider__box-img position-relative">
-							<img src="./images/fir1.png" alt="fir" class="slider__img" />
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix1.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
 						</div>
 					</div>
-					<p class="text-xl font-bold leading-tight text-white font-display">
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
+						Название проекта
+					</p>
+					<p class="text-lg leading-tight text-txt">Деятельность</p>
+				</div>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
+							<p class="text-sm leading-tight text-txt">Фирменный стиль</p>
+						</div>
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/fir2.png" alt="fir" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
+						</div>
+					</div>
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
+						Название проекта
+					</p>
+					<p class="text-lg leading-tight text-txt">Деятельность</p>
+				</div>
+				<div class="sm:mr-8 slider__item ">
+					<div class="pt-3 rounded-[10px] border border-gray_border mb-6 bg-gray_light">
+						<div class="flex gap-2 px-4 mb-4">
+							<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
+							<p class="text-sm leading-tight text-txt">SMM-дизайн</p>
+						</div>
+						<div class="slider__box-img position-relative shadow-slider_img rounded-[10px]">
+							<img src="./images/phoenix2.png" alt="phoenix" class="object-contain rounded-[10px] w-full h-auto slider__img"
+								width="540" height="405" />
+						</div>
+					</div>
+					<p class="mb-1 text-xl font-bold leading-tight text-white font-display">
 						Название проекта
 					</p>
 					<p class="text-lg leading-tight text-txt">Деятельность</p>
@@ -941,7 +1091,7 @@
 </section>
 			<div class="mb-7">
 				
-<h2 class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight">
+<h2 class="font-bold text-white text-balance font-display text-3xl sm:text-[40px] leading-tight">
 	Вы получите полноценный сайт с уникальным дизайном для вашей ниши
 </h2>
 			</div>
@@ -959,7 +1109,7 @@
 	<div class="w-2/3 mb-9">
 		<div class="mb-4">
 			
-<h2 class="font-bold text-white font-display text-3xl sm:text-[40px] leading-tight">
+<h2 class="font-bold text-white text-balance font-display text-3xl sm:text-[40px] leading-tight">
 	Если у вас возникли вопросы, то вероятно здесь вы найдете	ответ
 </h2>
 		</div>
