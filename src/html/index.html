@@ -11,16 +11,20 @@
 			<div class="container">
 
 				@@include('sections/_hero.html',{})
-				@@include('sections/_services.html',{})				
-				@@include('sections/_quote.html',{
-				"img-quote": "jobs.png",
-				"alt-quote": "Стив Джобс",
-				"h2-quote": "Дизайн — это не просто то, как что-то выглядит, это то, как это работает.",
-				"author-quote": "Стив Джобс",
-				"description-quote": "Основатель Apple",
-				"text-size":"3xl",
-				"sm-text-size": "[40px]",
-				})
+				@@include('sections/_services.html',{})
+				<section class="relative py-24 quote">
+				
+						@@include('sections/_quote.html',{
+						"img-quote": "jobs.png",
+						"alt-quote": "Стив Джобс",
+						"h2-quote": "Дизайн — это не просто то, как что-то выглядит, это то, как это работает.",
+						"author-quote": "Стив Джобс",
+						"description-quote": "Основатель Apple",
+						"text-size":"3xl",
+						"sm-text-size": "[40px]",
+						})
+					
+				</section>
 				@@include('sections/_portfolio.html',{})
 				@@include('sections/_about.html',{})
 				<!-- @@include('sections/_contacts-form.html',{}) -->
