@@ -1,9 +1,11 @@
-<section class="contacts py-14">
+<section class="py-6 contacts">
 
 	<div class="grid grid-cols-6 gap-7">
 		<div class="flex flex-col col-span-6 pb-6 lg:col-span-3">
-			@@include('../blocks/_title-page.html',{ "title-page":"Контакты" })
-			<div class="mb-11">
+			<div class="mb-4">				
+				@@include('../blocks/_title-page.html',{ "title-page":"Контакты" })
+			</div>
+			<div class="mb-12">
 				@@include('../blocks/_text-section.html', { "text-section": "Для сотрудничества, оставьте заявку на сайте, или свяжитесь с нами любым удобным способом:"})
 			</div>
 			<div class="mb-4 text-xl font-bold leading-tight text-white font-display">
@@ -80,65 +82,7 @@
 			</div>
 		</div>
 		<div class="col-span-6 lg:col-span-3">
-			<div class="grid grid-cols-6 gap-x-9 gap-y-7">
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="mb-2 text-lg font-medium leading-tight text-white">
-							Начать<br />
-							переписку
-						</h3>
-						<p class="leading-tight text-txt">
-							Выбери удобный для себя мессенджер
-						</p>
-						<div class="mt-auto">
-							@@include('../blocks/_messengers.html',{})
-						</div>
-					</div>
-				</div>
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="text-lg font-medium leading-tight text-white">
-							Поговорить по телефону
-						</h3>
-
-						<div class="mt-auto">@@include('../blocks/_phones.html',{})</div>
-					</div>
-				</div>
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="text-lg font-medium leading-tight text-white">
-							Написать на почту
-						</h3>
-
-						<div class="mt-auto">
-							<a href="" class="flex items-center gap-3">
-								<span
-									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500">
-									<img src="@img/icons/mail.svg" alt="mail" />
-								</span>
-								<p class="leading-tight text-txt">info@atib.by</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="text-lg font-medium leading-tight text-white">
-							Заполнить бриф
-						</h3>
-						<form class="flex items-center gap-3 mt-auto">
-							<label for="file" class="flex items-center w-full h-full gap-3 text-txt">
-								<span
-									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500">
-									<img src="@img/icons/download.svg" alt="Заполнить бриф" />
-								</span>
-								<span>Заполнить бриф</span>
-							</label>
-							<input class="hidden" aria-describedby="upload_file" id="file" type="file" />
-						</form>
-					</div>
-				</div>
-			</div>
+			@@include('../blocks/_contacts-item.html',{})
 		</div>
 	</div>
 </section>

@@ -7,9 +7,10 @@
 			
 			@@include('components/_header.html',{})
 
-			<main class="pt-24">
+			<main class="pt-28">
 				@@include('sections/_breadcrumb.html',{})
 				@@include('sections/_contacts-page.html',{})
+				<section class="relative py-14 quote">
 				@@include('sections/_quote.html',{
 				"img-quote": "adams.png",
 				"alt-quote": "Скон Адамс",
@@ -19,6 +20,7 @@
 				"text-size":"3xl",
 				"sm-text-size": "[40px]",
 				})
+				</section>
 			</main>
 			@@include('components/_footer.html',{})
 		</div>

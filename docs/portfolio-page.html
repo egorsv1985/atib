@@ -318,26 +318,15 @@
 
 		<main class="pt-24">
 			<nav class="flex pt-24" aria-label="Breadcrumb">
-	<ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+	<ol class="inline-flex items-center space-x-1 md:space-x-2 ">
 		<li class="inline-flex items-center">
-			<a href="#"
-				class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-				<svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-					viewBox="0 0 20 20">
-					<path
-						d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
-				</svg>
-
+			<a href="/" class="flex items-center justify-center w-10 h-10 border rounded-full bg-gray_light border-gray_border ">
+				<img src="./images/icons/home.svg" alt="home" />
 			</a>
 		</li>
 		<li aria-current="page">
-			<div class="flex items-center">
-				<svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-					fill="none" viewBox="0 0 6 10">
-					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="m1 9 4-4-4-4" />
-				</svg>
-				<span class="text-sm font-medium text-gray-500 ms-1 md:ms-2 dark:text-gray-400">Контакты</span>
+			<div class="relative flex items-center text-white ml-7 after:absolute after:top-1/2 after:w-4 after:h-px after:bg-gray_border after:-left-7">
+				<span class="leading-tight">Контакты</span>
 			</div>
 		</li>
 	</ol>
@@ -843,17 +832,17 @@
 		</div>
 		<div class="col-span-6 lg:col-span-3">
 			<div class="grid grid-cols-6 gap-x-9 gap-y-7">
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="mb-2 text-lg font-medium leading-tight text-white">
-							Начать<br />
-							переписку
-						</h3>
-						<p class="leading-tight text-txt">
-							Выбери удобный для себя мессенджер
-						</p>
-						<div class="mt-auto">
-							<ul class="flex items-center justify-between gap-2 max-w-36">
+	<div class="col-span-6 sm:col-span-3 min-h-72">
+		<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
+			<h3 class="mb-2 text-lg font-medium leading-tight text-white">
+				Начать<br />
+				переписку
+			</h3>
+			<p class="leading-tight text-txt">
+				Выбери удобный для себя мессенджер
+			</p>
+			<div class="mt-auto">
+				<ul class="flex items-center justify-between gap-2 max-w-36">
 	<li>		
 		<a
 			href="#"
@@ -880,17 +869,17 @@
 	</li>
 </ul>
 
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="text-lg font-medium leading-tight text-white">
-							Поговорить по телефону
-						</h3>
 
-						<div class="mt-auto"><div class="flex flex-col gap-3 md:gap-1 ">
+			</div>
+		</div>
+	</div>
+	<div class="col-span-6 sm:col-span-3 min-h-72">
+		<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
+			<h3 class="text-lg font-medium leading-tight text-white">
+				Поговорить по телефону
+			</h3>
+
+			<div class="mt-auto"><div class="flex flex-col gap-3 md:gap-1 ">
 	<a data-hover="+375 (29) 305 47 00" href="tel:+375293054700"
 		class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt"
 		style="background: url(./images/icons/mts.svg) no-repeat left 50% / 13px 15px"> +375 (29) 305 47 00
@@ -900,41 +889,45 @@
 		style="background: url(./images/icons/a1.svg) no-repeat left 50% / 13px 15px"> +375 (33) 305 47 00
 	</a>
 </div></div>
-					</div>
-				</div>
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="text-lg font-medium leading-tight text-white">
-							Написать на почту
-						</h3>
+		</div>
+	</div>
+	<div class="col-span-6 sm:col-span-3 min-h-72">
+		<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
+			<h3 class="text-lg font-medium leading-tight text-white">
+				Написать на почту
+			</h3>
 
-						<div class="mt-auto">
-							<a href="" class="flex items-center gap-3">
-								<span
-									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500"><img
-										src="./images/icons/mail.svg" alt="mail" /></span>
-								<p class="leading-tight text-txt">info@atib.by</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-span-6 sm:col-span-3 min-h-72">
-					<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
-						<h3 class="text-lg font-medium leading-tight text-white">
-							Заполнить бриф
-						</h3>
-						<form class="flex items-center gap-3 mt-auto">
-							<label for="download" class="flex items-center w-full h-full gap-3 text-txt">
-								<span
-									class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500"><img
-										src="./images/icons/download.svg" alt="Заполнить бриф" /></span>
-								<span>Заполнить бриф</span>
-							</label>
-							<input class="hidden" aria-describedby="upload_file" id="download" type="file" />
-						</form>
-					</div>
-				</div>
+			<div class="mt-auto">
+				<a href="" class="flex items-center gap-3">
+					<span
+						class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500"><img
+							src="./images/icons/mail.svg" alt="mail" /></span>
+					<p data-hover="info@atib.by"
+						class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight text-txt">
+						info@atib.by</p>
+				</a>
 			</div>
+		</div>
+	</div>
+	<div class="col-span-6 sm:col-span-3 min-h-72">
+		<div class="border rounded-[10px] border-gray_border h-full flex flex-col py-6 px-7">
+			<h3 class="text-lg font-medium leading-tight text-white">
+				Заполнить бриф
+			</h3>
+			<form class="flex items-center gap-3 mt-auto">
+				<label for="download" class="flex items-center gap-3 cursor-pointer">
+					<span
+						class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500 min-w-10"><img
+							src="./images/icons/download.svg" alt="Заполнить бриф" /></span>
+					<span data-hover="Заполнить бриф"
+						class="relative block before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight w-full h-full text-txt">Заполнить
+						бриф</span>
+				</label>
+				<input class="hidden" aria-describedby="upload_file" id="download" type="file" />
+			</form>
+		</div>
+	</div>
+</div>
 		</div>
 	</div>
 
