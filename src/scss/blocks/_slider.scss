@@ -4,6 +4,7 @@
 	border-radius: 50%;
 	background: url('@img/icons/arrow_slider.svg') no-repeat center;
 	border: 1px solid rgb(50, 50, 50);
+	text-indent: -999999px;
 
 	z-index: 10;
 	&:hover {
@@ -14,4 +15,9 @@
 
 .slick-prev {
 	transform: rotate(180deg);
+}
+.sale {
+	.slick-track {
+		display: flex;
+	}
 }

@@ -1,16 +1,16 @@
-<section class="py-3 contacts-form">
+<section class="py-10 contacts-form">
 	
 		<div
 			class="grid grid-cols-12 bg-gray_light border gap-7 border-gray_border rounded-[10px] py-14 px-9"
 		>
 			<div class="col-span-12 lg:col-span-6">
-				<div class="mb-2 ">
+				<div class="mb-4 ">
 					@@include('../blocks/_h2-section.html', { "h2-section": "Давайте сделаем сильный проект вместе!"})
 				</div>
-				<div class="mb-4">
+				<div class="mb-5">
 					@@include('../blocks/_text-section.html', { "text-section": "Оставьте свой телефон, и аккаунт-менеджер сориентирует по порядку работы	стоимости"})					
 				</div>			
-				<div class="flex flex-wrap justify-between gap-4 mb-6 sm:justify-start">
+				<div class="flex flex-wrap justify-between gap-4 mb-7 sm:justify-start">
 					@@include('../blocks/_messengers.html',{})
 					@@include('../blocks/_phones.html',{})
 				</div>
@@ -51,7 +51,7 @@
 							class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500"
 							><img src="@img/icons/map.svg" alt="г. Минск, БЦ S.Union"
 						/></span>
-						<p class="text-sm font-medium leading-tight text-txt font-display">
+						<p class="text-sm font-medium text-txt font-display">
 							г. Минск,<br />
 							БЦ S.Union
 						</p>
@@ -78,11 +78,11 @@
 							name="tel"
 							id="tel"
 							placeholder="Телефон"
-							class="block w-full p-4 text-base leading-tight border rounded-md bg-gray_light border-gray_border text-txt"
+							class="block w-full p-4 text-base leading-tight border rounded-md form-phone bg-gray_light border-gray_border text-txt"
 							required=""
 						/>
 					</div>
-					<div>
+					<div class="">
 						<label
 							for="work"
 							class="hidden mb-2 text-sm font-medium text-white dark:text-white"
@@ -99,7 +99,7 @@
 						</select>
 					</div>
 
-					<div class="flex items-start">
+					<div class="flex items-start mt-2">
 						<div class="flex items-center h-5">
 							<input
 								id="terms"

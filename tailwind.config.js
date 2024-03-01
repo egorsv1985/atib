@@ -14,8 +14,9 @@ export default {
 		boxShadow: {
 			inset: 'inset 0 4px 10px 0 rgba(255, 255, 255, 0.1)',
 			inner: '0 4px 10px 0 rgba(255, 255, 255, 0.5)',
-			lg: '0 4px 50px 0 rgba(49, 148, 255, 0.2)',
+			lg: '0 4px 50px 0 ',
 			slider_img: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+			
 		},
 		letterSpacing: {
 			wider: '.04em',
