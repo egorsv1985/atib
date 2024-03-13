@@ -1,38 +1,62 @@
 $(document).ready(function () {
-	// Функция для анимации прогресса
-	function animateProgress($progressBar, percentageText, smoothness) {
-		var progress = 0 // Инициализация переменной для отслеживания прогресса
-		var $progressCount = $progressBar.find('.ProgressBar-percentage--count') // Нахождение элемента для отображения прогресса
+	function animateProgress($progress, percentageText, smoothness) {
+		var progress = 0
+		var $progressCount = $progress.find('.progress__percentage--count')
+		var $progressBarContainer = $progress.find('.progress')
+		var $parent = $progress.closest('.progress__border')
 
-		// Функция для обновления прогресса
 		function updateProgress() {
-			progress += 1 // Увеличение значения прогресса
-			$progressCount.text(Math.floor(progress) + '%') // Обновление текста прогресса
-			var rotation = 'rotate(' + progress * 3.6 + 'deg)' // Рассчет угла поворота для анимации прогресса
-			$progressBar
-				.find('.ProgressBar-circle')
-				.css('transform', rotation)
-				.css('opacity', 1) // Установка анимации прогресса
+			progress += 1
+			$progressCount.text(Math.floor(progress) + '%')
+			$progressBarContainer.css(
+				'transform',
+				'rotate(' + progress * 3.6 + 'deg)'
+			)
 
-			// Если прогресс достиг максимального значения
+			var red, green, blue
+			if (progress <= 50) {
+				// Промежуточные значения для изменения цвета от красного к желтому
+				red = Math.round(251 - (progress / 50) * (251 - 255))
+				green = Math.round(98 + (progress / 50) * (202 - 98))
+				blue = 64
+			} else {
+				// Промежуточные значения для изменения цвета от желтого к зеленому
+				red = Math.round(255 - ((progress - 50) / 50) * (255 - 100))
+				green = Math.round(202 + ((progress - 50) / 50) * (168 - 202))
+				blue = Math.round(64 + ((progress - 50) / 50) * (133 - 64))
+			}
+			$parent.css(
+				'background-color',
+				'rgb(' + red + ',' + green + ',' + blue + ')'
+			)
+
+			var borderRed, borderGreen, borderBlue
+			if (progress <= 50) {
+				borderRed = Math.round(255 - (progress / 50) * (255 - 255))
+				borderGreen = Math.round(112 + (progress / 50) * (214 - 112))
+				borderBlue = Math.round(80 + (progress / 50) * (152 - 80))
+			} else {
+				borderRed = Math.round(255 - ((progress - 50) / 50) * (255 - 100))
+				borderGreen = Math.round(214 + ((progress - 50) / 50) * (214 - 214))
+				borderBlue = Math.round(80 + ((progress - 50) / 50) * (152 - 80))
+			}
+			$parent.css(
+				'border-color',
+				'rgb(' + borderRed + ',' + borderGreen + ',' + borderBlue + ')'
+			)
+
 			if (progress >= percentageText) {
-				progress = 0 // Сброс прогресса
-				$progressBar
-					.find('.ProgressBar-circle')
-					.css('transform', 'rotate(0deg)')
-					.css('opacity', 0) // Скрытие анимации прогресса
+				progress = 0
 			}
 		}
 
-		// Запуск анимации с заданной плавностью
 		var animationInterval = setInterval(updateProgress, smoothness)
 	}
 
-	// Для каждого элемента прогресс-бара
-	$('.ProgressBar').each(function () {
-		var $progressBar = $(this) // Получение текущего прогресс-бара
-		var percentageText = parseInt($progressBar.attr('data-progress')) // Получение значения прогресса из атрибута
+	$('.progress').each(function () {
+		var $progressBar = $(this)
+		var percentageText = parseInt($progressBar.attr('data-progress'))
 
-		animateProgress($progressBar, percentageText, 100) // Запуск анимации с плавностью по умолчанию
+		animateProgress($progressBar, percentageText, 100)
 	})
 })
