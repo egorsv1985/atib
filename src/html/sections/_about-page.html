@@ -1,32 +1,21 @@
-<section class="about-page py-14">
+<section class="pb-16 pt-7 about-page">
 	<div class="mb-14">
 		@@include('../blocks/_title-page.html',{ "title-page":"Мы проявляем креативность, разрабатываем дизайн и осуществляем твои желания" })
 	</div>
 	<div class="grid grid-cols-2 gap-7">
-		<div class="col-span-2 lg:col-span-1 ">
-			<div class="relative quote">
-				<div class="pl-24 quote__title">
-					<h2 class="text-xl font-bold leading-tight text-white mb-7 font-display text-balance">
-						Быстро, дешево и хорошо — из этих трех вещей нужно всегда выбирать две. Если быстро и дешево, это никогда не
-						будет
-						хорошо. Если это дешево и хорошо, никогда не получится быстро. А если это хорошо и быстро, никогда не выйдет
-						дешево. Но
-						помни: из трех все равно придется всегда выбирать две
-					</h2>
-					<div class="flex gap-5">
-						<div class="rounded-full">
-							<img src="@img/yaits.png" alt="Том Уэйтс" class="" />
-						</div>
-						<div class="flex flex-col justify-center gap-1">
-							<p class="text-lg font-medium leading-tight text-txt">Том Уэйтс</p>
-							<p class="leading-tight text-txt text-balance">Композитор, актер</p>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="col-span-2 pt-2 lg:col-span-1">
+			@@include('../sections/_quote.html',{
+			"img-quote": "yaits.png",
+			"alt-quote": "Том Уэйтс",
+			"h2-quote": "Быстро, дешево и хорошо — из этих трех вещей нужно всегда выбирать две. Если быстро и дешево, это	никогда не будет хорошо. Если это дешево и хорошо, никогда не получится быстро. А если это хорошо и быстро,	никогда не выйдет дешево. Но помни: из трех все равно придется всегда выбирать две",
+			"author-quote": "Том Уэйтс",
+			"description-quote": "Композитор, актер",
+			"text-size":"xl",
+			"sm-text-size": "xl",
+			})			
 		</div>
 		<div class="col-span-2 lg:col-span-1">
-			<div class="flex flex-col space-y-3 text-lg leading-tight text-txt">
+			<div class="flex flex-col space-y-5 text-lg leading-tight text-txt">
 				<p>Мы предлагаем полный цикл разработки сайта - от создания дизайна до наполнения контентом и продвижения в
 					поисковых
 					системах. Каждый проект мы рассматриваем индивидуально, учитывая особенности бизнеса и потребности клиента.

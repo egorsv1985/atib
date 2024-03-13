@@ -123,6 +123,34 @@ $(document).ready(function () {
 			},
 		],
 	})
+	$('.instrument__slider').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 0,
+		speed: 500,
+		cssEase: 'linear',
+		infinite: true,
+		arrows: false,
+		centerMode: true,
+		centerPadding: '15',
+		pauseOnHover: false,
+		rows: 2,
+		responsive: [			
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 4,
+				},
+			},			
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+				},
+			},
+		],
+	})
 	$('.services__slider1').slick({
 		slidesToShow: 2,
 		slidesToScroll: 2,
