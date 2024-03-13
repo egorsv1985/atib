@@ -223,21 +223,22 @@
 					
 
 					<div
-						class="border progress__border transition duration-500 ease-in-out rounded-full p-2.5 aspect-square flex items-center justify-center">
-						<div class="progress" data-progress="100">
+						class="border relative progress__border transition duration-500 ease-in-out rounded-full p-2.5 aspect-square flex items-center justify-center">
+						<div class="relative progress" data-progress="100">
 							<span
 								class="text-xl font-bold leading-tight text-white font-display progress__percentage progress__percentage--count"></span>
-							<div class="progress__circle"></div>
-							
+							<svg class="progress-ring" width="112" height="112">
+								<circle class="progress-ring__circle" stroke="#fff" stroke-width="10" cx="56" cy="56" r="36" fill="transparent" />
+							</svg>
+														
+							</div>
 						</div>
 					</div>
 
 
 
-				</div>
-			
-			</div>
-		</div>
+				</div>			
+			</div>		
 		<div class="col-span-12 md:col-span-6 lg:col-span-5">
 			<div
 				class="border bg-gray_light hover:cursor-[url(../images/icons/cursor_analyst.svg),_pointer] border-gray_border h-full py-6 px-8  rounded-[10px]">

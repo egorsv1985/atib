@@ -55,6 +55,7 @@ $(document).ready(function () {
 		var progress = 0
 		var $progressCount = $progress.find('.progress__percentage--count')
 		var $progressBarContainer = $progress.find('.progress')
+		var $progressCircle = $progress.find('.progress__circle')
 		var $parent = $progress.closest('.progress__border')
 
 		function updateProgress() {
@@ -67,12 +68,10 @@ $(document).ready(function () {
 
 			var red, green, blue
 			if (progress <= 50) {
-				// Промежуточные значения для изменения цвета от красного к желтому
 				red = Math.round(251 - (progress / 50) * (251 - 255))
 				green = Math.round(98 + (progress / 50) * (202 - 98))
 				blue = 64
 			} else {
-				// Промежуточные значения для изменения цвета от желтого к зеленому
 				red = Math.round(255 - ((progress - 50) / 50) * (255 - 100))
 				green = Math.round(202 + ((progress - 50) / 50) * (168 - 202))
 				blue = Math.round(64 + ((progress - 50) / 50) * (133 - 64))
@@ -97,6 +96,13 @@ $(document).ready(function () {
 				'rgb(' + borderRed + ',' + borderGreen + ',' + borderBlue + ')'
 			)
 
+			var dashOffset = ((100 - progress) / 100) * 314
+			$progressCircle
+				.find('.progress__circle-path')
+				.css('stroke-dashoffset', dashOffset)
+
+			setProgress(progress) // Вызываем функцию setProgress с текущим значением progress
+
 			if (progress >= percentageText) {
 				progress = 0
 			}
@@ -109,8 +115,20 @@ $(document).ready(function () {
 		var $progressBar = $(this)
 		var percentageText = parseInt($progressBar.attr('data-progress'))
 
-		animateProgress($progressBar, percentageText, 100)
+		animateProgress($progressBar, percentageText, 1000)
 	})
+
+	const $circle = $('.progress-ring__circle')
+	const radius = $circle.prop('r').baseVal.value
+	const circumference = 2 * Math.PI * radius
+
+	$circle.css('stroke-dasharray', `${circumference} ${circumference}`)
+	$circle.css('stroke-dashoffset', circumference)
+
+	function setProgress(percent) {
+		const offset = circumference - (percent / 100) * circumference
+		$circle.css('stroke-dashoffset', offset)
+	}
 })
 
 ;(function (factory) {

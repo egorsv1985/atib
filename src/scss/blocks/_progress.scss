@@ -1,1 +1,47 @@
+// .circle {
+//     position: absolute;
+//     width: 112px;
+//     height: 112px;
+//     border-radius: 50%;
+//     border: 10px solid white;
+//     opacity: 0.5;
+// }
+
+// .circle.left {
+//     clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+//     animation: rotate-left 5s infinite linear;
+// }
+
+// .circle.right {
+//     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+//     animation: rotate-right 5s infinite linear;
+// }
+
+// @keyframes rotate-left {
+//     0% { transform: rotate(0deg); }
+//     50% { transform: rotate(180deg); }
+//     100% { transform: rotate(180deg); }
+// }
+
+// @keyframes rotate-right {
+//     0% { transform: rotate(0deg); }
+//     50% { transform: rotate(0deg); }
+//     100% { transform: rotate(180deg); }
+// }
+.progress-ring__circle{
+	stroke-dasharray: 50 10;
+	transform-origin: center;
+	transform: rotate(-90deg);
+	transition:  stroke-dashoffset .3s;
+	
+}
+
+
+
+
+
+
+
+
+
 
