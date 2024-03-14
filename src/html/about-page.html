@@ -12,15 +12,17 @@
 				@@include('sections/_map-page.html',{})
 				@@include('sections/_instrument.html',{})
 				@@include('sections/_team.html',{})
-				@@include('sections/_quote.html',{
-				"img-quote": "jobs.png",
-				"alt-quote": "Артемий Лебедев",
-				"h2-quote": "Мы не обсуждаем дизайн. Мы обсуждаем: решена задача, которая перед нами была поставлена, или не решена",
-				"author-quote": "Артемий Лебедев",
-				"description-quote": "Основатель Apple",
-				"text-size":"3xl",
-				"sm-text-size": "[40px]",
-				})
+				<section class="relative py-20 quote">
+					@@include('sections/_quote.html',{
+					"img-quote": "jobs.png",
+					"alt-quote": "Артемий Лебедев",
+					"h2-quote": "Мы не обсуждаем дизайн. Мы обсуждаем: решена задача, которая перед нами была поставлена, или не решена",
+					"author-quote": "Артемий Лебедев",
+					"description-quote": "Основатель Apple",
+					"text-size":"3xl",
+					"sm-text-size": "[40px]",
+					})
+				</section>
 			</div>
 			@@include('sections/_reviews.html',{})
 			<div class="container">

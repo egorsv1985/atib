@@ -103,8 +103,8 @@ $(document).ready(function () {
 
 			setProgress(progress) // Вызываем функцию setProgress с текущим значением progress
 
-			if (progress >= percentageText) {
-				progress = 0
+			if (progress >= 100) {
+				clearInterval(animationInterval) // Останавливаем интервал анимации после достижения 100%
 			}
 		}
 
@@ -115,7 +115,7 @@ $(document).ready(function () {
 		var $progressBar = $(this)
 		var percentageText = parseInt($progressBar.attr('data-progress'))
 
-		animateProgress($progressBar, percentageText, 200)
+		animateProgress($progressBar, percentageText, 100)
 	})
 
 	const $circle = $('.progress-ring__circle')
@@ -3045,19 +3045,53 @@ $(document).ready(function () {
 
 	// Инициализация слайдеров
 	$(
-		'.page-branding__slider, .page-development__slider, .page-promotion__slider, team__slider'
+		'.page-branding__slider, .page-development__slider, .page-promotion__slider'
 	).slick(settings)
 
 	// Обработчик события изменения размера окна
 	$(window).on('resize', function () {
 		if ($(window).width() > 640) {
 			$(
-				'.page-branding__slider, .page-development__slider, .page-promotion__slider, team__slider'
+				'.page-branding__slider, .page-development__slider, .page-promotion__slider'
 			).slick('unslick')
 			return
 		}
 		$(
-			'.page-branding__slider, .page-development__slider, .page-promotion__slider, team__slider'
+			'.page-branding__slider, .page-development__slider, .page-promotion__slider'
+		)
+			.not('.slick-initialized')
+			.slick(settings)
+	})
+})
+
+$(document).ready(function () {
+	var settings = {
+		infinite: true,
+		speed: 500,
+		autoplay: false,
+		autoplaySpeed: 5000,
+		swipe: true,
+		arrows: false,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	}
+
+	// Инициализация слайдеров
+	$(
+		' .team__slider'
+	).slick(settings)
+
+	// Обработчик события изменения размера окна
+	$(window).on('resize', function () {
+		if ($(window).width() > 768) {
+			$(
+				' .team__slider'
+			).slick('unslick')
+			return
+		}
+		$(
+			' .team__slider'
 		)
 			.not('.slick-initialized')
 			.slick(settings)
@@ -3249,6 +3283,19 @@ $(document).ready(function () {
 		centerPadding: '0',
 		pauseOnHover: false, // Прокрутка не останавливается при наведении
 	})
+	// $('.team__slider').slick({
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 4,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 0,
+	// 	speed: 500,
+	// 	cssEase: 'linear',		
+	// 	infinite: true,
+	// 	arrows: false,
+	// 	centerMode: true,
+	// 	centerPadding: '0',
+	// 	pauseOnHover: false, // Прокрутка не останавливается при наведении
+	// })
 })
 
 

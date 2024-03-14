@@ -183,6 +183,19 @@ $(document).ready(function () {
 		centerPadding: '0',
 		pauseOnHover: false, // Прокрутка не останавливается при наведении
 	})
+	// $('.team__slider').slick({
+	// 	slidesToShow: 4,
+	// 	slidesToScroll: 4,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 0,
+	// 	speed: 500,
+	// 	cssEase: 'linear',		
+	// 	infinite: true,
+	// 	arrows: false,
+	// 	centerMode: true,
+	// 	centerPadding: '0',
+	// 	pauseOnHover: false, // Прокрутка не останавливается при наведении
+	// })
 })
 
 

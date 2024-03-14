@@ -5,7 +5,7 @@ $(document).ready(function () {
 		autoplay: false,
 		autoplaySpeed: 5000,
 		swipe: true,
-		arrows: true,
+		arrows: false,
 		cssEase: 'linear',
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -13,19 +13,19 @@ $(document).ready(function () {
 
 	// Инициализация слайдеров
 	$(
-		'.page-branding__slider, .page-development__slider, .page-promotion__slider'
+		' .team__slider'
 	).slick(settings)
 
 	// Обработчик события изменения размера окна
 	$(window).on('resize', function () {
-		if ($(window).width() > 640) {
+		if ($(window).width() > 768) {
 			$(
-				'.page-branding__slider, .page-development__slider, .page-promotion__slider'
+				' .team__slider'
 			).slick('unslick')
 			return
 		}
 		$(
-			'.page-branding__slider, .page-development__slider, .page-promotion__slider'
+			' .team__slider'
 		)
 			.not('.slick-initialized')
 			.slick(settings)

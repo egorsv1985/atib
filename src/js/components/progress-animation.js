@@ -51,8 +51,8 @@ $(document).ready(function () {
 
 			setProgress(progress) // Вызываем функцию setProgress с текущим значением progress
 
-			if (progress >= percentageText) {
-				progress = 0
+			if (progress >= 100) {
+				clearInterval(animationInterval) // Останавливаем интервал анимации после достижения 100%
 			}
 		}
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
 		var $progressBar = $(this)
 		var percentageText = parseInt($progressBar.attr('data-progress'))
 
-		animateProgress($progressBar, percentageText, 200)
+		animateProgress($progressBar, percentageText, 100)
 	})
 
 	const $circle = $('.progress-ring__circle')
