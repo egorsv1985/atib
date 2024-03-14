@@ -51,7 +51,7 @@
 		"gulp-webp": "latest",
 		"gulp-webp-css": "latest",
 		"gulp-webp-html": "latest",
-		"gulp-webp-html-nosvg": "latest",
+		"gulp-webp-html-nosvg": "^1.1.1",
 		"gulp-zip": "latest",
 		"postcss": "latest",
 		"postcss-animation": "latest",

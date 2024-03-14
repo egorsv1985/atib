@@ -14,7 +14,7 @@ import sassGlob from 'gulp-sass-glob' // Плагин для использов�
 import postcss from 'gulp-postcss' // Плагин для постобработки CSS
 import imagemin from 'gulp-imagemin' // Плагин для оптимизации изображений
 import webp from 'gulp-webp' // Плагин для создания изображений в формате WebP
-import webpHTML from 'gulp-webp-html' // Плагин для вставки тегов WebP в HTML
+import webpHTML from 'gulp-webp-html-nosvg' // Плагин для вставки тегов WebP в HTML
 import concat from 'gulp-concat' // Плагин для объединения файлов
 import browserSync from 'browser-sync' // Плагин для запуска локального сервера
 import filter from 'gulp-filter' // Плагин для фильтрации файлов
