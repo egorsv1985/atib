@@ -3188,10 +3188,11 @@ $(document).ready(function () {
 	$('.reviews__slider').slick({
 		infinite: true,
 		speed: 500,
-		autoplay: false,
-		autoplaySpeed: 100,
+		autoplay: true,
+		autoplaySpeed: 0,
 		swipe: true,
 		arrows: true,
+		pauseOnHover: false,
 		cssEase: 'linear',
 		slidesToShow: 5,
 		slidesToScroll: 1,
