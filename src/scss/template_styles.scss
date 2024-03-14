@@ -7,6 +7,9 @@
 @import './libs/**.*scss';
 @import './pages/**.*scss';
 @import './sections/**.*scss';
-.container{
+.container {
 	padding-inline: 8px;
 }
+// *, *::after, *::before {
+// 	border: 1px solid red;
+// }

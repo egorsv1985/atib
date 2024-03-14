@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 	var translateYValue = 0
 	var animateBox = $('.hero__animation')
