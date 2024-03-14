@@ -3255,6 +3255,34 @@ $(document).ready(function () {
 			},
 		],
 	})
+	$('.result__slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 0,
+		speed: 500,
+		cssEase: 'linear',
+		infinite: true,
+		arrows: false,
+		centerMode: true,
+		centerPadding: '20',
+		pauseOnHover: false,
+		rows: 2,
+		responsive: [			
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
+				},
+			},			
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
+	})
 	$('.services__slider1').slick({
 		slidesToShow: 2,
 		slidesToScroll: 2,
