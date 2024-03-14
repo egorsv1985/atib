@@ -1686,9 +1686,6 @@ input[type="range"]::-ms-fill-lower {
 .p-2 {
   padding: 0.5rem;
 }
-.p-2\.5 {
-  padding: 0.625rem;
-}
 .p-3 {
   padding: 0.75rem;
 }
@@ -1703,6 +1700,9 @@ input[type="range"]::-ms-fill-lower {
 }
 .p-\[30px\] {
   padding: 30px;
+}
+.p-2\.5 {
+  padding: 0.625rem;
 }
 .px-10 {
   padding-left: 2.5rem;
@@ -2680,6 +2680,12 @@ input[type="range"]::-ms-fill-lower {
   padding-left: 1.25rem;
 }
 
+.before\:text-white::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .before\:text-blue_500::before {
   content: var(--tw-content);
   --tw-text-opacity: 1;
@@ -2708,12 +2714,6 @@ input[type="range"]::-ms-fill-lower {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(242 72 34 / var(--tw-text-opacity));
-}
-
-.before\:text-white::before {
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .before\:text-yellow_500::before {

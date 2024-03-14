@@ -115,7 +115,7 @@ $(document).ready(function () {
 		var $progressBar = $(this)
 		var percentageText = parseInt($progressBar.attr('data-progress'))
 
-		animateProgress($progressBar, percentageText, 1000)
+		animateProgress($progressBar, percentageText, 200)
 	})
 
 	const $circle = $('.progress-ring__circle')
