@@ -11,7 +11,12 @@
 	<div class="flex justify-between mb-7">
 		<div class="relative">
 			<div class="items-center hidden gap-4 sm:flex">
-				@@include('../blocks/_tab-list.html', {})
+				<ul class="flex  flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
+					aria-labelledby="dropdownTabListButton" id="portfolio-tab" data-tabs-toggle="#portfolio-tab-content" role="tablist">
+					@@include('../blocks/_tab-item.html', { "tab": "branding","color": "yellow", "title" :"Брендинг" })
+					@@include('../blocks/_tab-item.html', { "tab": "development","color": "blue", "title" :"Разработка" })
+					@@include('../blocks/_tab-item.html', { "tab": "promotion","color": "pink", "title" :"Реклама" })
+				</ul>
 			</div>
 			<div class="flex sm:hidden">				
 				<!-- Dropdown button -->
@@ -20,14 +25,19 @@
 				</button>
 				<!-- Dropdown menu -->
 				<div id="dropdown" class="z-10 hidden py-2">
-					@@include('../blocks/_tab-list.html', {})
+					<ul class="flex  flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
+						aria-labelledby="dropdownTabListButton" data-tabs-toggle="#portfolio-tab-content" role="tablist">
+						@@include('../blocks/_tab-item.html', { "tab": "branding","color": "yellow", "title" :"Брендинг" })
+						@@include('../blocks/_tab-item.html', { "tab": "development","color": "blue", "title" :"Разработка" })
+						@@include('../blocks/_tab-item.html', { "tab": "promotion","color": "pink", "title" :"Реклама" })
+					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="items-center hidden gap-4 sm:flex slider__controls-btns"></div>
 	</div>
 
-	<div id="default-tab-content">
+	<div id="portfolio-tab-content">
 		<div class="hidden" id="branding" role="tabpanel" aria-labelledby="branding-tab">
 			<div class="-mx-4 branding__slider slider">
 				@@include('../blocks/_portfolio-item.html',

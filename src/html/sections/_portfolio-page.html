@@ -4,34 +4,35 @@
 		@@include('../blocks/_title-page.html', { "title-page": "Мы создаем бренды, разрабатываем и развиваем"})
 		@@include('../blocks/_span-page.html', { "span-page": "digital-проекты"})
 	</div>
-	<ul
-		class="flex max-w-fit flex-col sm:flex-row mb-7 p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
-		id="portfolio-page-tab" data-tabs-toggle="#portfolio-page-tab-content" role="tablist">
-		<li class="" role="presentation">
-			<button
-				class="px-4 py-1 text-lg font-medium leading-tight text-yellow_border aria-selected:text-white border hover:bg-yellow_500 active::bg-yellow_500 border-yellow_border rounded-[20px] aria-selected:bg-yellow_500"
-				id="page-branding-tab" data-tabs-target="#page-branding" type="button" role="tab" aria-controls="page-branding"
-				aria-selected="false">
-				Брендинг
+	<div class="relative">
+		<div class="items-center hidden gap-4 sm:flex">
+			<ul class="flex  flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
+				aria-labelledby="dropdownTabListButton" id="portfolio-tab" data-tabs-toggle="#portfolio-page-tab-content"
+				role="tablist">
+				@@include('../blocks/_tab-item.html', { "tab": "page-branding","color": "yellow", "title" :"Брендинг" })
+				@@include('../blocks/_tab-item.html', { "tab": "page-development","color": "blue", "title" :"Разработка" })
+				@@include('../blocks/_tab-item.html', { "tab": "page-promotion","color": "pink", "title" :"Реклама" })
+			</ul>
+		</div>
+		<div class="flex sm:hidden">
+			<!-- Dropdown button -->
+			<button id="dropdownTabListButton" data-dropdown-toggle="dropdown" data-dropdown-on-hide="true"
+				class="px-4 py-1 text-lg font-medium leading-tight text-white  border relative    inline-block border-white rounded-[20px]"
+				type="button">Портфолио
 			</button>
-		</li>
-		<li class="" role="presentation">
-			<button
-				class="px-4 py-1 text-lg font-medium leading-tight text-blue_border aria-selected:text-white border hover:bg-blue_500 active::bg-blue_500 border-blue_border rounded-[20px] aria-selected:bg-blue_500"
-				id="page-development-tab" data-tabs-target="#page-development" type="button" role="tab"
-				aria-controls="page-development" aria-selected="false">
-				Разработка
-			</button>
-		</li>
-		<li class="" role="presentation">
-			<button
-				class="px-4 py-1 text-lg font-medium leading-tight text-pink_border aria-selected:text-white border hover:bg-pink_500 active::bg-pink_500 border-pink_border rounded-[20px] aria-selected:bg-pink_500"
-				id="page-promotion-tab" data-tabs-target="#page-promotion" type="button" role="tab"
-				aria-controls="page-promotion" aria-selected="false">
-				Реклама
-			</button>
-		</li>
-	</ul>
+			<!-- Dropdown menu -->
+			<div id="dropdown" class="z-10 hidden py-2">
+				<ul
+					class="flex  flex-col sm:flex-row -mb-px p-4 gap-2 text-center bg-gray_light border-gray_border rounded-[40px]"
+					aria-labelledby="dropdownTabListButton" data-tabs-toggle="#portfolio-page-tab-content" role="tablist">
+				@@include('../blocks/_tab-item.html', { "tab": "page-branding","color": "yellow", "title" :"Брендинг" })
+				@@include('../blocks/_tab-item.html', { "tab": "page-development","color": "blue", "title" :"Разработка" })
+				@@include('../blocks/_tab-item.html', { "tab": "page-promotion","color": "pink", "title" :"Реклама" })
+				</ul>
+			</div>
+		</div>
+	</div>
+	
 	<div id="portfolio-page-tab-content" class="mb-24">
 		<div class="hidden" id="page-branding" role="tabpanel" aria-labelledby="page-branding-tab">
 			<div class="sm:grid sm:grid-cols-2 gap-x-7 gap-y-9 page-branding__slider slider">
@@ -215,9 +216,13 @@
 		</div>
 	</div>
 	<div class="justify-center hidden sm:flex ">
-		<button type="button" id=""
-			class="font-medium px-8 py-4 rounded-[80px] border justify-center items-center gap-2.5 inline-flex text-center text-white text-base font-display border-blue_border bg-blue_500 text-nowrap hover:border-white/50 leading-tight max-w-48">
-			Увидеть больше
-		</button>
+		<a href="#"
+			class="rounded-[80px]  justify-center items-center gap-2.5 text-center text-white text-base font-display  bg-blue_500 text-nowrap hover:border-white/50 leading-tight max-w-48 relative  inline-block px-8 py-4 overflow-hidden font-medium transition-all border shadow border-blue_border  hover:bg-white group">
+			<span
+				class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+			<span
+				class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-blue_500">Увидеть
+				больше</span>
+		</a>
 	</div>
 </section>
