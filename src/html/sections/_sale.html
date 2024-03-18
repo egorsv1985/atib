@@ -2,11 +2,11 @@
 	<div class="mb-4">
 		@@include('../blocks/_title-section.html', { "title-section": "Выгодно!", "color": "red" })
 	</div>
-	<div class="w-2/3 mb-5">
+	<div class="w-full mb-5 md:w-2/3">
 		@@include('../blocks/_h2-section.html', { "h2-section": "Специальные предложения для экономии вашего бюджета" })
 	</div>
-	<div class="flex justify-between mb-10">
-		<div class="w-2/3">
+	<div class="flex flex-col justify-between gap-2 mb-10 md:flex-row">
+		<div class="w-full md:w-2/3">
 			@@include('../blocks/_text-section.html', { "text-section": "Наши проекты объединяют в себе эстетику и функциональность для достижения оптимальных результатов." })
 		</div>
 		<div class="flex items-center gap-4 sale-slider__controls-btns"></div>

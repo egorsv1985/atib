@@ -87,7 +87,7 @@ $(document).ready(function () {
 	})
 	$('.reviews__slider').slick({
 		infinite: true,
-		speed: 500,
+		speed: 2000,
 		autoplay: true,
 		autoplaySpeed: 0,
 		swipe: true,
@@ -129,7 +129,7 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 0,
-		speed: 500,
+		speed: 2000,
 		cssEase: 'linear',
 		infinite: true,
 		arrows: false,
@@ -137,13 +137,13 @@ $(document).ready(function () {
 		centerPadding: '15',
 		pauseOnHover: false,
 		rows: 2,
-		responsive: [			
+		responsive: [
 			{
 				breakpoint: 1100,
 				settings: {
 					slidesToShow: 4,
 				},
-			},			
+			},
 			{
 				breakpoint: 768,
 				settings: {
@@ -157,7 +157,7 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 0,
-		speed: 500,
+		speed: 2000,
 		cssEase: 'linear',
 		infinite: true,
 		arrows: false,
@@ -165,13 +165,13 @@ $(document).ready(function () {
 		centerPadding: '20',
 		pauseOnHover: false,
 		rows: 2,
-		responsive: [			
+		responsive: [
 			{
 				breakpoint: 1100,
 				settings: {
 					slidesToShow: 2,
 				},
-			},			
+			},
 			{
 				breakpoint: 768,
 				settings: {
@@ -185,7 +185,7 @@ $(document).ready(function () {
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 0,
-		speed: 500,
+		speed: 2000,
 		cssEase: 'linear',
 		vertical: true, // Вертикальная ориентация для первого слайдера
 		verticalSwiping: true,
@@ -202,7 +202,7 @@ $(document).ready(function () {
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 0,
-		speed: 500,
+		speed: 2000,
 		cssEase: 'linear',
 		vertical: true, // Вертикальная ориентация для второго слайдера
 		verticalSwiping: false,
@@ -212,25 +212,4 @@ $(document).ready(function () {
 		centerPadding: '0',
 		pauseOnHover: false, // Прокрутка не останавливается при наведении
 	})
-	// $('.team__slider').slick({
-	// 	slidesToShow: 4,
-	// 	slidesToScroll: 4,
-	// 	autoplay: true,
-	// 	autoplaySpeed: 0,
-	// 	speed: 500,
-	// 	cssEase: 'linear',		
-	// 	infinite: true,
-	// 	arrows: false,
-	// 	centerMode: true,
-	// 	centerPadding: '0',
-	// 	pauseOnHover: false, // Прокрутка не останавливается при наведении
-	// })
 })
-
-
-
-
-
-
-
-

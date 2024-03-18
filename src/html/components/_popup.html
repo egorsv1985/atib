@@ -1,6 +1,6 @@
 <!-- Main modal -->
 <div id="callback-modal" tabindex="-1" aria-hidden="true"
-  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-[9999999] justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
   <div class="relative w-full max-w-4xl max-h-full p-4">
     <!-- Modal content -->
     <div class="relative bg-gray_light rounded-[10px] py-10 px-24">
@@ -34,7 +34,7 @@
             <div>
               <label for="name" class="hidden">Фамилия и имя*</label>
               <input type="text" name="name" id="name"
-                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-green_500 bg-gray_light border-gray_border text-txt"
+                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt"
                 placeholder="Фамилия и имя*" required="" />
             </div>
           </div>
@@ -42,7 +42,7 @@
             <div>
               <label for="mail" class="hidden">Почта*</label>
               <input type="mail" name="mail" id="mail" placeholder="Почта*"
-                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-green_500 bg-gray_light border-gray_border text-txt"
+                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt"
                 required="" />
             </div>
           </div>
@@ -50,7 +50,7 @@
             <div>
               <label for="company" class="hidden">Компания</label>
               <input type="text" name="company" id="company"
-                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-green_500 bg-gray_light border-gray_border text-txt"
+                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt"
                 placeholder="Компания" required="" />
             </div>
           </div>
@@ -58,7 +58,7 @@
             <div>
               <label for="tel" class="hidden">Телефон</label>
               <input type="tel" name="tel" id="tel" placeholder="Телефон"
-                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-green_500 form-phone bg-gray_light border-gray_border text-txt"
+                class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none form-phone bg-gray_light border-gray_border text-txt"
                 required="" />
             </div>
           </div>
@@ -69,7 +69,7 @@
         <div class="mb-8">
           <label for="services" class="hidden mb-2 text-sm font-medium text-white dark:text-white">Вид услуги</label>
           <select id="services"
-            class="block w-full p-4 text-base leading-tight border rounded-md focus:border-green_500 bg-gray_light border-gray_border text-txt">
+            class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt">
             <option value="Вид услуги" selected="">Вид услуги</option>
             <option value="Дизайн лендинга">Дизайн лендинга</option>
             <option value="Сайт на Тильда">Сайт на Тильда</option>
@@ -85,7 +85,7 @@
         <div class="mb-3">
           <label for="message" class="hidden">Описание</label>
           <input type="textarea" name="message" id="message" placeholder="Описание"
-            class="block w-full p-4 text-base leading-tight border rounded-md focus:border-green_500 bg-gray_light border-gray_border text-txt"
+            class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt"
             required="" />
         </div>
         <div class="mb-6">

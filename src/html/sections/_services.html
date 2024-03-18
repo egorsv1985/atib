@@ -5,7 +5,7 @@
 	<div class="mb-6">
 		@@include('../blocks/_h2-section.html', { "h2-section": "Направления работы" })
 	</div>
-	<div class="w-2/3 mb-16">
+	<div class="w-full mb-16 md:w-2/3">
 		@@include('../blocks/_text-section.html', { "text-section": "Стоимость каждого проекта рассчитывается индивидуально, в зависимости от объёмов, сложности и сроков." })
 	</div>
 	<div class="grid grid-cols-3 gap-7">
@@ -47,7 +47,7 @@
 							</div>
 							<div class="col-span-2 md:col-span-1">
 								<div
-									class="flex gap-4 border justify-between items-center border-gray_border rounded-[10px] shadow-inset p-[30px] -mt-5 mb-[30px]">
+									class="flex gap-4 border justify-between items-center border-gray_border rounded-[10px] shadow-inset p-[30px] -mt-5 lg:mb-[30px] mb-3">
 									<div
 										class="w-[30px] h-[30px] border border-purple_border shadow-inner shadow-purple_light/50 rounded-full bg-purple_light">
 									</div>
@@ -67,7 +67,7 @@
 										class="w-[30px] h-[30px] border border-red_border shadow-inner shadow-red_light/50 rounded-full bg-red_light">
 									</div>
 								</div>
-								<div class="flex max-[400px]:flex-col flex-row justify-between gap-2">
+								<div class="flex max-[400px]:flex-col flex-row justify-between lg:gap-2 gap-3">
 									<div
 										class="flex gap-1 flex-col border items-center border-gray_border rounded-[10px] shadow-inset py-4 px-7">
 										<img src="@img/icons/company_name.svg" alt="Company name" class="" />
