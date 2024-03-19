@@ -34,8 +34,25 @@ $config = [
                     'value' => '',
                     'size' => 60
                 ],
+                'wa_link' => [
+                    'label' => 'WatsApp',
+                    'type' => 'text',
+                    'value' => '',
+                    'size' => 60
+                ],
+                'tg_link' => [
+                    'label' => 'telegram',
+                    'type' => 'text',
+                    'value' => '',
+                    'size' => 60
+                ],
+                'vb_link' => [
+                    'label' => 'viber',
+                    'type' => 'text',
+                    'value' => '',
+                    'size' => 60
+                ],
             ]
         ]
     ],
-
 ];

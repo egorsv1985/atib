@@ -47,7 +47,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
 	</div>
 
 	<div class="wrapper">
-		<header class="fixed py-4 header z-[9999] left-0 right-0 top-0 before:absolute before:inset-0 before:bg-gray_500 before:transition-opacity before:duration-500 before:ease-out backdrop-blur-lg before:opacity-80 before:-z-10">
+		<header class=" py-4 header z-[9999] left-0 right-0 top-0 before:absolute before:inset-0 before:bg-gray_500 before:transition-opacity before:duration-500 before:ease-out backdrop-blur-lg before:opacity-80 before:-z-10">
 			<div class="container px-2">
 				<div class="z-40 flex items-center justify-between pb-3 border-b border-b-gray_border">
 					<div class="w-1/3 mr-3 sm:w-1/4 lg:w-1/6 max-[400px]:w-1/2">
@@ -82,57 +82,24 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
 
 								<span>Услуги</span>
 							</div>
-							<ul class="py-2 text-sm border-0 " aria-labelledby="menuDropdownButton">
-								<li class="mb-2">
-
-									<div class="flex items-center gap-2">
-										<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
-										<a href="services-page.html" data-hover="Брендинг" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-yellow_border hover:text-yellow_500  before:transition-[width] before:duration-500 hover:before:w-full">Брендинг</a>
-									</div>
-
-								</li>
-								<li class="mb-2">
-
-									<div class="flex items-center gap-2">
-										<span class="w-4 h-4 rounded-full border-green_border bg-green_500"></span>
-										<a href="services-page.html" data-hover="Полиграфия" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-green_border hover:text-green_500  before:transition-[width] before:duration-500 hover:before:w-full">Полиграфия</a>
-									</div>
-
-								</li>
-								<li class="mb-2">
-
-									<div class="flex items-center gap-2">
-										<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
-										<a href="services-page.html" data-hover="Разработка" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-blue_border hover:text-blue_500  before:transition-[width] before:duration-500 hover:before:w-full">Разработка</a>
-									</div>
-
-								</li>
-								<li class="mb-2">
-
-									<div class="flex items-center gap-2">
-										<span class="w-4 h-4 rounded-full border-purple_border bg-purple_500"></span>
-										<a href="services-page.html" data-hover="Мобильная разработка" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-purple_border hover:text-purple_500  before:transition-[width] before:duration-500 hover:before:w-full">Мобильная
-											разработка</a>
-									</div>
-
-								</li>
-								<li class="mb-2">
-
-									<div class="flex items-center gap-2">
-										<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
-										<a href="services-page.html" data-hover="Реклама" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-pink_border hover:text-pink_500  before:transition-[width] before:duration-500 hover:before:w-full">Реклама</a>
-									</div>
-
-								</li>
-								<li class="mb-2">
-
-									<div class="flex items-center gap-2">
-										<span class="w-4 h-4 rounded-full border-red_border bg-red_500"></span>
-										<a href="services-page.html" data-hover="Motion-дизайн" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-red_border hover:text-red_500  before:transition-[width] before:duration-500 hover:before:w-full">Motion-дизайн</a>
-									</div>
-
-								</li>
-							</ul>
+							<? $APPLICATION->IncludeComponent(
+								"bitrix:menu",
+								"services-menu",
+								array(
+									"COMPONENT_TEMPLATE" => "services-menu",
+									"ROOT_MENU_TYPE" => "top",
+									"MENU_CACHE_TYPE" => "A",
+									"MENU_CACHE_TIME" => "3600",
+									"MENU_CACHE_USE_GROUPS" => "Y",
+									"MENU_CACHE_GET_VARS" => array(),
+									"MAX_LEVEL" => "2",
+									"CHILD_MENU_TYPE" => "left",
+									"USE_EXT" => "Y",
+									"DELAY" => "N",
+									"ALLOW_MULTI_SELECT" => "N"
+								),
+								false
+							); ?>
 						</div>
 					</div>
 					<div class="lg:w-[12.6%] md:w-1/6 sm:w-1/5 w-1/3 md:mr-7 mr-3 max-[400px]:hidden">
@@ -168,8 +135,6 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
 							<span class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-gray_500">Работать
 								с нами</span>
 						</button>
-
-
 					</div>
 					<div class="w-1/4 md:w-1/12">
 						<button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center justify-end w-full gap-3 p-2 ml-1 font-medium text-white rounded-lg font-display focus:outline-none " aria-controls="mobile-menu-2" aria-expanded="true">
@@ -178,96 +143,55 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
 								<div class="bg-red_500 w-[5px] h-[5px]"></div>
 								<div class="bg-yellow_500 w-[5px] h-[5px]"></div>
 							</div>
-
 							<span class="">Меню</span>
 						</button>
-
 					</div>
 				</div>
 				<nav class="hidden w-full " id="mobile-menu-2">
 					<div class="grid grid-cols-10 gap-3 py-4 md:gap-7">
 						<div class="col-span-10 md:col-span-2">
-							<ul class="flex flex-col gap-2 text-xl font-bold leading-tight text-white md:gap-4 font-display">
-								<li>
-									<a href="about-page.html" class="relative inline-block transition-colors duration-300 group text-txt hover:text-blue-500">
-										<span class="relative z-10 text-nowrap">
-											О студии
-										</span>
-										<span class="absolute bottom-0 left-0 w-full h-px transition-transform duration-300 origin-left transform scale-x-0 bg-white group-hover:scale-x-100"></span>
-									</a>
-								</li>
-								<li>
-									<a href="portfolio-page.html" class="relative inline-block transition-colors duration-300 group text-txt hover:text-blue-500">
-										<span class="relative z-10 text-nowrap">
-											Портфолио
-										</span>
-										<span class="absolute bottom-0 left-0 w-full h-px transition-transform duration-300 origin-left transform scale-x-0 bg-white group-hover:scale-x-100"></span>
-									</a>
-								</li>
-								<li>
-									<a href="contacts.html" class="relative inline-block transition-colors duration-300 group text-txt hover:text-blue-500">
-										<span class="relative z-10 text-nowrap">
-											Контакты
-										</span>
-										<span class="absolute bottom-0 left-0 w-full h-px transition-transform duration-300 origin-left transform scale-x-0 bg-white group-hover:scale-x-100"></span>
-									</a>
-								</li>
-							</ul>
+							<? $APPLICATION->IncludeComponent(
+								"bitrix:menu",
+								"main-menu",
+								array(
+									"COMPONENT_TEMPLATE" => "main-menu",
+									"ROOT_MENU_TYPE" => "left",
+									"MENU_CACHE_TYPE" => "A",
+									"MENU_CACHE_TIME" => "3600",
+									"MENU_CACHE_USE_GROUPS" => "Y",
+									"MENU_CACHE_GET_VARS" => array(),
+									"MAX_LEVEL" => "2",
+									"CHILD_MENU_TYPE" => "left",
+									"USE_EXT" => "Y",
+									"DELAY" => "N",
+									"ALLOW_MULTI_SELECT" => "N"
+								),
+								false
+							); ?>
+
 						</div>
 						<div class="col-span-10 col-start-1 md:col-span-12 md:col-start-6">
 							<div class="flex flex-col gap-5">
 								<span class="text-xl font-bold leading-tight text-white font-display">Услуги</span>
-								<ul class="grid grid-flow-row grid-cols-1 grid-rows-3 text-lg leading-tight md:grid-cols-2 text-txt">
-									<li class="mb-2">
+								<? $APPLICATION->IncludeComponent(
+									"bitrix:menu",
+									"secondary-menu",
+									array(
+										"COMPONENT_TEMPLATE" => "secondary-menu",
+										"ROOT_MENU_TYPE" => "right",
+										"MENU_CACHE_TYPE" => "A",
+										"MENU_CACHE_TIME" => "3600",
+										"MENU_CACHE_USE_GROUPS" => "Y",
+										"MENU_CACHE_GET_VARS" => array(),
+										"MAX_LEVEL" => "2",
+										"CHILD_MENU_TYPE" => "left",
+										"USE_EXT" => "Y",
+										"DELAY" => "N",
+										"ALLOW_MULTI_SELECT" => "N"
+									),
+									false
+								); ?>
 
-										<div class="flex items-center gap-2">
-											<span class="w-4 h-4 rounded-full border-yellow_border bg-yellow_500"></span>
-											<a href="services-page.html" data-hover="Брендинг" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-yellow_border hover:text-yellow_500  before:transition-[width] before:duration-500 hover:before:w-full">Брендинг</a>
-										</div>
-
-									</li>
-									<li class="mb-2">
-
-										<div class="flex items-center gap-2">
-											<span class="w-4 h-4 rounded-full border-green_border bg-green_500"></span>
-											<a href="services-page.html" data-hover="Полиграфия" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-green_border hover:text-green_500  before:transition-[width] before:duration-500 hover:before:w-full">Полиграфия</a>
-										</div>
-
-									</li>
-									<li class="mb-2">
-
-										<div class="flex items-center gap-2">
-											<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
-											<a href="services-page.html" data-hover="Разработка" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-blue_border hover:text-blue_500  before:transition-[width] before:duration-500 hover:before:w-full">Разработка</a>
-										</div>
-
-									</li>
-									<li class="mb-2">
-
-										<div class="flex items-center gap-2">
-											<span class="w-4 h-4 rounded-full border-purple_border bg-purple_500"></span>
-											<a href="services-page.html" data-hover="Мобильная разработка" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-purple_border hover:text-purple_500  before:transition-[width] before:duration-500 hover:before:w-full">Мобильная
-												разработка</a>
-										</div>
-
-									</li>
-									<li class="mb-2">
-
-										<div class="flex items-center gap-2">
-											<span class="w-4 h-4 rounded-full border-pink_border bg-pink_500"></span>
-											<a href="services-page.html" data-hover="Реклама" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-pink_border hover:text-pink_500  before:transition-[width] before:duration-500 hover:before:w-full">Реклама</a>
-										</div>
-
-									</li>
-									<li class="mb-2">
-
-										<div class="flex items-center gap-2">
-											<span class="w-4 h-4 rounded-full border-red_border bg-red_500"></span>
-											<a href="services-page.html" data-hover="Motion-дизайн" class="relative  before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-red_border hover:text-red_500  before:transition-[width] before:duration-500 hover:before:w-full">Motion-дизайн</a>
-										</div>
-
-									</li>
-								</ul>
 							</div>
 						</div>
 						<div class="block col-span-10 md:col-span-12 md:hidden">
