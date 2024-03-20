@@ -2656,6 +2656,9 @@ input[type="range"]::-ms-fill-lower {
   max-height: 300px !important;
   height: 300px !important;
 }
+.services .slick-track{
+  height: auto !important;
+}
 .services__development::before, .services__development::after {
   content: "";
   display: block;

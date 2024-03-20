@@ -22,13 +22,13 @@ $config = [
                     'value' => '',
                     'size' => 60
                 ],
-                'main_h1' => [
+                'hero_h1' => [
                     'label' => 'Заголовок',
                     'type' => 'text',
                     'value' => '',
                     'size' => 60
                 ],
-                'main_description' => [
+                'hero_description' => [
                     'label' => 'Подзаголовок',
                     'type' => 'text',
                     'value' => '',

@@ -4,6 +4,9 @@
 		height: 300px !important;
 		
 	}
+	.slick-track{
+		height: auto !important;
+	}
 	&__development {
 		&::before,
 		&::after {

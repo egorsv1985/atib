@@ -23,6 +23,8 @@ $asset->addCss(SITE_TEMPLATE_PATH . '/libs/slick/slick.min.css');
 // $asset->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
 
 $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
+if (CModule::IncludeModule("victory.options")) {
+}
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +81,6 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
 									<div class="bg-red_500  w-[5px] rounded-full h-[5px]"></div>
 									<div class="bg-yellow_500  w-[5px] rounded-full h-[5px]"></div>
 								</div>
-
 								<span>Услуги</span>
 							</div>
 							<? $APPLICATION->IncludeComponent(
@@ -103,29 +104,48 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
 						</div>
 					</div>
 					<div class="lg:w-[12.6%] md:w-1/6 sm:w-1/5 w-1/3 md:mr-7 mr-3 max-[400px]:hidden">
-						<ul class="flex items-center justify-between gap-2 max-w-36">
-							<li>
-								<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
-									<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/telegramm.svg" width="20" height="20" alt="telegramm" />
-								</a>
-							</li>
-							<li>
-								<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
-									<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/whatsapp.svg" width="20" height="20" alt="whatsapp" />
-								</a>
-							</li>
-							<li>
-								<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
-									<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/viber.svg" width="20" height="20" alt="viber" />
-								</a>
-							</li>
-						</ul>
+						<?
+						$tg_link = \Victory\Options\CVictoryOptions::getOptionValue('tg_link_' . SITE_ID);
+						$wa_link = \Victory\Options\CVictoryOptions::getOptionValue('wa_link_' . SITE_ID);
+						$vb_link = \Victory\Options\CVictoryOptions::getOptionValue('vb_link_' . SITE_ID);
+						if ($tg_link || $wa_link || $vb_link) :
+
+						?>
+							<ul class="flex items-center justify-between gap-2 max-w-36">
+								<? if ($tg_link) : ?>
+									<li class="social__item">
+										<a href="<?= $tg_link ?>" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/telegramm.svg" width="20" height="20" alt="telegramm" />
+										</a>
+									</li>
+								<? endif; ?>
+								<? if ($wa_link) : ?>
+									<li class=" social__item">
+										<a href="<?= $wa_link ?>" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/whatsapp.svg" width="20" height="20" alt="whatsapp" />
+										</a>
+									</li>
+								<? endif; ?>
+								<? if ($vb_link) : ?>
+									<li class="social__item">
+										<a href="<?= $vb_link ?>" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/viber.svg" width="20" height="20" alt="viber" />
+										</a>
+									</li>
+								<? endif; ?>
+							</ul>
+						<? endif; ?>
+
 					</div>
 					<div class="hidden w-1/4 mr-7 lg:w-1/6 lg:block">
 						<div class="flex flex-col gap-3 md:gap-1 ">
-							<a data-hover="+375 (29) 305 47 00" href="tel:+375293054700" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> +375 (29) 305 47 00
+							<?
+							$phone1 = \Victory\Options\CVictoryOptions::getOptionValue('phone1_' . SITE_ID);
+							$phone2 = \Victory\Options\CVictoryOptions::getOptionValue('phone2_' . SITE_ID);
+							?>
+							<a data-hover="<?= $phone1 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone1); ?>" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> <?= $phone1 ?>
 							</a>
-							<a data-hover="+375 (33) 305 47 00" href="tel:+375333054700" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/a1.svg) no-repeat left 50% / 13px 20px"> +375 (33) 305 47 00
+							<a data-hover="<?= $phone2 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone2); ?>" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> <?= $phone2 ?>
 							</a>
 						</div>
 					</div>
@@ -196,53 +216,65 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/scripts.js');
 						</div>
 						<div class="block col-span-10 md:col-span-12 md:hidden">
 							<div class="flex flex-col gap-3 md:gap-1 ">
-								<a data-hover="+375 (29) 305 47 00" href="tel:+375293054700" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> +375 (29) 305 47 00
+								<?
+								$phone1 = \Victory\Options\CVictoryOptions::getOptionValue('phone1_' . SITE_ID);
+								$phone2 = \Victory\Options\CVictoryOptions::getOptionValue('phone2_' . SITE_ID);
+								print_r($phone1);
+								?>
+								<a data-hover="<?= $phone1 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone1); ?>" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> <?= $phone1 ?>
 								</a>
-								<a data-hover="+375 (33) 305 47 00" href="tel:+375333054700" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/a1.svg) no-repeat left 50% / 13px 20px"> +375 (33) 305 47 00
+								<a data-hover="<?= $phone2 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone2); ?>" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> <?= $phone2 ?>
 								</a>
 							</div>
 						</div>
 						<div class="block col-span-10 md:col-span-12 md:hidden">
-							<ul class="flex items-center justify-between gap-2 max-w-36">
-								<li>
-									<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/telegramm.svg" alt="telegramm" />
-									</a>
-								</li>
-								<li>
-									<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/whatsapp.svg" alt="whatsapp" />
-									</a>
-								</li>
-								<li>
-									<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/viber.svg" alt="viber" />
-									</a>
-								</li>
-							</ul>
+							<?
+							$tg_link = \Victory\Options\CVictoryOptions::getOptionValue('tg_link_' . SITE_ID);
+							$wa_link = \Victory\Options\CVictoryOptions::getOptionValue('wa_link_' . SITE_ID);
+							$vb_link = \Victory\Options\CVictoryOptions::getOptionValue('vb_link_' . SITE_ID);
+							if ($tg_link || $wa_link || $vb_link) :
+							?>
+								<ul class="flex items-center justify-between gap-2 max-w-36">
+									<? if ($tg_link) : ?>
+										<li class="social__item">
+											<a href="<?= $tg_link ?>" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/telegramm.svg" width="20" height="20" alt="telegramm" />
+											</a>
+										</li>
+									<? endif; ?>
+									<? if ($wa_link) : ?>
+										<li class=" social__item">
+											<a href="<?= $wa_link ?>" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/whatsapp.svg" width="20" height="20" alt="whatsapp" />
+											</a>
+										</li>
+									<? endif; ?>
+									<? if ($vb_link) : ?>
+										<li class="social__item">
+											<a href="<?= $vb_link ?>" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+												<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/viber.svg" width="20" height="20" alt="viber" />
+											</a>
+										</li>
+									<? endif; ?>
+								</ul>
+							<? endif; ?>
 						</div>
 					</div>
 				</nav>
-
-
-
 			</div>
 		</header>
 		<main>
 			<div class="container">
-
 				<section class="hero cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_you.svg),_pointer]">
 					<div class="grid grid-cols-2 ">
 						<div class="col-span-2 md:col-span-1">
 							<div class="flex flex-col hero__box py-[30%] md:py-[27vh] relative pseudo-grid before:absolute before:block   before:top-[21%] before:left-[14%] before:bottom-[12%] before:-right-[24%]">
-								<h1 class="lg:text-[64px]  text-5xl font-bold text-white font-display leading-tight mb-2"> Дизайн-студия
+								<h1 class="lg:text-[64px]  text-5xl font-bold text-white font-display leading-tight mb-2"> <?= \Victory\Options\CVictoryOptions::getOptionValue('hero_h1_' . SITE_ID); ?>
 								</h1>
 								<div class="relative mb-7 hero__box-logo">
 									<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/corner_logo.svg" alt="atib" class="" width="518" height="187" />
 								</div>
-								<h2 class="mb-12 text-2xl leading-tight tracking-wider text-txt text-balance"> Создаем дизайн, который
-									вдохновляет </h2>
-
+								<h2 class="mb-12 text-2xl leading-tight tracking-wider text-txt text-balance"><?= \Victory\Options\CVictoryOptions::getOptionValue('hero_description_' . SITE_ID); ?></h2>
 								<button data-modal-target="callback-modal" data-modal-toggle="callback-modal" class="rounded-[80px]  justify-center items-center gap-2.5 text-center text-white text-base font-display  bg-blue_500 text-nowrap hover:border-white/50 leading-tight max-w-48 relative  inline-block px-8 py-4 overflow-hidden font-medium transition-all border shadow border-blue_border  hover:bg-white group" type="button">
 									<span class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
 									<span class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-blue_500">Связаться
