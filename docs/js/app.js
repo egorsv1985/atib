@@ -3314,7 +3314,7 @@ $(document).ready(function () {
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 0,
-		speed: 2000,
+		speed: 5000,
 		cssEase: 'linear',
 		vertical: true, // Вертикальная ориентация для первого слайдера
 		verticalSwiping: true,
@@ -3331,7 +3331,7 @@ $(document).ready(function () {
 		slidesToScroll: 2,
 		autoplay: true,
 		autoplaySpeed: 0,
-		speed: 2000,
+		speed: 5000,
 		cssEase: 'linear',
 		vertical: true, // Вертикальная ориентация для второго слайдера
 		verticalSwiping: false,

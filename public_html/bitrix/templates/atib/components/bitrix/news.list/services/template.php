@@ -18,6 +18,11 @@ foreach ($arResult["ITEMS"] as $arItem) : ?>
 	<ul class="pl-5 text-lg font-medium leading-tight list-square">
 		<li class="mb-2 text-<?= $arItem["PROPERTIES"]["COLOR"]["VALUE"] ?>_500">
 			<span class="leading-tight text-txt"><?= $arItem["NAME"] ?></span>
+			<? if ($arItem["PREVIEW_TEXT"]) : ?>
+				<div class="flex gap-2 text-base font-normal leading-tight">
+					<?= $arItem["PREVIEW_TEXT"] ?>
+				</div>
+			<? endif; ?>
 		</li>
 	</ul>
 <? endforeach; ?>

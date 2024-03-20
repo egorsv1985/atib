@@ -52,6 +52,30 @@ $config = [
                     'value' => '',
                     'size' => 60
                 ],
+                'be_link' => [
+                    'label' => 'Behance ',
+                    'type' => 'text',
+                    'value' => '',
+                    'size' => 60
+                ],
+                'dr_link' => [
+                    'label' => 'dribbble ',
+                    'type' => 'text',
+                    'value' => '',
+                    'size' => 60
+                ],
+                'insta_link' => [
+                    'label' => 'instagram',
+                    'type' => 'text',
+                    'value' => '',
+                    'size' => 60
+                ],
+                'in_link' => [
+                    'label' => 'Linkedin',
+                    'type' => 'text',
+                    'value' => '',
+                    'size' => 60
+                ],
             ]
         ]
     ],
