@@ -466,32 +466,32 @@ $APPLICATION->SetTitle("Главная");
 			<div class="flex flex-wrap mb-5 -space-x-2.5 gap-y-3">
 				<div class="rounded-full border bg-gray_500 border-blue_500 p-1 w-[85px] h-[85px] about__box-img relative">
 					<picture>
-						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team1.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team1.png" alt="team" class="rounded-full" />
+						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team1.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team1.png" alt="team" class="rounded-full" width="85" height="85" />
 					</picture>
 				</div>
 				<div class="rounded-full border bg-gray_500  border-purple_500 p-1 w-[85px] h-[85px] about__box-img relative">
 					<picture>
-						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team2.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team2.png" alt="team" class="rounded-full" />
+						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team2.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team2.png" alt="team" class="rounded-full" width="85" height="85" />
 					</picture>
 				</div>
 				<div class="rounded-full border bg-gray_500  border-yellow_500 p-1 w-[85px] h-[85px] about__box-img relative">
 					<picture>
-						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team3.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team3.png" alt="team" class="rounded-full" />
+						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team3.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team3.png" alt="team" class="rounded-full" width="85" height="85" />
 					</picture>
 				</div>
 				<div class="rounded-full border bg-gray_500  border-green_500 p-1 w-[85px] h-[85px] about__box-img relative">
 					<picture>
-						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team4.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team4.png" alt="team" class="rounded-full" />
+						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team4.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team4.png" alt="team" class="rounded-full" width="85" height="85" />
 					</picture>
 				</div>
 				<div class="rounded-full border bg-gray_500  border-red_500 p-1 w-[85px] h-[85px] about__box-img relative">
 					<picture>
-						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team5.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team5.png" alt="team" class="rounded-full" />
+						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team5.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team5.png" alt="team" class="rounded-full" width="85" height="85" />
 					</picture>
 				</div>
 				<div class="rounded-full border bg-gray_500  border-pink_500 p-1 w-[85px] h-[85px] about__box-img relative">
 					<picture>
-						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team6.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team6.png" alt="team" class="rounded-full" />
+						<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team6.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team6.png" alt="team" class="rounded-full" width="85" height="85" />
 					</picture>
 				</div>
 			</div>
@@ -746,12 +746,12 @@ $APPLICATION->SetTitle("Главная");
 				<div class="flex">
 					<div class="rounded-full border bg-gray_500 border-blue_500 p-1 w-[65px] h-[65px] about__box-img relative">
 						<picture>
-							<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team1.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team1.png" alt="team" class="rounded-full" />
+							<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team1.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team1.png" alt="team" class="rounded-full" width="85" height="85" />
 						</picture>
 					</div>
 					<div class="rounded-full border bg-gray_500 -ml-2 border-purple_500 p-1 w-[65px] h-[65px] about__box-img relative">
 						<picture>
-							<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team7.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team7.png" alt="team" class="rounded-full" />
+							<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/team7.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/team7.png" alt="team" class="rounded-full" width="85" height="85" />
 						</picture>
 					</div>
 				</div>
@@ -770,7 +770,7 @@ $APPLICATION->SetTitle("Главная");
 					</li>
 				</ul>
 				<a href="" class="flex gap-3">
-					<span class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_light"><img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/map.svg" alt="г. Минск, БЦ S.Union" /></span>
+					<span class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_light"><img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/map.svg" alt="адрес офиса г. Минск, БЦ S.Union" /></span>
 					<p class="text-sm font-medium text-txt font-display">
 						г. Минск,<br />
 						БЦ S.Union
@@ -1120,7 +1120,7 @@ $APPLICATION->SetTitle("Главная");
 					<div class="col-span-6 md:col-span-3 lg:col-span-2">
 						<a href="" class="flex gap-3">
 							<span class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500">
-								<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/map.svg" alt="г. Минск, БЦ S.Union" />
+								<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/map.svg" alt="адрес офиса г. Минск, БЦ S.Union" />
 							</span>
 							<p class="text-sm font-medium leading-tight text-txt font-display">
 								г. Минск,<br />
@@ -1221,7 +1221,7 @@ $APPLICATION->SetTitle("Главная");
 								?>
 								<a href="mailto:<?= $email ?>" class="flex items-center gap-3">
 									<span class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_500">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/mail.svg" alt="<?= $email ?>" />
+										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/mail.svg" alt="почта для связи" />
 									</span>
 									<p data-hover="<?= $email ?>" class="relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight text-txt">
 										<?= $email ?></p>

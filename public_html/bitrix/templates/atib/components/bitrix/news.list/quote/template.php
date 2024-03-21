@@ -33,7 +33,7 @@ $this->setFrameMode(true);
 			<div class="flex gap-5">
 				<div class="rounded-full">
 					<picture>
-						<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["NAME"] ?>" title="<?= $arItem["NAME"] ?>" class="" />
+						<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="<?= $arItem["NAME"] ?>" title="<?= $arItem["NAME"] ?>" class="" width="65" height="65" />
 					</picture>
 				</div>
 				<div class="flex flex-col justify-center gap-1">

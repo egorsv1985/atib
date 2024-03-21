@@ -25,7 +25,7 @@ $this->setFrameMode(true);
 			?>
 					<div class="rounded-[10px]">
 						<picture>
-							<source srcset="<?= $IMAGE["WEBP"] ?>" type="image/webp"><img src="<?= $IMAGE["PNG"] ?>" alt="<?= $arItem['NAME']; ?>" title="<?= $arItem['NAME']; ?>">
+							<source srcset="<?= $IMAGE["WEBP"] ?>" type="image/webp"><img src="<?= $IMAGE["PNG"] ?>" alt="<?= $arItem['NAME']; ?>" title="<?= $arItem['NAME']; ?>" width="160" height="160" >
 						</picture>
 					</div>
 				<? endforeach; ?>
@@ -43,7 +43,7 @@ $this->setFrameMode(true);
 			?>
 					<div class="rounded-[10px]">
 						<picture>
-							<source srcset="<?= $IMAGE["WEBP"] ?>" type="image/webp"><img src="<?= $IMAGE["PNG"] ?>" alt="<?= $arItem['NAME']; ?>" title="<?= $arItem['NAME']; ?>">
+							<source srcset="<?= $IMAGE["WEBP"] ?>" type="image/webp"><img src="<?= $IMAGE["PNG"] ?>" alt="<?= $arItem['NAME']; ?>" title="<?= $arItem['NAME']; ?>" width="145" height="145" >
 						</picture>
 					</div>
 				<? endforeach; ?>

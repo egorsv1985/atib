@@ -25,7 +25,7 @@ $this->setFrameMode(true);
 	?>
 		<div class="flex items-center justify-center min-h-[100px]">
 			<picture>
-				<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="" class="grayscale" />
+				<source srcset="<?= $arItem["PREVIEW_PICTURE"]["WEBP"] ?>" type="image/webp"><img src="<?= $arItem["PREVIEW_PICTURE"]["PNG"] ?>" alt="" class="grayscale" width="160" height="100" />
 			</picture>
 		</div>
 	<? endforeach; ?>

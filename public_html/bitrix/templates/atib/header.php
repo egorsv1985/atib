@@ -6,8 +6,10 @@ use \Bitrix\Main\Page\Asset;
 
 $asset = Asset::getInstance();
 
-$asset->addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
+// $asset->addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
 // $asset->addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js');
+
+$asset->addJs(SITE_TEMPLATE_PATH . '/libs/jquery/jquery-3.7.1.min.js');
 
 $asset->addJs(SITE_TEMPLATE_PATH . '/libs/Inputmask-5.x/dist/jquery.inputmask.min.js');
 $asset->addJs(SITE_TEMPLATE_PATH . '/libs/inputmask-multi-master/js/jquery.inputmask-multi.min.js');
@@ -35,7 +37,7 @@ if (CModule::IncludeModule("victory.options")) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<!-- <? $APPLICATION->ShowHead(); ?> -->
+	<? $APPLICATION->ShowHead(); ?>
 	<title><? $APPLICATION->ShowTitle(); ?></title>
 	<link rel="apple-touch-icon" sizes="180x180" href="<?= SITE_TEMPLATE_PATH ?>/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?= SITE_TEMPLATE_PATH ?>/favicon/favicon-32x32.png">

@@ -195,7 +195,7 @@ if ($arResult["MESSAGE"] <> '') : ?>
 					?>
 						<div>
 							<label for="PROPERTY[<?= $propertyID ?>][<?= $i ?>]" class="hidden"><? if (intval($propertyID) > 0) : ?><?= $arResult["PROPERTY_LIST_FULL"][$propertyID]["NAME"] ?><? else : ?><?= !empty($arParams["CUSTOM_TITLE_" . $propertyID]) ? $arParams["CUSTOM_TITLE_" . $propertyID] : GetMessage("IBLOCK_FIELD_" . $propertyID) ?><? endif ?></label>
-							<input autocomplete="off" <?= (in_array($propertyID, $arResult["PROPERTY_REQUIRED"]) ? 'required="required" ' : '') ?>class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt <?= ($propertyID == 11) ? ' form-phone' : ''; ?>" type="text" placeholder="<?= $PLACEHOLDER; ?>" name="PROPERTY[<?= $propertyID ?>][<?= $i ?>]" size="<?= $arResult["PROPERTY_LIST_FULL"][$propertyID]["COL_COUNT"]; ?>" value="<?= $value ?>">
+							<input  <?= (in_array($propertyID, $arResult["PROPERTY_REQUIRED"]) ? 'required="required" ' : '') ?>class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt <?= ($propertyID == 11) ? ' form-phone' : ''; ?>" type="text" placeholder="<?= $PLACEHOLDER; ?>" name="PROPERTY[<?= $propertyID ?>][<?= $i ?>]" size="<?= $arResult["PROPERTY_LIST_FULL"][$propertyID]["COL_COUNT"]; ?>" value="<?= $value ?>">
 
 						</div>
 						<?
