@@ -2,6 +2,9 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 
+if (!defined("TYPE_PAGE"))
+	define('TYPE_PAGE', 'TEXT');
+
 use \Bitrix\Main\Page\Asset;
 
 $asset = Asset::getInstance();
@@ -264,25 +267,22 @@ if (CModule::IncludeModule("victory.options")) {
 				</nav>
 			</div>
 		</header>
-		<? if (TYPE_PAGE == 'TEXT') : ?>
-			<main class="pt-28">
-				<nav class="flex pt-24" aria-label="Breadcrumb">
-					<ol class="inline-flex items-center space-x-1 md:space-x-2 ">
-						<li class="inline-flex items-center">
-							<a href="/" class="flex items-center justify-center w-10 h-10 border rounded-full bg-gray_light border-gray_border ">
-								<img src="./images/icons/home.svg" alt="home" />
-							</a>
-						</li>
-						<li aria-current="page">
-							<div class="relative flex items-center text-white ml-7 after:absolute after:top-1/2 after:w-4 after:h-px after:bg-gray_border after:-left-7">
-								<span class="leading-tight">Контакты</span>
-							</div>
-						</li>
-					</ol>
-				</nav>
-			<? endif; ?>
-			<main>
-				<div class="container">
+		<main class="<?= TYPE_PAGE == 'TEXT' ? 'pt-28' : '' ?>">
+			<div class="container">
+				<? if (TYPE_PAGE == 'TEXT') : ?>
+
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:breadcrumb",
+						"",
+						array(
+							"PATH" => "",
+							"SITE_ID" => SITE_ID,
+							"START_FROM" => "0"
+						)
+					); ?>
+				<? endif; ?>
+
+				<? if (TYPE_PAGE == 'MAIN') : ?>
 					<section class="hero cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_you.svg),_pointer]">
 						<div class="grid grid-cols-2 ">
 							<div class="col-span-2 md:col-span-1">
@@ -358,3 +358,4 @@ if (CModule::IncludeModule("victory.options")) {
 							</div>
 						</div>
 					</section>
+				<? endif; ?>
