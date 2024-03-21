@@ -264,80 +264,97 @@ if (CModule::IncludeModule("victory.options")) {
 				</nav>
 			</div>
 		</header>
-		<main>
-			<div class="container">
-				<section class="hero cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_you.svg),_pointer]">
-					<div class="grid grid-cols-2 ">
-						<div class="col-span-2 md:col-span-1">
-							<div class="flex flex-col hero__box py-[30%] md:py-[27vh] relative pseudo-grid before:absolute before:block   before:top-[21%] before:left-[14%] before:bottom-[12%] before:-right-[24%]">
-								<h1 class="lg:text-[64px]  text-5xl font-bold text-white font-display leading-tight mb-2"> <?= \Victory\Options\CVictoryOptions::getOptionValue('hero_h1_' . SITE_ID); ?>
-								</h1>
-								<div class="relative mb-7 hero__box-logo">
-									<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/corner_logo.svg" alt="atib" class="" width="518" height="187" />
-								</div>
-								<h2 class="mb-12 text-2xl leading-tight tracking-wider text-txt text-balance"><?= \Victory\Options\CVictoryOptions::getOptionValue('hero_description_' . SITE_ID); ?></h2>
-								<button data-modal-target="callback-modal" data-modal-toggle="callback-modal" class="rounded-[80px]  justify-center items-center gap-2.5 text-center text-white text-base font-display  bg-blue_500 text-nowrap hover:border-white/50 leading-tight max-w-48 relative  inline-block px-8 py-4 overflow-hidden font-medium transition-all border shadow border-blue_border  hover:bg-white group" type="button">
-									<span class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-									<span class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-blue_500">Связаться
-										с нами</span>
-								</button>
+		<? if (TYPE_PAGE == 'TEXT') : ?>
+			<main class="pt-28">
+				<nav class="flex pt-24" aria-label="Breadcrumb">
+					<ol class="inline-flex items-center space-x-1 md:space-x-2 ">
+						<li class="inline-flex items-center">
+							<a href="/" class="flex items-center justify-center w-10 h-10 border rounded-full bg-gray_light border-gray_border ">
+								<img src="./images/icons/home.svg" alt="home" />
+							</a>
+						</li>
+						<li aria-current="page">
+							<div class="relative flex items-center text-white ml-7 after:absolute after:top-1/2 after:w-4 after:h-px after:bg-gray_border after:-left-7">
+								<span class="leading-tight">Контакты</span>
 							</div>
-						</div>
-						<div class="relative col-span-2 md:col-span-1 aspect-square before:h-[30%] after:h-[30%] md:before:h-[27vh] md:after:h-[27vh] before:-top-px after:-bottom-px hero__gradient  md:aspect-[5/8]">
-							<div class="relative flex flex-col h-full overflow-hidden ">
-								<div class="z-10 relative  hero__animation flex min-w-full flex-[0_0_auto] items-center flex-col  animate-translate">
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right0 -left-48">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Photoshop.svg" alt="Adobe Photoshop" class="" width="50" height="50" />
+						</li>
+					</ol>
+				</nav>
+			<? endif; ?>
+			<main>
+				<div class="container">
+					<section class="hero cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_you.svg),_pointer]">
+						<div class="grid grid-cols-2 ">
+							<div class="col-span-2 md:col-span-1">
+								<div class="flex flex-col hero__box py-[30%] md:py-[27vh] relative pseudo-grid before:absolute before:block   before:top-[21%] before:left-[14%] before:bottom-[12%] before:-right-[24%]">
+									<h1 class="lg:text-[64px]  text-5xl font-bold text-white font-display leading-tight mb-2"> <?= \Victory\Options\CVictoryOptions::getOptionValue('hero_h1_' . SITE_ID); ?>
+									</h1>
+									<div class="relative mb-7 hero__box-logo">
+										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/corner_logo.svg" alt="atib" class="" width="518" height="187" />
 									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right1">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/tilda.svg" alt="tilda" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right2 -right-44">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Microsoft_Office.svg" alt="Microsoft Office" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right3 left-7">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/bitrix.svg" alt="bitrix" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right4 -left-24">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Illustrator.svg" alt="Adobe Illustrator" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right5 -right-52">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/MODX.svg" alt="MODX" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right6 left-28">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/figma.svg" alt="Figma" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right7 -left-3">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Wordpress.svg" alt="Wordpress" class="" width="50" height="50" />
-									</div>
-								</div>
-								<div class="z-10 relative hero__animation flex min-w-full flex-[0_0_auto] items-center flex-col  animate-translate">
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right0 -left-48">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Photoshop.svg" alt="Adobe Photoshop" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right1">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/tilda.svg" alt="tilda" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right2 -right-44">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Microsoft_Office.svg" alt="Microsoft Office" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right3 left-7">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/bitrix.svg" alt="bitrix" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right4 -left-24">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Illustrator.svg" alt="Adobe Illustrator" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right5 -right-52">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/MODX.svg" alt="MODX" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right6 left-28">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/figma.svg" alt="Figma" class="" width="50" height="50" />
-									</div>
-									<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right7 -left-3">
-										<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Wordpress.svg" alt="Wordpress" class="" width="50" height="50" />
-									</div>
+									<h2 class="mb-12 text-2xl leading-tight tracking-wider text-txt text-balance"><?= \Victory\Options\CVictoryOptions::getOptionValue('hero_description_' . SITE_ID); ?></h2>
+									<button data-modal-target="callback-modal" data-modal-toggle="callback-modal" class="rounded-[80px]  justify-center items-center gap-2.5 text-center text-white text-base font-display  bg-blue_500 text-nowrap hover:border-white/50 leading-tight max-w-48 relative  inline-block px-8 py-4 overflow-hidden font-medium transition-all border shadow border-blue_border  hover:bg-white group" type="button">
+										<span class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+										<span class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-blue_500">Связаться
+											с нами</span>
+									</button>
 								</div>
 							</div>
+							<div class="relative col-span-2 md:col-span-1 aspect-square before:h-[30%] after:h-[30%] md:before:h-[27vh] md:after:h-[27vh] before:-top-px after:-bottom-px hero__gradient  md:aspect-[5/8]">
+								<div class="relative flex flex-col h-full overflow-hidden ">
+									<div class="z-10 relative  hero__animation flex min-w-full flex-[0_0_auto] items-center flex-col  animate-translate">
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right0 -left-48">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Photoshop.svg" alt="Adobe Photoshop" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right1">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/tilda.svg" alt="tilda" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right2 -right-44">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Microsoft_Office.svg" alt="Microsoft Office" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right3 left-7">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/bitrix.svg" alt="bitrix" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right4 -left-24">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Illustrator.svg" alt="Adobe Illustrator" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right5 -right-52">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/MODX.svg" alt="MODX" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right6 left-28">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/figma.svg" alt="Figma" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right7 -left-3">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Wordpress.svg" alt="Wordpress" class="" width="50" height="50" />
+										</div>
+									</div>
+									<div class="z-10 relative hero__animation flex min-w-full flex-[0_0_auto] items-center flex-col  animate-translate">
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right0 -left-48">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Photoshop.svg" alt="Adobe Photoshop" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right1">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/tilda.svg" alt="tilda" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right2 -right-44">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Microsoft_Office.svg" alt="Microsoft Office" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right3 left-7">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/bitrix.svg" alt="bitrix" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right4 -left-24">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Adobe_Illustrator.svg" alt="Adobe Illustrator" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right5 -right-52">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/MODX.svg" alt="MODX" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right6 left-28">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/figma.svg" alt="Figma" class="" width="50" height="50" />
+										</div>
+										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right7 -left-3">
+											<img src="<?= SITE_TEMPLATE_PATH ?>/images/icons/Wordpress.svg" alt="Wordpress" class="" width="50" height="50" />
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-				</section>
+					</section>
