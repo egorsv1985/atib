@@ -240,6 +240,3 @@ $APPLICATION->IncludeFile("includes/contacts-form.php", array(),);
 		false
 	); ?>
 <? endif; ?>
-
-
-	
