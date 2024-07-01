@@ -3532,19 +3532,19 @@ input[type="range"]::-ms-fill-lower {
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:py-\[27vh\] {
-    padding-top: 27vh;
-    padding-bottom: 27vh;
+  .md\:py-\[18vh\] {
+    padding-top: 18vh;
+    padding-bottom: 18vh;
   }
 
-  .md\:before\:h-\[27vh\]::before {
+  .md\:before\:h-\[18vh\]::before {
     content: var(--tw-content);
-    height: 27vh;
+    height: 18vh;
   }
 
-  .md\:after\:h-\[27vh\]::after {
+  .md\:after\:h-\[18vh\]::after {
     content: var(--tw-content);
-    height: 27vh;
+    height: 18vh;
   }
 }
 

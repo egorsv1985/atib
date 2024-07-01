@@ -23,7 +23,7 @@ for ($index = 0; $index < $itemSize; $index++) {
 		$strReturn .= '
             <li class="inline-flex items-center breadcrumb-item" id="bx_breadcrumb_' . $index . '" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <a href="' . $arResult[$index]["LINK"] . '" class="flex items-center justify-center w-10 h-10 border rounded-full bg-gray_light border-gray_border" title="' . $title . '" itemprop="item">
-                    <img src="/bitrix/components/bitrix/breadcrumb/.default/images/icons/home.svg" alt="home" />
+                    <img src="' . SITE_TEMPLATE_PATH . '/images/icons/home.svg" alt="home" />
                     <span class="hidden" itemprop="name">' . $title . '</span>
                 </a>
                 <meta itemprop="position" content="' . ($index + 1) . '" />

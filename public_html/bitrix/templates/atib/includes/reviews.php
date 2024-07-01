@@ -1,4 +1,4 @@
-<section class="py-10 reviews">
+<section class="py-10 reviews overflow-x-hidden">
 	<div class="container">
 		<div class="mb-4">
 			<div class="px-4 py-1 text-lg font-medium leading-tight text-white border bg-gray_light border-gray_border rounded-[20px] inline-flex ">

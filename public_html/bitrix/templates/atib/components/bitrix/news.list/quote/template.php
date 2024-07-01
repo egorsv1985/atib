@@ -26,7 +26,7 @@ $this->setFrameMode(true);
 		?>
 
 			<div class="mb-6">
-				<h2 class="font-bold text-balance text-white font-display text-3xl sm:text-[40px] leading-tight ">
+				<h2 class="font-bold  text-white font-display text-3xl sm:text-[40px] leading-tight ">
 					<?= $arItem["PREVIEW_TEXT"] ?>
 				</h2>
 			</div>

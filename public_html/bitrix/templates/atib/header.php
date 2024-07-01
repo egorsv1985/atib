@@ -269,7 +269,7 @@ if (CModule::IncludeModule("victory.options")) {
 		</header>
 		<main class="<?= TYPE_PAGE == 'TEXT' ? 'pt-28' : '' ?>">
 			<div class="container">
-				<? if (TYPE_PAGE == 'TEXT') : ?>
+				<? if (TYPE_PAGE =='TEXT' || TYPE_PAGE == 'CONTACTS') : ?>
 
 					<? $APPLICATION->IncludeComponent(
 						"bitrix:breadcrumb",
@@ -286,7 +286,7 @@ if (CModule::IncludeModule("victory.options")) {
 					<section class="hero cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_you.svg),_pointer]">
 						<div class="grid grid-cols-2 ">
 							<div class="col-span-2 md:col-span-1">
-								<div class="flex flex-col hero__box py-[30%] md:py-[27vh] relative pseudo-grid before:absolute before:block   before:top-[21%] before:left-[14%] before:bottom-[12%] before:-right-[24%]">
+								<div class="flex flex-col hero__box py-[30%] md:py-[18vh] relative pseudo-grid before:absolute before:block   before:top-[21%] before:left-[14%] before:bottom-[12%] before:-right-[24%]">
 									<h1 class="lg:text-[64px]  text-5xl font-bold text-white font-display leading-tight mb-2"> <?= \Victory\Options\CVictoryOptions::getOptionValue('hero_h1_' . SITE_ID); ?>
 									</h1>
 									<div class="relative mb-7 hero__box-logo">
@@ -300,7 +300,7 @@ if (CModule::IncludeModule("victory.options")) {
 									</button>
 								</div>
 							</div>
-							<div class="relative col-span-2 md:col-span-1 aspect-square before:h-[30%] after:h-[30%] md:before:h-[27vh] md:after:h-[27vh] before:-top-px after:-bottom-px hero__gradient  md:aspect-[5/8]">
+							<div class="relative col-span-2 md:col-span-1 aspect-square before:h-[30%] after:h-[30%] md:before:h-[18vh] md:after:h-[18vh] before:-top-px after:-bottom-px hero__gradient  md:aspect-[5/8]">
 								<div class="relative flex flex-col h-full overflow-hidden ">
 									<div class="z-10 relative  hero__animation flex min-w-full flex-[0_0_auto] items-center flex-col  animate-translate">
 										<div class="relative flex items-center justify-center w-20 overflow-hidden transition duration-300 ease-out border rounded-full group aspect-square sm:w-24 md:w-32 p-7 bg-gray_light hover:bg-gray_light/50 border-gray_border animate-left-right0 -left-48">
