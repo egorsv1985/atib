@@ -54,7 +54,7 @@ if (CModule::IncludeModule("victory.options")) {
 	</div>
 
 	<div class="wrapper">
-		<header class=" py-4 header z-[9999] left-0 right-0 top-0 before:absolute before:inset-0 before:bg-gray_500 before:transition-opacity before:duration-500 before:ease-out backdrop-blur-lg before:opacity-80 before:-z-10">
+		<header class=" py-4 relative header z-[999] left-0 right-0 top-0 before:absolute before:inset-0 before:bg-gray_500 before:transition-opacity before:duration-500 before:ease-out backdrop-blur-lg before:opacity-80 before:-z-10">
 			<div class="container px-2">
 				<div class="z-40 flex items-center justify-between pb-3 border-b border-b-gray_border">
 					<div class="w-1/3 mr-3 sm:w-1/4 lg:w-1/6 max-[400px]:w-1/2">
@@ -78,7 +78,7 @@ if (CModule::IncludeModule("victory.options")) {
 							</span>
 						</button>
 						<!-- Dropdown menu -->
-						<div id="menuDropdown" class="text-gray_light z-10 py-4 px-10 dropdown-menu hidden  bg-white rounded-[10px]">
+						<div id="menuDropdown" class="text-gray_light z-50 py-4 px-10 dropdown-menu hidden  bg-white rounded-[10px]">
 							<div class="flex items-center gap-2 text-center">
 								<div class="grid grid-flow-row gap-[3px] grid-cols-2 grid-rows-2">
 									<div class="bg-blue_500  w-[5px] rounded-full h-[5px]"></div>
