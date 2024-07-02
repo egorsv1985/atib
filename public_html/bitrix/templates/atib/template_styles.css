@@ -1367,21 +1367,7 @@ input[type="range"]::-ms-fill-lower {
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.cursor-\[url\(\.\.\/images\/icons\/cursor\.svg\)\2c _pointer\] {
-  cursor: url(images/icons/cursor.svg), pointer;
-}
-.cursor-\[url\(\.\.\/images\/icons\/cursor_development1\.svg\)\2c _pointer\] {
-  cursor: url(images/icons/cursor_development1.svg), pointer;
-}
-.cursor-\[url\(\.\.\/images\/icons\/cursor_development2\.svg\)\2c _pointer\] {
-  cursor: url(images/icons/cursor_development2.svg), pointer;
-}
-.cursor-\[url\(\.\.\/images\/icons\/cursor_you\.svg\)\2c _pointer\] {
-  cursor: url(images/icons/cursor_you.svg), pointer;
-}
-.cursor-pointer {
-  cursor: pointer;
-}
+
 .list-square {
   list-style-type: square;
 }
@@ -2361,7 +2347,9 @@ input[type="range"]::-ms-fill-lower {
 .sale .slick-track {
   display: flex;
 }
-
+.slick-slide {
+    height: inherit;
+}
 .steps__item:last-child span:after {
   display: none;
 }
@@ -3016,20 +3004,34 @@ input[type="range"]::-ms-fill-lower {
 .checked\:ring-offset-0:checked {
   --tw-ring-offset-width: 0px;
 }
-
-.hover\:cursor-\[url\(\.\.\/images\/icons\/cursor_analyst\.svg\)\2c _pointer\]:hover {
+.cursor-\[url\(\.\.\/images\/icons\/cursor\.svg\)\2c _pointer\] {
+  cursor: url(images/icons/cursor.svg), pointer;
+}
+.cursor-\[url\(\.\.\/images\/icons\/cursor_development1\.svg\)\2c _pointer\] {
+  cursor: url(images/icons/cursor_development1.svg), pointer;
+}
+.development {
+  cursor: url(images/icons/cursor_development2.svg), pointer;
+}
+.hero, .steps__item {
+  cursor: url(images/icons/cursor_you.svg), pointer;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.instrument__analyst:hover {
   cursor: url(images/icons/cursor_analyst.svg), pointer;
 }
 
-.hover\:cursor-\[url\(\.\.\/images\/icons\/cursor_designer\.svg\)\2c _pointer\]:hover {
+.instrument__designer:hover {
   cursor: url(images/icons/cursor_designer.svg), pointer;
 }
 
-.hover\:cursor-\[url\(\.\.\/images\/icons\/cursor_programmer\.svg\)\2c _pointer\]:hover {
+.instrument__programmer:hover {
   cursor: url(images/icons/cursor_programmer.svg), pointer;
 }
 
-.hover\:cursor-\[url\(\.\.\/images\/icons\/cursor_seo\.svg\)\2c _pointer\]:hover {
+.instrument__seo:hover {
   cursor: url(images/icons/cursor_seo.svg), pointer;
 }
 
@@ -3666,7 +3668,23 @@ input[type="range"]::-ms-fill-lower {
     background-repeat: no-repeat;
   }
 }
-
+#portfolio-tab-content {
+	position: relative;
+}
+#portfolio-tab-content .portfolio__item.hidden {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+  opacity: 0;
+}
+#portfolio-tab-content .portfolio__item {
+	position: relative;
+	z-index: 1;
+  opacity: 1;
+}
 @media (min-width: 1280px) {
 
   .xl\:grid-cols-6 {

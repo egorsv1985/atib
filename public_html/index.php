@@ -165,9 +165,9 @@ $APPLICATION->IncludeFile("includes/about.php", array(),);
 <?
 $APPLICATION->IncludeFile("includes/contacts-form.php", array(),);
 ?>
-<?
-$APPLICATION->IncludeFile("includes/sale.php", array(),);
+<? $APPLICATION->IncludeFile("includes/sale.php", array(),);
 ?>
+</div>
 <?
 $APPLICATION->IncludeFile("includes/reviews.php", array(),);
 ?>
@@ -230,8 +230,7 @@ $APPLICATION->IncludeFile("includes/reviews.php", array(),);
 				"STRICT_SECTION_CHECK" => "N"
 			)
 		); ?> </section>
-</div>
-<br>
-<br><?
-		require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
-		?>
+
+<?
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
+?>

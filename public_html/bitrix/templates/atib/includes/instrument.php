@@ -3,20 +3,14 @@
 		<div class="px-4 py-1 text-lg font-medium leading-tight text-white border bg-gray_light border-gray_border rounded-[20px] inline-flex ">
 			Инструменты
 		</div>
-
 	</div>
 	<div class="grid grid-cols-12 mb-10">
 		<div class="col-span-12 lg:col-span-7">
 			<div class="mb-4">
-
-				<h2 class="font-bold text-white text-balance font-display text-3xl sm:text-[40px] leading-tight">
-					Технологии, которые мы используем для создания качественных веб-решений
-				</h2>
+				<h2 class="font-bold text-white text-balance font-display text-3xl sm:text-[40px] leading-tight"> Технологии, которые мы используем для создания качественных веб-решений </h2>
 			</div>
 			<div class="">
-				<p class="text-xl leading-tight text-txt text-balance">Знакомьтесь с людьми, которые делают ваш проект
-					возможным</p>
-
+				<p class="text-xl leading-tight text-txt text-balance">Знакомьтесь с людьми, которые делают ваш проект возможным</p>
 			</div>
 		</div>
 	</div>
@@ -30,10 +24,7 @@
 							</h3>
 						</div>
 						<div class="mb-8 text-lg leading-tight text-txt">
-							<p class="">Мы работаем с известными CMS для управления сайтами. Мы готовы помочь вам создать и
-								управлять
-								вашим сайтом, используя
-								лучшие практики и инструменты CMS.</p>
+							<p class="">Мы работаем с известными CMS для управления сайтами. Мы готовы помочь вам создать и управлять вашим сайтом, используя лучшие практики и инструменты CMS.</p>
 						</div>
 						<ul class="flex mb-4 space-x-3 leading-tight">
 							<li class="text-blue_500">Битрикс</li>
@@ -65,7 +56,7 @@
 						</ul>
 					</div>
 					<div class="h-full col-span-7 md:col-span-3">
-						<div class="h-full hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_programmer.svg),_pointer]">
+						<div class="h-full instrument__programmer hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_programmer.svg),_pointer]">
 							<picture>
 								<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/cms.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/cms.png" alt="cms" class="mt-7">
 							</picture>
@@ -75,7 +66,7 @@
 			</div>
 		</div>
 		<div class="col-span-12 md:col-span-6 lg:col-span-5 ">
-			<div class="border bg-gray_light border-gray_border h-full hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_programmer.svg),_pointer]  rounded-[10px]">
+			<div class="border bg-gray_light border-gray_border h-full instrument__programmer hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_programmer.svg),_pointer]  rounded-[10px]">
 				<div class="pt-8 mb-3 instrument__slider slider">
 					<div class="mb-4 slider-item">
 						<div class="flex items-center justify-center w-20 h-20 border rounded-full aspect-square bg-gray_light border-gray_border">
@@ -150,7 +141,7 @@
 			</div>
 		</div>
 		<div class="col-span-12 md:col-span-6 lg:col-span-4">
-			<div class="border bg-gray_light hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_designer.svg),_pointer] border-gray_border h-full p-7  rounded-[10px]">
+			<div class="border bg-gray_light instrument__designer hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_designer.svg),_pointer] border-gray_border h-full p-7  rounded-[10px]">
 				<div class="mb-3">
 					<h3 class="text-xl font-bold leading-tight text-white font-display text-balance"> Дизайн </h3>
 				</div>
@@ -198,7 +189,7 @@
 			</div>
 		</div>
 		<div class="col-span-12 md:col-span-6 lg:col-span-3">
-			<div class="border bg-gray_light hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_seo.svg),_pointer] border-gray_border h-full p-7  rounded-[10px] relative">
+			<div class="border bg-gray_light instrument__seo hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_seo.svg),_pointer] border-gray_border h-full p-7  rounded-[10px] relative">
 				<div class="mb-2">
 					<h3 class="text-xl font-bold leading-tight text-white font-display text-balance"> SEO-продвижение
 					</h3>
@@ -219,7 +210,7 @@
 			</div>
 		</div>
 		<div class="col-span-12 md:col-span-6 lg:col-span-5">
-			<div class="border bg-gray_light hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_analyst.svg),_pointer] border-gray_border h-full py-6 px-8  rounded-[10px]">
+			<div class="border bg-gray_light instrument__analyst hover:cursor-[url(.<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_analyst.svg),_pointer] border-gray_border h-full py-6 px-8  rounded-[10px]">
 				<div class="mb-2">
 					<h3 class="text-xl font-bold leading-tight text-white font-display text-balance"> Веб-аналитика</h3>
 				</div>

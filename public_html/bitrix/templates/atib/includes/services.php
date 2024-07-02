@@ -251,7 +251,7 @@
 				</div>
 				<div class="grid grid-cols-2 gap-4 md:gap-7 lg:gap-4">
 					<div class="col-span-2 md:col-span-1 lg:col-span-2 md:order-1 lg:order-none">
-						<div class="flex flex-col border px-5 py-6 bg-gray_light border-gray_border cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_development2.svg),_pointer] rounded-[10px]">
+						<div class="development flex flex-col border px-5 py-6 bg-gray_light border-gray_border cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_development2.svg),_pointer] rounded-[10px]">
 							<div class="flex items-center justify-between mb-4">
 								<div class="flex items-center gap-2">
 									<div>

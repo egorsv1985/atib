@@ -3,6 +3,7 @@
 <? if (!empty($arResult)) :
 	
 ?>
+
 	<ul class="py-2 text-sm border-0 " aria-labelledby="menuDropdownButton">
 		<?
 		foreach ($arResult as $arItem) :

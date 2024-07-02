@@ -1,4 +1,4 @@
-<?php
+<?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
@@ -21,21 +21,17 @@ $sectionResult = CIBlockSection::GetList(['SORT' => 'ASC'], $sectionFilter, fals
 while ($section = $sectionResult->GetNext()) {
 	$arSections[$section['ID']] = $section;
 }
-
-
-
 ?>
-
-<?php
+<?
 // Проверяем, есть ли разделы
 if (!empty($arSections)) :
 	foreach ($arSections as $arSection) :
 		$this->AddEditAction($arSection['ID'], $arSection['EDIT_LINK'], $strSectionEdit);
 		$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
 ?>
-		<div class="hidden" id="portfolio-<?= $arSection['ID']; ?>" role="tabpanel" aria-labelledby="portfolio-<?= $arSection['ID']; ?>-tab">
+		<div class="hidden portfolio__item" id="portfolio-<?= $arSection['ID']; ?>" role="tabpanel" aria-labelledby="portfolio-<?= $arSection['ID']; ?>-tab">
 			<div class="-mx-4 branding__slider slider">
-				<?php
+				<?
 				foreach ($arResult["ITEMS"] as $arItem) :
 					if ($arItem["IBLOCK_SECTION_ID"] == $arSection['ID']) :
 						$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -63,15 +59,9 @@ if (!empty($arSections)) :
 							</p>
 							<p class="text-lg leading-tight text-txt"><?= $arItem["PREVIEW_TEXT"] ?></p>
 						</div>
-				<?php
-					endif;
-				endforeach;
-				?>
+					<? endif;					?>
+				<? endforeach;				?>
 			</div>
 		</div>
-<?php
-	endforeach;
-else :
-	echo "No sections found.";
-endif;
-?>
+	<? endforeach;	?>
+<? endif; ?>

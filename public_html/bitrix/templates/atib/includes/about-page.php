@@ -4,9 +4,12 @@
 			Мы проявляем креативность, разрабатываем дизайн и осуществляем твои желания
 		</h2>
 	</div>
+
 	<div class="grid grid-cols-2 gap-7">
-		<div class="col-span-2 pt-2 lg:col-span-1">
-			<? $APPLICATION->IncludeComponent(
+		<div class="col-span-2 pt-2 lg:col-span-1 quote">
+			
+			<?php
+			$APPLICATION->IncludeComponent(
 				"bitrix:news.list",
 				"quote",
 				array(
@@ -33,7 +36,7 @@
 						0 => "",
 						1 => "",
 					),
-					"FILTER_NAME" => "",
+					"FILTER_NAME" => "elementFilter", // Указываем имя фильтра
 					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 					"IBLOCK_ID" => "3",
 					"IBLOCK_TYPE" => "CONTENT",
@@ -41,9 +44,6 @@
 					"INCLUDE_SUBSECTIONS" => "Y",
 					"MESSAGE_404" => "",
 					"NEWS_COUNT" => "1",
-					"FILTER" => array(
-						"ID" => "17"
-					),
 					"PAGER_BASE_LINK_ENABLE" => "N",
 					"PAGER_DESC_NUMBERING" => "N",
 					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -73,7 +73,8 @@
 					"COMPONENT_TEMPLATE" => "quote"
 				),
 				false
-			); ?>
+			);
+			?>
 		</div>
 		<div class="col-span-2 lg:col-span-1">
 			<div class="flex flex-col space-y-5 text-lg leading-tight text-txt">

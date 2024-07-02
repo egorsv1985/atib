@@ -58,7 +58,7 @@ if (CModule::IncludeModule("victory.options")) {
 			<div class="container px-2">
 				<div class="z-40 flex items-center justify-between pb-3 border-b border-b-gray_border">
 					<div class="w-1/3 mr-3 sm:w-1/4 lg:w-1/6 max-[400px]:w-1/2">
-						<a href="/" class="block  target="_blank"max-w-full text-center">
+						<a href="/" class="block  target=" _blank"max-w-full text-center">
 							<picture>
 								<source srcset="<?= SITE_TEMPLATE_PATH ?>/images/logo.webp" type="image/webp"><img src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png" alt="logo" class="max-w-full" width="160" height="34" />
 							</picture>
@@ -103,6 +103,101 @@ if (CModule::IncludeModule("victory.options")) {
 									"USE_EXT" => "Y",
 									"DELAY" => "N",
 									"ALLOW_MULTI_SELECT" => "N"
+								),
+								false
+							); ?>
+							<? $APPLICATION->IncludeComponent(
+								"bitrix:news",
+								"services",
+								array(
+									"ADD_ELEMENT_CHAIN" => "Y",
+									"ADD_SECTIONS_CHAIN" => "Y",
+									"AJAX_MODE" => "N",
+									"AJAX_OPTION_ADDITIONAL" => "",
+									"AJAX_OPTION_HISTORY" => "N",
+									"AJAX_OPTION_JUMP" => "N",
+									"AJAX_OPTION_STYLE" => "Y",
+									"BROWSER_TITLE" => "-",
+									"CACHE_FILTER" => "N",
+									"CACHE_GROUPS" => "Y",
+									"CACHE_TIME" => "7200",
+									"CACHE_TYPE" => "A",
+									"CHECK_DATES" => "Y",
+									"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+									"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
+									"DETAIL_DISPLAY_TOP_PAGER" => "N",
+									"DETAIL_FIELD_CODE" => array(
+										0 => "",
+										1 => "",
+									),
+									"DETAIL_PAGER_SHOW_ALL" => "Y",
+									"DETAIL_PAGER_TEMPLATE" => "",
+									"DETAIL_PAGER_TITLE" => "Страница",
+									"DETAIL_PROPERTY_CODE" => array(
+										0 => "",
+										1 => "FAQ",
+										2 => "TARIFFS",
+										3 => "",
+									),
+									"DETAIL_SET_CANONICAL_URL" => "Y",
+									"DISPLAY_BOTTOM_PAGER" => "Y",
+									"DISPLAY_DATE" => "Y",
+									"DISPLAY_NAME" => "Y",
+									"DISPLAY_PICTURE" => "Y",
+									"DISPLAY_PREVIEW_TEXT" => "Y",
+									"DISPLAY_TOP_PAGER" => "N",
+									"FILE_404" => "",
+									"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+									"IBLOCK_ID" => "10",
+									"IBLOCK_TYPE" => "CONTENT",
+									"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+									"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+									"LIST_FIELD_CODE" => array(
+										0 => "",
+										1 => "",
+									),
+									"LIST_PROPERTY_CODE" => array(
+										0 => "",
+										1 => "FAQ",
+										2 => "TARIFFS",
+										3 => "",
+									),
+									"MESSAGE_404" => "",
+									"META_DESCRIPTION" => "-",
+									"META_KEYWORDS" => "-",
+									"NEWS_COUNT" => "200",
+									"PAGER_BASE_LINK_ENABLE" => "N",
+									"PAGER_DESC_NUMBERING" => "N",
+									"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+									"PAGER_SHOW_ALL" => "N",
+									"PAGER_SHOW_ALWAYS" => "N",
+									"PAGER_TEMPLATE" => ".default",
+									"PAGER_TITLE" => "Новости",
+									"PREVIEW_TRUNCATE_LEN" => "",
+									"SEF_FOLDER" => "/uslugi/",
+									"SEF_MODE" => "Y",
+									"SET_LAST_MODIFIED" => "Y",
+									"SET_STATUS_404" => "Y",
+									"SET_TITLE" => "Y",
+									"SHOW_404" => "Y",
+									"SORT_BY1" => "SORT",
+									"SORT_BY2" => "ACTIVE_FROM",
+									"SORT_ORDER1" => "ASC",
+									"SORT_ORDER2" => "DESC",
+									"STRICT_SECTION_CHECK" => "Y",
+									"USE_CATEGORIES" => "N",
+									"USE_FILTER" => "N",
+									"USE_PERMISSIONS" => "N",
+									"USE_RATING" => "N",
+									"USE_RSS" => "N",
+									"USE_SEARCH" => "N",
+									"USE_SHARE" => "N",
+									"COMPONENT_TEMPLATE" => "services",
+									"SEF_URL_TEMPLATES" => array(
+										"news" => "",
+										"section" => "#SECTION_CODE#/",
+										"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
+									)
 								),
 								false
 							); ?>
@@ -269,7 +364,7 @@ if (CModule::IncludeModule("victory.options")) {
 		</header>
 		<main class="<?= TYPE_PAGE == 'TEXT' ? 'pt-28' : '' ?>">
 			<div class="container">
-				<? if (TYPE_PAGE =='TEXT' || TYPE_PAGE == 'CONTACTS') : ?>
+				<? if (TYPE_PAGE == 'TEXT' || TYPE_PAGE == 'CONTACTS') : ?>
 
 					<? $APPLICATION->IncludeComponent(
 						"bitrix:breadcrumb",
