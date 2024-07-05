@@ -88,119 +88,47 @@ if (CModule::IncludeModule("victory.options")) {
 								</div>
 								<span>Услуги</span>
 							</div>
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:menu",
-								"services-menu",
-								array(
-									"COMPONENT_TEMPLATE" => "services-menu",
-									"ROOT_MENU_TYPE" => "top",
-									"MENU_CACHE_TYPE" => "A",
-									"MENU_CACHE_TIME" => "3600",
-									"MENU_CACHE_USE_GROUPS" => "Y",
-									"MENU_CACHE_GET_VARS" => array(),
-									"MAX_LEVEL" => "2",
-									"CHILD_MENU_TYPE" => "left",
-									"USE_EXT" => "Y",
-									"DELAY" => "N",
-									"ALLOW_MULTI_SELECT" => "N"
-								),
-								false
-							); ?>
-							<? $APPLICATION->IncludeComponent(
-								"bitrix:news",
-								"services",
-								array(
-									"ADD_ELEMENT_CHAIN" => "Y",
-									"ADD_SECTIONS_CHAIN" => "Y",
-									"AJAX_MODE" => "N",
-									"AJAX_OPTION_ADDITIONAL" => "",
-									"AJAX_OPTION_HISTORY" => "N",
-									"AJAX_OPTION_JUMP" => "N",
-									"AJAX_OPTION_STYLE" => "Y",
-									"BROWSER_TITLE" => "-",
-									"CACHE_FILTER" => "N",
-									"CACHE_GROUPS" => "Y",
-									"CACHE_TIME" => "7200",
-									"CACHE_TYPE" => "A",
-									"CHECK_DATES" => "Y",
-									"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
-									"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
-									"DETAIL_DISPLAY_TOP_PAGER" => "N",
-									"DETAIL_FIELD_CODE" => array(
-										0 => "",
-										1 => "",
-									),
-									"DETAIL_PAGER_SHOW_ALL" => "Y",
-									"DETAIL_PAGER_TEMPLATE" => "",
-									"DETAIL_PAGER_TITLE" => "Страница",
-									"DETAIL_PROPERTY_CODE" => array(
-										0 => "",
-										1 => "FAQ",
-										2 => "TARIFFS",
-										3 => "",
-									),
-									"DETAIL_SET_CANONICAL_URL" => "Y",
-									"DISPLAY_BOTTOM_PAGER" => "Y",
-									"DISPLAY_DATE" => "Y",
-									"DISPLAY_NAME" => "Y",
-									"DISPLAY_PICTURE" => "Y",
-									"DISPLAY_PREVIEW_TEXT" => "Y",
-									"DISPLAY_TOP_PAGER" => "N",
-									"FILE_404" => "",
-									"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-									"IBLOCK_ID" => "10",
-									"IBLOCK_TYPE" => "CONTENT",
-									"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-									"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-									"LIST_FIELD_CODE" => array(
-										0 => "",
-										1 => "",
-									),
-									"LIST_PROPERTY_CODE" => array(
-										0 => "",
-										1 => "FAQ",
-										2 => "TARIFFS",
-										3 => "",
-									),
-									"MESSAGE_404" => "",
-									"META_DESCRIPTION" => "-",
-									"META_KEYWORDS" => "-",
-									"NEWS_COUNT" => "200",
-									"PAGER_BASE_LINK_ENABLE" => "N",
-									"PAGER_DESC_NUMBERING" => "N",
-									"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-									"PAGER_SHOW_ALL" => "N",
-									"PAGER_SHOW_ALWAYS" => "N",
-									"PAGER_TEMPLATE" => ".default",
-									"PAGER_TITLE" => "Новости",
-									"PREVIEW_TRUNCATE_LEN" => "",
-									"SEF_FOLDER" => "/uslugi/",
-									"SEF_MODE" => "Y",
-									"SET_LAST_MODIFIED" => "Y",
-									"SET_STATUS_404" => "Y",
-									"SET_TITLE" => "Y",
-									"SHOW_404" => "Y",
-									"SORT_BY1" => "SORT",
-									"SORT_BY2" => "ACTIVE_FROM",
-									"SORT_ORDER1" => "ASC",
-									"SORT_ORDER2" => "DESC",
-									"STRICT_SECTION_CHECK" => "Y",
-									"USE_CATEGORIES" => "N",
-									"USE_FILTER" => "N",
-									"USE_PERMISSIONS" => "N",
-									"USE_RATING" => "N",
-									"USE_RSS" => "N",
-									"USE_SEARCH" => "N",
-									"USE_SHARE" => "N",
-									"COMPONENT_TEMPLATE" => "services",
-									"SEF_URL_TEMPLATES" => array(
-										"news" => "",
-										"section" => "#SECTION_CODE#/",
-										"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-									)
-								),
-								false
-							); ?>
+
+							<?
+							if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+							if (CModule::IncludeModule("iblock")) {
+								$arFilter = array(
+									"IBLOCK_ID" => 10, // ID инфоблока
+									"ACTIVE" => "Y", // Только активные элементы
+								);
+
+								$arSelect = array("ID", "NAME", "DETAIL_PAGE_URL", "PROPERTY_COLOR");
+
+								$res = CIBlockElement::GetList(
+									array("SORT" => "ASC"), // Сортировка
+									$arFilter, // Фильтр
+									false,
+									false,
+									$arSelect // Поля для выборки
+								);
+
+								$menuItems = array();
+								while ($ob = $res->GetNextElement()) {
+									$arFields = $ob->GetFields();
+									$menuItems[] = $arFields;
+								}
+							}
+							// print_r($menuItems);
+							?>
+
+							<? if (!empty($menuItems)) : ?>
+								<ul class="py-2 text-sm border-0" aria-labelledby="menuDropdownButton">
+									<? foreach ($menuItems as $menuItem) : ?>
+										<li class="mb-2">
+											<div class="flex items-center gap-2">
+												<span class="w-4 h-4 rounded-full border-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_border bg-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_500"></span>
+												<a href="<?= $menuItem["DETAIL_PAGE_URL"] ?>" class="relative before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_border hover:text-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_500 before:transition-[width] before:duration-500 hover:before:w-full"><?= $menuItem["NAME"] ?></a>
+											</div>
+										</li>
+									<? endforeach; ?>
+								</ul>
+							<? endif; ?>
 						</div>
 					</div>
 					<div class="lg:w-[12.6%] md:w-1/6 sm:w-1/5 w-1/3 md:mr-7 mr-3 max-[400px]:hidden">
@@ -242,9 +170,9 @@ if (CModule::IncludeModule("victory.options")) {
 							$phone1 = \Victory\Options\CVictoryOptions::getOptionValue('phone1_' . SITE_ID);
 							$phone2 = \Victory\Options\CVictoryOptions::getOptionValue('phone2_' . SITE_ID);
 							?>
-							<a data-hover="<?= $phone1 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone1); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> <?= $phone1 ?>
+							<a data-hover="<?= $phone1 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone1); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 12px 16px"> <?= $phone1 ?>
 							</a>
-							<a data-hover="<?= $phone2 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone2); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/a1.svg) no-repeat left 50% / 13px 20px"> <?= $phone2 ?>
+							<a data-hover="<?= $phone2 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone2); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/a1.svg) no-repeat left 50% / 13px 15px"> <?= $phone2 ?>
 							</a>
 						</div>
 					</div>
@@ -292,25 +220,46 @@ if (CModule::IncludeModule("victory.options")) {
 						<div class="col-span-10 col-start-1 md:col-span-12 md:col-start-6">
 							<div class="flex flex-col gap-5">
 								<span class="text-xl font-bold leading-tight text-white font-display">Услуги</span>
-								<? $APPLICATION->IncludeComponent(
-									"bitrix:menu",
-									"secondary-menu",
-									array(
-										"COMPONENT_TEMPLATE" => "secondary-menu",
-										"ROOT_MENU_TYPE" => "right",
-										"MENU_CACHE_TYPE" => "A",
-										"MENU_CACHE_TIME" => "3600",
-										"MENU_CACHE_USE_GROUPS" => "Y",
-										"MENU_CACHE_GET_VARS" => array(),
-										"MAX_LEVEL" => "2",
-										"CHILD_MENU_TYPE" => "left",
-										"USE_EXT" => "Y",
-										"DELAY" => "N",
-										"ALLOW_MULTI_SELECT" => "N"
-									),
-									false
-								); ?>
 
+								<?
+								if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+								if (CModule::IncludeModule("iblock")) {
+									$arFilter = array(
+										"IBLOCK_ID" => 10, // ID инфоблока
+										"ACTIVE" => "Y", // Только активные элементы
+									);
+
+									$arSelect = array("ID", "NAME", "DETAIL_PAGE_URL", "PROPERTY_COLOR");
+
+									$res = CIBlockElement::GetList(
+										array("SORT" => "ASC"), // Сортировка
+										$arFilter, // Фильтр
+										false,
+										false,
+										$arSelect // Поля для выборки
+									);
+
+									$menuItems = array();
+									while ($ob = $res->GetNextElement()) {
+										$arFields = $ob->GetFields();
+										$menuItems[] = $arFields;
+									}
+								}
+								?>
+
+								<? if (!empty($menuItems)) : ?>
+									<ul class="grid grid-flow-row grid-cols-1 grid-rows-3 text-lg leading-tight md:grid-cols-2 text-txt">
+										<? foreach ($menuItems as $menuItem) : ?>
+											<li class="mb-2">
+												<div class="flex items-center gap-2">
+													<span class="w-4 h-4 rounded-full border-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_border bg-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_500"></span>
+													<a href="<?= $menuItem["DETAIL_PAGE_URL"] ?>" class="relative before:absolute before:bottom-0 before:left-0 before:overflow-hidden before:w-0 before:border-b-2 before:border-b-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_border hover:text-<?= $menuItem["PROPERTY_COLOR_VALUE"] ?>_500 before:transition-[width] before:duration-500 hover:before:w-full"><?= $menuItem["NAME"] ?></a>
+												</div>
+											</li>
+										<? endforeach; ?>
+									</ul>
+								<? endif; ?>
 							</div>
 						</div>
 						<div class="block col-span-10 md:col-span-12 md:hidden">
@@ -320,9 +269,9 @@ if (CModule::IncludeModule("victory.options")) {
 								$phone2 = \Victory\Options\CVictoryOptions::getOptionValue('phone2_' . SITE_ID);
 								print_r($phone1);
 								?>
-								<a data-hover="<?= $phone1 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone1); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> <?= $phone1 ?>
+								<a data-hover="<?= $phone1 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone1); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 12px 16px"> <?= $phone1 ?>
 								</a>
-								<a data-hover="<?= $phone2 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone2); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 20px"> <?= $phone2 ?>
+								<a data-hover="<?= $phone2 ?>" href="tel:<?= str_replace(array(' ', '(', ')', '-'), '', $phone2); ?>" target="_blank" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(<?= SITE_TEMPLATE_PATH ?>/images/icons/mts.svg) no-repeat left 50% / 13px 15px"> <?= $phone2 ?>
 								</a>
 							</div>
 						</div>
