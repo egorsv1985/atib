@@ -1,3 +1,3 @@
 <?
-$sSectionName="Услуги";
+$sSectionName= "Портфолио";
 ?>

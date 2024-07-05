@@ -43,7 +43,7 @@ if (!empty($arSections)) :
 						}
 				?>
 						<div class="px-4 slider__item sm:mr-0">
-							<a href="<?= $arItem['LIST_PAGE_URL'] ?>" class="pt-3 block rounded-[10px] border border-gray_border mb-2 bg-gray_light">
+							<a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="pt-3 block rounded-[10px] border border-gray_border mb-2 bg-gray_light">
 								<div class="flex gap-2 px-4 mb-4">
 									<span class="w-4 h-4 rounded-full border-<?= $arItem["PROPERTIES"]["COLOR"]["VALUE"] ?>_border bg-<?= $arItem["PROPERTIES"]["COLOR"]["VALUE"] ?>_500"></span>
 									<p class="text-sm leading-tight text-txt"><?= $arItem["PROPERTIES"]["STYLE"]["VALUE"] ?></p>

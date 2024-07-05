@@ -1,11 +1,10 @@
 <?
+define('TYPE_PAGE', 'CONTACTS');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Разработка сайтов и сервисов");
-
-?>
-<? $APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("Портфолио");
+?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"services", 
+	"portfolio-page", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -31,26 +30,19 @@ $APPLICATION->SetPageProperty("title", "Разработка сайтов и с�
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "DETAILS",
-			1 => "TOTAL_DESCRIPTION",
-			2 => "TOTAL_NAME",
-			3 => "PROJECTS_LEFT",
-			4 => "PROJECTS_RIGHT",
-			5 => "COLOR",
-			6 => "FAQ",
-			7 => "TARIFFS",
-			8 => "",
+			0 => "STYLE",
+			1 => "COLOR",
+			2 => "",
 		),
-		"DETAIL_SET_CANONICAL_URL" => "Y",
+		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FILE_404" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "10",
+		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "CONTENT",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -59,20 +51,14 @@ $APPLICATION->SetPageProperty("title", "Разработка сайтов и с�
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "DETAILS",
-			1 => "TOTAL_DESCRIPTION",
-			2 => "TOTAL_NAME",
-			3 => "PROJECTS_LEFT",
-			4 => "PROJECTS_RIGHT",
-			5 => "COLOR",
-			6 => "FAQ",
-			7 => "TARIFFS",
-			8 => "",
+			0 => "STYLE",
+			1 => "COLOR",
+			2 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "200",
+		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -81,17 +67,17 @@ $APPLICATION->SetPageProperty("title", "Разработка сайтов и с�
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/uslugi/",
+		"SEF_FOLDER" => "/portfolio/",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "Y",
-		"SET_STATUS_404" => "Y",
+		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
-		"SHOW_404" => "Y",
-		"SORT_BY1" => "SORT",
-		"SORT_BY2" => "ACTIVE_FROM",
-		"SORT_ORDER1" => "ASC",
-		"SORT_ORDER2" => "DESC",
-		"STRICT_SECTION_CHECK" => "Y",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
 		"USE_CATEGORIES" => "N",
 		"USE_FILTER" => "N",
 		"USE_PERMISSIONS" => "N",
@@ -99,13 +85,12 @@ $APPLICATION->SetPageProperty("title", "Разработка сайтов и с�
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "services",
+		"COMPONENT_TEMPLATE" => "portfolio-page",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
-			"section" => "#SECTION_CODE#/",
-			"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/",
+			"section" => "#SECTION_CODE_PATH#/",
+			"detail" => "#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
 		)
 	),
 	false
-); ?>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+);?><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

@@ -56,7 +56,7 @@ $this->setFrameMode(true);
 						"SECTION_URL" => "",
 						"SECTION_USER_FIELDS" => array(0 => "UF_COLOR", 1 => "",),
 						"SHOW_PARENT_NAME" => "Y",
-						"TOP_DEPTH" => "2",
+						"TOP_DEPTH" => "1",
 						"VIEW_MODE" => "LINE"
 					)
 				); ?>
@@ -90,7 +90,7 @@ $this->setFrameMode(true);
 							"SECTION_URL" => "",
 							"SECTION_USER_FIELDS" => array(0 => "UF_COLOR", 1 => "",),
 							"SHOW_PARENT_NAME" => "Y",
-							"TOP_DEPTH" => "2",
+							"TOP_DEPTH" => "1",
 							"VIEW_MODE" => "LINE"
 						)
 					); ?>
@@ -100,8 +100,6 @@ $this->setFrameMode(true);
 		<div class="items-center hidden gap-4 sm:flex slider__controls-btns"></div>
 	</div>
 	<div id="portfolio-tab-content">
-
-
 		<? $APPLICATION->IncludeComponent(
 			"bitrix:news.list",
 			"",
