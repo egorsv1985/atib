@@ -34,15 +34,12 @@ $this->setFrameMode(true);
 				</div>
 				<div class="flex flex-col gap-2">
 					<h3 class="text-xl font-bold leading-tight text-white font-display">Задача</h3>
-					<p class="text-lg leading-tight text-txt">Разработать структуру сайта и дизайн в светлом,
-						минималистичном
-						стиле. Отрисовать стильные, понятные, минималистичные
-						схематичные изображения работы системы HomeID. Добавить языковые версии сайта. Настроить SEO.</p>
+					<p class="text-lg leading-tight text-txt"><?= $arResult["PROPERTIES"]["TASK"]["VALUE"]['TEXT'] ?></p>
 				</div>
 				<div class="flex items-center mt-auto gap-7">
-					<a href="#" class="font-medium  px-8 py-4 rounded-[80px] border justify-center items-center gap-2.5 inline-flex text-center text-white text-base font-display border-blue_border bg-blue_500 text-nowrap hover:border-white/50 leading-tight max-w-48">Кейс
+					<a href="<?= $arResult["PROPERTIES"]["BEHANCE"]["VALUE"] ?>" class="font-medium  px-8 py-4 rounded-[80px] border justify-center items-center gap-2.5 inline-flex text-center text-white text-base font-display border-blue_border bg-blue_500 text-nowrap hover:border-white/50 leading-tight max-w-48">Кейс
 						на Behance</a>
-					<a href="#" class="leading-tight underline text-blue_500 hover:text-blue_border">Ссылка на сайт</a>
+					<a href="<?= $arResult["PROPERTIES"]["LINK"]["VALUE"] ?>" class="leading-tight underline text-blue_500 hover:text-blue_border">Ссылка на сайт</a>
 				</div>
 			</div>
 		</div>
@@ -53,19 +50,19 @@ $this->setFrameMode(true);
 						<div class="flex-grow basis-0 border bg-gray_light border-gray_border rounded-[10px] p-5">
 							<div class="flex flex-col gap-2">
 								<h3 class="text-xl font-bold leading-tight text-white font-display">Клиент</h3>
-								<p class="text-lg leading-tight text-txt">ООО «Гмартикун»</p>
+								<p class="text-lg leading-tight text-txt"><?= $arResult["PROPERTIES"]["CLIENT"]["VALUE"] ?></p>
 							</div>
 						</div>
 						<div class="flex-grow basis-0 border bg-gray_light border-gray_border rounded-[10px] p-5">
 							<div class="flex flex-col gap-2">
 								<h3 class="text-xl font-bold leading-tight text-white font-display">Отрасль</h3>
-								<p class="text-lg leading-tight text-txt">Информационные технологии</p>
+								<p class="text-lg leading-tight text-txt"><?= $arResult["PROPERTIES"]["SECTOR"]["VALUE"] ?></p>
 							</div>
 						</div>
 						<div class="flex-grow basis-0 border bg-gray_light border-gray_border rounded-[10px] p-5">
 							<div class="flex flex-col gap-2">
 								<h3 class="text-xl font-bold leading-tight text-white font-display">Год запуска</h3>
-								<p class="text-lg leading-tight text-txt">2023</p>
+								<p class="text-lg leading-tight text-txt"><?= $arResult["PROPERTIES"]["YEAR"]["VALUE"] ?></p>
 							</div>
 						</div>
 					</div>
@@ -73,17 +70,16 @@ $this->setFrameMode(true);
 				<div class="col-span-2 lg:col-span-1">
 					<div class="border bg-gray_light border-gray_border rounded-[10px] p-5">
 						<h3 class="text-xl font-bold leading-tight text-white font-display mb-2.5">Тезисно о проекте</h3>
+						<? $summary = $arResult["PROPERTIES"]["SUMMARY"]["VALUE"];
+						?>
 						<ul class="space-y-2 text-lg leading-tight text-txt">
-							<li class="">Web-разработка</li>
-							<li class="">Сайт на Tilda</li>
-							<li class="">Сайт под SEO-продвижение</li>
-							<li class="">Сбор<br>семантического ядра и формирование структуры сайта</li>
-							<li class="">Прототипирование</li>
-							<li class="">UX/UI дизайн</li>
-							<li class="">Копирайтинг</li>
-							<li class="">Адаптивность</li>
-							<li class="">SEO-оптимизаия</li>
+							<?php if (is_array($summary) && !empty($summary)) : ?>
+								<?php foreach ($summary as $item) : ?>
+									<li class=""><?= htmlspecialchars($item) ?></li>
+								<?php endforeach; ?>
+							<?php endif; ?>
 						</ul>
+
 					</div>
 				</div>
 			</div>
