@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 			</h2>
 		</div>
 		<div class="">
-			<p class="text-xl leading-tight  text-txt text-balance">Домофонная система</p>
+			<p class="text-xl leading-tight  text-txt text-balance"><?= $arResult["PROPERTIES"]["NAME_DESCRIPTION"]["VALUE"] ?></p>
 
 		</div>
 	</div>
@@ -30,10 +30,7 @@ $this->setFrameMode(true);
 			<div class="flex flex-col h-full gap-6">
 				<div class="flex flex-col gap-2">
 					<h3 class="text-xl font-bold leading-tight text-white font-display">О проекте</h3>
-					<p class="text-lg leading-tight text-txt">HomeID - облачное решение, которое работает как привычная
-						домофонная
-						система, только без проводов, без оконечных
-						устройств в квартирах и дополнительных серверов</p>
+					<p class="text-lg leading-tight text-txt"><?= $arResult["PROPERTIES"]["ABOUT"]["VALUE"]['TEXT'] ?></p>
 				</div>
 				<div class="flex flex-col gap-2">
 					<h3 class="text-xl font-bold leading-tight text-white font-display">Задача</h3>
