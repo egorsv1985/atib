@@ -25,7 +25,7 @@ $this->setFrameMode(true);
 			digital-проекты
 		</span>
 	</div>
-	<div class="relative">
+	<div class="relative mb-10">
 		<div class="items-center hidden gap-4 sm:flex">
 			<? $APPLICATION->IncludeComponent(
 				"bitrix:catalog.section.list",

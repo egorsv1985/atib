@@ -3341,8 +3341,12 @@ input[type="range"]::-ms-fill-lower {
   }
 }
 
-@media (min-width: 640px) {
 
+@media (min-width: 640px) {
+.design__content h2,
+.result__content h2 {
+  font-size: 1.875rem;
+}
   .sm\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -3693,6 +3697,25 @@ input[type="range"]::-ms-fill-lower {
 	position: relative;
 	z-index: 1;
   opacity: 1;
+}
+.design__content h2,
+.result__content h2
+{
+  font-weight: 700;
+  color:#fff;
+  line-height: 1.2;
+  font-family: SF UI Display, sans-serif;
+  text-wrap: balance;
+  font-size: 2.5rem;
+    
+}
+.design__content p,
+.result__content p
+{
+  color: #bdbdc0;
+  line-height: 1.2;
+  font-size: 1.25rem;
+    text-wrap: balance;
 }
 @media (min-width: 1280px) {
 
