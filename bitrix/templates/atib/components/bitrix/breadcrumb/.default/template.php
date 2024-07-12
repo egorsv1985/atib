@@ -1,4 +1,4 @@
-<?php
+<?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 /**
@@ -9,18 +9,20 @@ global $APPLICATION;
 
 // Delayed function must return a string
 if (empty($arResult))
-	return "";
-// print_r($arResult);
+    return "";
+
 $strReturn = '
 <nav class="flex pt-24" aria-label="breadcrumb">
     <ol class="inline-flex items-center space-x-1 breadcrumb md:space-x-2" itemscope itemtype="http://schema.org/BreadcrumbList">';
 
 $itemSize = count($arResult);
 for ($index = 0; $index < $itemSize; $index++) {
-	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
+    $title = htmlspecialcharsex($arResult[$index]["TITLE"]);
 
-	if ($arResult[$index]["LINK"] <> "" && $index != $itemSize - 1) {
-		$strReturn .= '
+    if ($arResult[$index]["LINK"] <> "" && $index != $itemSize - 1) {
+        if ($index == 0) {
+            // Для первой ссылки добавляем картинку
+            $strReturn .= '
             <li class="inline-flex items-center breadcrumb-item" id="bx_breadcrumb_' . $index . '" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <a href="' . $arResult[$index]["LINK"] . '" class="flex items-center justify-center w-10 h-10 border rounded-full bg-gray_light border-gray_border" title="' . $title . '" itemprop="item">
                     <img src="' . SITE_TEMPLATE_PATH . '/images/icons/home.svg" alt="home" />
@@ -28,15 +30,26 @@ for ($index = 0; $index < $itemSize; $index++) {
                 </a>
                 <meta itemprop="position" content="' . ($index + 1) . '" />
             </li>';
-	} else {
-		$strReturn .= '
+        } else {
+            // Для последующих ссылок выводим текст
+            $strReturn .= '
+            <li class="inline-flex items-center breadcrumb-item" id="bx_breadcrumb_' . $index . '" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="' . $arResult[$index]["LINK"] . '" class="relative ml-7 text-txt hover:text-txt after:absolute after:top-1/2 after:w-4 after:h-px after:bg-gray_border after:-left-7" title="' . $title . '" itemprop="item">
+                    <span itemprop="name">' . $title . '</span>
+                </a>
+                <meta itemprop="position" content="' . ($index + 1) . '" />
+            </li>';
+        }
+    } else {
+        // Для последнего элемента
+        $strReturn .= '
             <li class="breadcrumb-item active" aria-current="page" id="bx_breadcrumb_' . $index . '" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                 <div class="relative flex items-center text-white ml-7 after:absolute after:top-1/2 after:w-4 after:h-px after:bg-gray_border after:-left-7">
                     <span class="leading-tight" itemprop="name">' . $title . '</span>
                 </div>
                 <meta itemprop="position" content="' . ($index + 1) . '" />
             </li>';
-	}
+    }
 }
 
 $strReturn .= '
