@@ -217,7 +217,7 @@ if (CModule::IncludeModule("victory.options")) {
 							); ?>
 
 						</div>
-						<div class="col-span-10 col-start-1 md:col-span-12 md:col-start-6">
+						<div class="col-span-10 col-start-1 md:col-span-12 md:col-start-5">
 							<div class="flex flex-col gap-5">
 								<span class="text-xl font-bold leading-tight text-white font-display">Услуги</span>
 
@@ -311,7 +311,7 @@ if (CModule::IncludeModule("victory.options")) {
 				</nav>
 			</div>
 		</header>
-		<main class="<?= TYPE_PAGE == 'TEXT' ? 'pt-28' : '' ?>">
+		<main class="<?= TYPE_PAGE == 'TEXT' ? 'pt-2' : '' ?>">
 			<div class="container">
 				<? if (TYPE_PAGE == 'TEXT' || TYPE_PAGE == 'CONTACTS') : ?>
 

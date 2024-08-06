@@ -2993,7 +2993,7 @@ $(document).ready(function () {
 
 	// Обработчик события изменения размера окна
 	$(window).on('resize', function () {
-		if ($(window).width() > 640) {
+		if ($(window).width() > 767) {
 			$(
 				'.page-branding__slider, .page-development__slider, .page-promotion__slider'
 			).slick('unslick')
@@ -3014,20 +3014,37 @@ $(document).ready(function () {
 		swipe: true,
 		arrows: false,
 		cssEase: 'linear',
-		slidesToShow: 1,
+		slidesToShow: 2,
 		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	}
 
-	// Инициализация слайдеров
-	$(' .team__slider').slick(settings)
+	// Функция для инициализации или удаления слайдера в зависимости от ширины окна
+	function initializeSlider() {
+		if ($(window).width() > 767) {
+			if ($('.team__slider').hasClass('slick-initialized')) {
+				$('.team__slider').slick('unslick')
+			}
+		} else {
+			if (!$('.team__slider').hasClass('slick-initialized')) {
+				$('.team__slider').slick(settings)
+			}
+		}
+	}
+
+	// Инициализация слайдера при загрузке страницы
+	initializeSlider()
 
 	// Обработчик события изменения размера окна
 	$(window).on('resize', function () {
-		if ($(window).width() > 768) {
-			$(' .team__slider').slick('unslick')
-			return
-		}
-		$(' .team__slider').not('.slick-initialized').slick(settings)
+		initializeSlider()
 	})
 
 	$('.branding__slider').slick({

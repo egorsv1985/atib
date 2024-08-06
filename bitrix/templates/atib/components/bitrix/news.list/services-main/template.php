@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 // print_r($arResult);
 ?>
-<section class=" contacts py-14">
+<section class="  py-14 cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_you.svg),_pointer]">
 	<div class="flex flex-col gap-24">
 		<?
 		foreach ($arResult["ITEMS"] as $arItem) : ?>

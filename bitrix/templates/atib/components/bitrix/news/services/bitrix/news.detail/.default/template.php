@@ -13,7 +13,12 @@
 $this->setFrameMode(true);
 // print_r($arResult);
 ?>
-<section class="contacts py-14">
+<section class=" relative services-main cursor-[url(<?= SITE_TEMPLATE_PATH ?>/images/icons/cursor_you.svg),_pointer]">
+
+	<div class=" services-main__rect -z-10 absolute  rounded-[20px] bg-gray_500 border border-gray_border ">
+		<div class=" bg-gray_light border h-full border-gray_border rounded-[20px]"></div>
+	</div>
+	<div class=""></div>
 	<div class="flex flex-col gap-24">
 		<div class="grid grid-cols-3 gap-7 border-b-gray_border">
 			<div class="relative col-span-3 lg:col-span-2 pseudo-grid before:absolute before:block  before:top-[10%] before:left-[52%] before:-bottom-[10%] before:right-0">
@@ -52,7 +57,7 @@ $this->setFrameMode(true);
 		</div>
 	</div>
 </section>
-<section class="pb-12 about-service pt-36">
+<section class="pb-12 about-service pt-28 ">
 	<div class="grid grid-cols-3 gap-7">
 		<div class="col-span-3 lg:col-span-1">
 			<div class="px-4 py-1 text-lg font-medium leading-tight text-white border bg-gray_light border-gray_border rounded-[20px] inline-flex ">
@@ -68,8 +73,8 @@ $this->setFrameMode(true);
 	</div>
 </section>
 <? $APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"tariffs", 
+	"bitrix:news.list",
+	"tariffs",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -140,7 +145,7 @@ $this->setFrameMode(true);
 	false
 ); ?>
 
-<section class="py-11 portfolio">
+<section class="py-7 portfolio">
 	<div class="mb-5">
 		<div class="px-4 py-1 text-lg font-medium leading-tight text-white border bg-gray_light border-gray_border rounded-[20px] inline-flex ">
 			Портфолио
@@ -810,3 +815,230 @@ $this->setFrameMode(true);
 		Вы получите полноценный сайт с уникальным дизайном для вашей ниши
 	</h2>
 </div>
+<section class="py-10 contacts-form">
+
+	<div class="grid grid-cols-12 bg-gray_light border gap-7 border-gray_border rounded-[10px] py-14 px-9">
+		<div class="col-span-12 lg:col-span-6">
+			<div class="mb-4 ">
+
+				<h2 class="font-bold text-white text-balance font-display text-3xl sm:text-[40px] leading-tight">
+					Давайте сделаем сильный проект вместе!
+				</h2>
+			</div>
+			<div class="mb-5">
+				<p class="text-xl leading-tight  text-txt text-balance">Оставьте свой телефон, и аккаунт-менеджер
+					сориентирует по порядку работы стоимости</p>
+
+			</div>
+			<div class="flex flex-wrap justify-between gap-4 mb-7 sm:justify-start">
+				<ul class="flex items-center justify-between gap-2 max-w-36">
+					<li>
+						<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+							<img src="./images/icons/telegramm.svg" alt="telegramm" width="20" height="20" />
+						</a>
+					</li>
+					<li>
+						<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+							<img src="./images/icons/whatsapp.svg" alt="whatsapp" width="20" height="20" />
+						</a>
+					</li>
+					<li>
+						<a href="#" class="flex items-center justify-center w-10 h-10 transition duration-500 border rounded-full group/messengers border-gray_border bg-gray_light hover:border-gray_light hover:bg-gray_border">
+							<img src="./images/icons/viber.svg" alt="viber" width="20" height="20" />
+						</a>
+					</li>
+				</ul>
+				<div class="flex flex-col gap-3 md:gap-1 ">
+					<a data-hover="+375 (29) 305 47 00" href="tel:+375293054700" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full  leading-tight text-txt" style="background: url(./images/icons/mts.svg) no-repeat left 50% / 13px 15px"> +375 (29) 305 47 00
+					</a>
+					<a data-hover="+375 (33) 305 47 00" href="tel:+375333054700" class="pl-5 relative before:content-[attr(data-hover)] before:absolute before:top-0 before:left-0 before:overflow-hidden  before:h-0 before:pl-5 before:duration-300 before:text-white before:transition-[height] hover:before:h-full leading-tight text-txt" style="background: url(./images/icons/a1.svg) no-repeat left 50% / 13px 15px"> +375 (33) 305 47 00
+					</a>
+				</div>
+			</div>
+			<div class="mb-4 ">
+				<h3 class="text-xl font-bold leading-tight text-white font-display">Контактное лицо</h3>
+
+			</div>
+			<div class="flex flex-wrap items-center gap-7">
+				<div class="flex">
+					<div class="rounded-full border bg-gray_500 border-blue_500 p-1 w-[65px] h-[65px] about__box-img relative">
+						<picture>
+							<source srcset="./images/team1.webp" type="image/webp"><img src="./images/team1.png" alt="team" class="rounded-full" />
+						</picture>
+					</div>
+					<div class="rounded-full border bg-gray_500 -ml-2 border-purple_500 p-1 w-[65px] h-[65px] about__box-img relative">
+						<picture>
+							<source srcset="./images/team7.webp" type="image/webp"><img src="./images/team7.png" alt="team" class="rounded-full" />
+						</picture>
+					</div>
+				</div>
+				<ul class="flex flex-col gap-2 text-sm leading-tight text-txt">
+					<li class="">
+						<div class="flex gap-2">
+							<span class="w-4 h-4 rounded-full border-blue_border bg-blue_500"></span>
+							<p class="text-sm leading-tight text-txt">Менеджер Елена</p>
+						</div>
+					</li>
+					<li class="flex gap-3">
+						<div class="flex gap-2">
+							<span class="w-4 h-4 rounded-full border-purple_border bg-purple_500"></span>
+							<p class="text-sm leading-tight text-txt">Менеджер Полина</p>
+						</div>
+					</li>
+				</ul>
+
+
+
+				<a href="" class="flex gap-3">
+					<span class="flex items-center justify-center w-10 h-10 border rounded-full border-gray_border bg-gray_light"><img src="./images/icons/map.svg" alt="г. Минск, БЦ S.Union" /></span>
+					<p class="text-sm font-medium text-txt font-display">
+						г. Минск,<br />
+						БЦ S.Union
+					</p>
+				</a>
+			</div>
+		</div>
+		<div class="col-span-12 py-3 lg:ms-24 lg:col-span-6 lg:me-14">
+			<form class="flex flex-col h-full gap-2" action="#">
+				<div>
+					<label for="name" class="hidden">Ваше имя</label>
+					<input type="text" name="name" id="name" class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt" placeholder="Ваше имя" required="" />
+				</div>
+				<div>
+					<label for="tel" class="hidden">Телефон</label>
+					<input type="tel" name="tel" id="tel" placeholder="Телефон" class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none form-phone bg-gray_light border-gray_border text-txt" required="" />
+				</div>
+				<div class="">
+					<label for="work" class="hidden mb-2 text-sm font-medium text-white dark:text-white">Вид работы</label>
+					<select id="work" class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt">
+						<option selected="">Вид работы</option>
+						<option>Визитки</option>
+						<option>Фирменный стиль</option>
+						<option>Дизайн упаковки</option>
+					</select>
+				</div>
+
+				<div class="flex items-start mt-2 mb-2">
+					<div class="flex items-center h-5">
+						<input id="terms" aria-describedby="terms" type="checkbox" class="w-5 h-5 border rounded-sm border-gray_border bg-gray_light checked::border-blue_border checked:bg-blue_500 ring-offset-0 checked:ring-offset-0 focus:ring-offset-0 focus:border-gray_border focus:bg-gray_light focus:ring-0 focus:outline-none" required="" />
+					</div>
+					<div class="ml-3 text-sm">
+						<label for="terms" class="text-base leading-tight text-txt">Оставляя заявку, вы соглашаетесь на
+							обработку
+							<a class="underline" href="#">персональных данных</a>
+							и
+							<a class="underline" href="#">политикой конфиденциальности</a>
+						</label>
+					</div>
+				</div>
+				<button type="submit" class="relative  overflow-hidden  transition-all  shadow  hover:bg-white group font-medium px-8 py-4 rounded-[80px] border justify-center items-center gap-2.5 inline-flex hover:text-blue_500 text-center text-white text-base font-display border-blue_border bg-blue_500 text-nowrap hover:border-white/50 leading-tight w-full mt-auto">
+					<span class="absolute inset-0 border-0 group-hover:border-[40px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+					<span class="relative w-full text-base leading-tight text-white transition-colors duration-500 ease-in-out text-nowrap group-hover:text-blue_500">Связаться
+						с нами</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
+<section class="py-24 faq">
+	<div class="mb-4">
+
+		<div class="px-4 py-1 text-lg font-medium leading-tight text-white border bg-gray_light border-gray_border rounded-[20px] inline-flex ">
+			Вопрос-ответ
+		</div>
+
+	</div>
+	<div class="w-full md:w-2/3 mb-9">
+		<div class="mb-4">
+
+			<h2 class="font-bold text-white text-balance font-display text-3xl sm:text-[40px] leading-tight">
+				Если у вас возникли вопросы, то вероятно здесь вы найдете ответ
+			</h2>
+		</div>
+		<p class="text-xl leading-tight  text-txt text-balance">Наши проекты объединяют в себе эстетику и
+			функциональность для достижения оптимальных результатов.</p>
+
+	</div>
+	<div class="space-y-5" id="accordion-collapse" data-accordion="collapse">
+		<div class="">
+			<h2 id="accordion-collapse-heading-1 ">
+				<button type="button" class="group/heading sm:text-center text-left   flex items-center justify-between w-full gap-3 p-5 font-bold font-display text-xl leading-tight text-white border-t-gray_border bg-gray_light rounded-t-[10px] " data-accordion-target="#accordion-collapse-body-1" aria-expanded="false" aria-controls="accordion-collapse-body-1">
+					<span>От чего зависит стоимость проекта?</span>
+					<span data-accordion-icon class="flex items-center justify-center w-10 h-10 border rounded-full group-aria-expanded/heading:bg-blue_500 border-gray_border">
+						<svg data-accordion-icon aria-hidden="true" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<path d="M11 11L11 5L13 5L13 11L19 11L19 13L13 13L13 19L11 19L11 13L5 13L5 11L11 11Z" fill="#BDBDC0" fill-opacity="1.000000" fill-rule="nonzero" />
+						</svg>
+					</span>
+				</button>
+			</h2>
+			<div id="accordion-collapse-body-1" class="hidden -mt-[1px]" aria-labelledby="accordion-collapse-heading-1">
+				<div class="px-5   rounded-b-[10px] bg-gray_light pb-3">
+					<p class="leading-tight text-txt">Стоимость зависит от объёма и сложности проекта, предполагаемых
+						сроков, размера команды. В смете мы подробно прописываем каждый этап работы и его стоимость, совместно
+						обсуждаем и корректируем и после согласования приступаем к работе. По обоюдной договоренности, смета
+						может корректироваться уже в процессе работы.</p>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<h2 id="accordion-collapse-heading-2 ">
+				<button type="button" class="group/heading sm:text-center text-left   flex items-center justify-between w-full gap-3 p-5 font-bold font-display text-xl leading-tight text-white border-t-gray_border bg-gray_light rounded-t-[10px] " data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+					<span>От чего зависит стоимость проекта?</span>
+					<span data-accordion-icon class="flex items-center justify-center w-10 h-10 border rounded-full group-aria-expanded/heading:bg-blue_500 border-gray_border">
+						<svg data-accordion-icon aria-hidden="true" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<path d="M11 11L11 5L13 5L13 11L19 11L19 13L13 13L13 19L11 19L11 13L5 13L5 11L11 11Z" fill="#BDBDC0" fill-opacity="1.000000" fill-rule="nonzero" />
+						</svg>
+					</span>
+				</button>
+			</h2>
+			<div id="accordion-collapse-body-2" class="hidden -mt-[1px]" aria-labelledby="accordion-collapse-heading-2">
+				<div class="px-5   rounded-b-[10px] bg-gray_light pb-3">
+					<p class="leading-tight text-txt">Стоимость зависит от объёма и сложности проекта, предполагаемых
+						сроков, размера команды. В смете мы подробно прописываем каждый этап работы и его стоимость, совместно
+						обсуждаем и корректируем и после согласования приступаем к работе. По обоюдной договоренности, смета
+						может корректироваться уже в процессе работы.</p>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<h2 id="accordion-collapse-heading-3 ">
+				<button type="button" class="group/heading sm:text-center text-left   flex items-center justify-between w-full gap-3 p-5 font-bold font-display text-xl leading-tight text-white border-t-gray_border bg-gray_light rounded-t-[10px] " data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+					<span>От чего зависит стоимость проекта?</span>
+					<span data-accordion-icon class="flex items-center justify-center w-10 h-10 border rounded-full group-aria-expanded/heading:bg-blue_500 border-gray_border">
+						<svg data-accordion-icon aria-hidden="true" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<path d="M11 11L11 5L13 5L13 11L19 11L19 13L13 13L13 19L11 19L11 13L5 13L5 11L11 11Z" fill="#BDBDC0" fill-opacity="1.000000" fill-rule="nonzero" />
+						</svg>
+					</span>
+				</button>
+			</h2>
+			<div id="accordion-collapse-body-3" class="hidden -mt-[1px]" aria-labelledby="accordion-collapse-heading-3">
+				<div class="px-5   rounded-b-[10px] bg-gray_light pb-3">
+					<p class="leading-tight text-txt">Стоимость зависит от объёма и сложности проекта, предполагаемых
+						сроков, размера команды. В смете мы подробно прописываем каждый этап работы и его стоимость, совместно
+						обсуждаем и корректируем и после согласования приступаем к работе. По обоюдной договоренности, смета
+						может корректироваться уже в процессе работы.</p>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<h2 id="accordion-collapse-heading-4 ">
+				<button type="button" class="group/heading sm:text-center text-left   flex items-center justify-between w-full gap-3 p-5 font-bold font-display text-xl leading-tight text-white border-t-gray_border bg-gray_light rounded-t-[10px] " data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+					<span>От чего зависит стоимость проекта?</span>
+					<span data-accordion-icon class="flex items-center justify-center w-10 h-10 border rounded-full group-aria-expanded/heading:bg-blue_500 border-gray_border">
+						<svg data-accordion-icon aria-hidden="true" width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<path d="M11 11L11 5L13 5L13 11L19 11L19 13L13 13L13 19L11 19L11 13L5 13L5 11L11 11Z" fill="#BDBDC0" fill-opacity="1.000000" fill-rule="nonzero" />
+						</svg>
+					</span>
+				</button>
+			</h2>
+			<div id="accordion-collapse-body-4" class="hidden -mt-[1px]" aria-labelledby="accordion-collapse-heading-4">
+				<div class="px-5   rounded-b-[10px] bg-gray_light pb-3">
+					<p class="leading-tight text-txt">Стоимость зависит от объёма и сложности проекта, предполагаемых
+						сроков, размера команды. В смете мы подробно прописываем каждый этап работы и его стоимость, совместно
+						обсуждаем и корректируем и после согласования приступаем к работе. По обоюдной договоренности, смета
+						может корректироваться уже в процессе работы.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
