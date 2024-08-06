@@ -4,9 +4,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 ?>
 <? if (TYPE_PAGE == 'CONTACTS') : ?>
 
-	<?
-	$APPLICATION->IncludeFile("includes/contacts-page.php", array(),);
-	?>
+	
 <? else :
 	$APPLICATION->IncludeFile("includes/contacts.php", array(),);
 endif; ?>

@@ -3558,6 +3558,15 @@ input[type="range"]::-ms-fill-lower {
   z-index: 1;
   
 } */
+ .main-map{
+  margin-bottom: 48px;
+ }
+ .main-map .ymaps-layers-pane {
+    opacity: 1;
+    filter: grayscale(100%);
+    filter: url(/img/filters.svg#grayscale);
+    -webkit-filter: grayscale(1);
+}
 @media (max-width: 400px) {
 
   .max-\[400px\]\:hidden {
