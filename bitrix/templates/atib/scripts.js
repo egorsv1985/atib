@@ -14,34 +14,32 @@ $(document).ready(function () {
 	}
 
 	animateTranslateY() // Запускаем анимацию
-})
 
-// // Предотвращение повторной отправки форм
-// form.addEventListener('submit', () => {
-// 	submitButton.disabled = true
+	// // Предотвращение повторной отправки форм
+	// form.addEventListener('submit', () => {
+	// 	submitButton.disabled = true
 
-// 	// Fix for Firefox. It persists the dynamic disabled state without this hack.
-// 	submitButton.autocomplete = 'off'
+	// 	// Fix for Firefox. It persists the dynamic disabled state without this hack.
+	// 	submitButton.autocomplete = 'off'
 
-// 	// We are using setTimeout for page-reload submit.
-// 	// For AJAX, use await and try-finally to enable submit the button again.
-// 	setTimeout(() => {
-// 		submitButton.disabled = false
-// 	}, 2000)
-// })
-//  form.addEventListener('submit', async () => {
-//    await fetch(…)
-//    try {
-//      showLoader()
-//      await fetch(…)
-//    } catch (e) {
-//      showError(e)
-//    } finally {
-//      hideLoader()
-//    }
-//   })
+	// 	// We are using setTimeout for page-reload submit.
+	// 	// For AJAX, use await and try-finally to enable submit the button again.
+	// 	setTimeout(() => {
+	// 		submitButton.disabled = false
+	// 	}, 2000)
+	// })
+	//  form.addEventListener('submit', async () => {
+	//    await fetch(…)
+	//    try {
+	//      showLoader()
+	//      await fetch(…)
+	//    } catch (e) {
+	//      showError(e)
+	//    } finally {
+	//      hideLoader()
+	//    }
+	//   })
 
-jQuery(document).ready(function () {
 	var e = document.querySelectorAll('.form-phone')
 	jQuery(e).inputmask({
 		mask: ['+7 (999) 999 99 99', '8 (999) 999 99 99'],
@@ -75,7 +73,6 @@ const instanceOptions = {
 	id: 'callback-modal',
 	override: true,
 }
-
 
 ;(function (factory) {
 	'use strict'
@@ -3008,9 +3005,7 @@ $(document).ready(function () {
 			.not('.slick-initialized')
 			.slick(settings)
 	})
-})
 
-$(document).ready(function () {
 	var settings = {
 		infinite: true,
 		speed: 500,
@@ -3034,9 +3029,7 @@ $(document).ready(function () {
 		}
 		$(' .team__slider').not('.slick-initialized').slick(settings)
 	})
-})
 
-$(document).ready(function () {
 	$('.branding__slider').slick({
 		infinite: true,
 		speed: 500,
@@ -3250,9 +3243,7 @@ $(document).ready(function () {
 		centerPadding: '0',
 		pauseOnHover: false, // Прокрутка не останавливается при наведении
 	})
-})
 
-$(document).ready(function () {
 	// Проверяем поддержку формата WebP
 	function supportsWebP() {
 		var elem = document.createElement('canvas')
@@ -3287,4 +3278,16 @@ $(document).ready(function () {
 	if (supportsAvif()) {
 		$('body').addClass('avif')
 	}
+	// $('#menu-button').click(function () {
+	// 	var $menu = $('#mobile-menu-2')
+	// 	if ($menu.hasClass('hidden')) {
+	// 		$menu
+	// 			.removeClass('hidden max-h-0 opacity-0')
+	// 			.addClass('max-h-screen opacity-100')
+	// 	} else {
+	// 		$menu
+	// 			.addClass('hidden max-h-0 opacity-0')
+	// 			.removeClass('max-h-screen opacity-100')
+	// 	}
+	// })
 })

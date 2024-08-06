@@ -384,6 +384,7 @@ video {
 /* Make elements with the HTML hidden attribute stay hidden by default */
 [hidden] {
   display: none;
+  
 }
 
 [data-tooltip-style^='light'] + .tooltip > .tooltip-arrow:before {
@@ -3547,6 +3548,16 @@ input[type="range"]::-ms-fill-lower {
 .-order-1 {
   order: -1;
 }
+/* #mobile-menu-2.hidden{
+  left: -100%;
+  display:  block !important;
+}
+#mobile-menu-2.opacity-100{
+  left: 0%;
+  position: relative;
+  z-index: 1;
+  
+} */
 @media (max-width: 400px) {
 
   .max-\[400px\]\:hidden {

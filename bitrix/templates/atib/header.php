@@ -184,7 +184,7 @@ if (CModule::IncludeModule("victory.options")) {
 						</button>
 					</div>
 					<div class="w-1/4 md:w-1/12">
-						<button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center justify-end w-full gap-3 p-2 ml-1 font-medium text-white rounded-lg font-display focus:outline-none " aria-controls="mobile-menu-2" aria-expanded="true">
+						<button id="menu-button" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center justify-end w-full gap-3 p-2 ml-1 font-medium text-white rounded-lg font-display focus:outline-none " aria-controls="mobile-menu-2" aria-expanded="false">
 							<span class="flex flex-col gap-[3px]">
 								<span class="bg-blue_500 w-[5px] h-[5px]"></span>
 								<span class="bg-red_500 w-[5px] h-[5px]"></span>
@@ -194,7 +194,7 @@ if (CModule::IncludeModule("victory.options")) {
 						</button>
 					</div>
 				</div>
-				<nav class="hidden w-full " id="mobile-menu-2">
+				<nav class="hidden  w-full" id="mobile-menu-2">
 					<div class="grid grid-cols-10 gap-3 py-4 md:gap-7">
 						<div class="col-span-10 md:col-span-2">
 							<? $APPLICATION->IncludeComponent(
