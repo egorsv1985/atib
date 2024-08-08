@@ -2988,19 +2988,19 @@ $(document).ready(function () {
 
 	// Инициализация слайдеров
 	$(
-		'.page-branding__slider, .page-development__slider, .page-promotion__slider'
+		'.page-brending__slider, .page-razrabotka__slider, .page-reklama__slider'
 	).slick(settings)
 
 	// Обработчик события изменения размера окна
 	$(window).on('resize', function () {
 		if ($(window).width() > 767) {
 			$(
-				'.page-branding__slider, .page-development__slider, .page-promotion__slider'
+				'.page-brending__slider, .page-razrabotka__slider, .page-reklama__slider'
 			).slick('unslick')
 			return
 		}
 		$(
-			'.page-branding__slider, .page-development__slider, .page-promotion__slider'
+			'.page-brending__slider, .page-razrabotka__slider, .page-reklama__slider'
 		)
 			.not('.slick-initialized')
 			.slick(settings)
@@ -3047,66 +3047,66 @@ $(document).ready(function () {
 		initializeSlider()
 	})
 
-	$('.branding__slider').slick({
-		infinite: true,
-		speed: 500,
-		autoplay: false,
-		autoplaySpeed: 5000,
-		swipe: true,
-		arrows: true,
-		cssEase: 'linear',
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		appendArrows: $('.slider__controls-btns'),
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-				},
-			},
-		],
-	})
-	$('.development__slider').slick({
-		infinite: true,
-		speed: 500,
-		autoplay: false,
-		autoplaySpeed: 5000,
-		swipe: true,
-		arrows: true,
-		cssEase: 'linear',
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		appendArrows: $('.slider__controls-btns'),
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-				},
-			},
-		],
-	})
-	$('.promotion__slider').slick({
-		infinite: true,
-		speed: 500,
-		autoplay: false,
-		autoplaySpeed: 5000,
-		swipe: true,
-		arrows: true,
-		cssEase: 'linear',
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		appendArrows: $('.slider__controls-btns'),
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-				},
-			},
-		],
-	})
+	// $('.brending__slider').slick({
+	// 	infinite: true,
+	// 	speed: 500,
+	// 	autoplay: false,
+	// 	autoplaySpeed: 5000,
+	// 	swipe: true,
+	// 	arrows: true,
+	// 	cssEase: 'linear',
+	// 	slidesToShow: 2,
+	// 	slidesToScroll: 1,
+	// 	appendArrows: $('.portfolio .slider__controls-btns'),
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 1,
+	// 			},
+	// 		},
+	// 	],
+	// })
+	// $('.razrabotka__slider').slick({
+	// 	infinite: true,
+	// 	speed: 500,
+	// 	autoplay: false,
+	// 	autoplaySpeed: 5000,
+	// 	swipe: true,
+	// 	arrows: true,
+	// 	cssEase: 'linear',
+	// 	slidesToShow: 2,
+	// 	slidesToScroll: 1,
+	// 	appendArrows: $('.portfolio .slider__controls-btns'),
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 1,
+	// 			},
+	// 		},
+	// 	],
+	// })
+	// $('.reklama__slider').slick({
+	// 	infinite: true,
+	// 	speed: 500,
+	// 	autoplay: false,
+	// 	autoplaySpeed: 5000,
+	// 	swipe: true,
+	// 	arrows: true,
+	// 	cssEase: 'linear',
+	// 	slidesToShow: 2,
+	// 	slidesToScroll: 1,
+	// 	appendArrows: $('.portfolio .slider__controls-btns'),
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 768,
+	// 			settings: {
+	// 				slidesToShow: 1,
+	// 			},
+	// 		},
+	// 	],
+	// })
 	$('.sale__slider').slick({
 		infinite: true,
 		speed: 500,

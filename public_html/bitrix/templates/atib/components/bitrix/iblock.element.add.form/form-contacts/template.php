@@ -280,7 +280,7 @@ if ($arResult["MESSAGE"] <> '') : ?>
 						case "dropdown":
 						case "multiselect":
 							?>
-							<label for="PROPERTY[<?= $propertyID ?>][<?= $i ?>]" class="hidden mb-2 text-sm font-medium text-white dark:text-white"><? if (intval($propertyID) > 0) : ?>
+							<label for="PROPERTY[<?= $propertyID ?>][<?= $i ?>]" class="hidden mb-2 text-sm font-medium text-white"><? if (intval($propertyID) > 0) : ?>
 									<?= $arResult["PROPERTY_LIST_FULL"][$propertyID]["NAME"] ?>
 								<? else : ?>
 									<?= !empty($arParams["CUSTOM_TITLE_" . $propertyID]) ? $arParams["CUSTOM_TITLE_" . $propertyID] : GetMessage("IBLOCK_FIELD_" . $propertyID) ?>

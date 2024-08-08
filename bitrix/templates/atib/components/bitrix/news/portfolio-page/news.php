@@ -29,7 +29,7 @@ $this->setFrameMode(true);
 		<div class="items-center hidden gap-4 sm:flex">
 			<? $APPLICATION->IncludeComponent(
 				"bitrix:catalog.section.list",
-				"portfolio-page",
+				"portfolio",
 				array(
 					"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
 					"ADD_SECTIONS_CHAIN" => "Y",
@@ -160,7 +160,7 @@ $this->setFrameMode(true);
 				"PARENT_SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
 				"DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["detail"],
 				"SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
-				"IBLOCK_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["news"],
+				"IBLOCK_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["news"],				
 			),
 			$component
 		); ?>

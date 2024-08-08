@@ -129,7 +129,7 @@ endif; ?>
 
 				</div>
 				<div class="mb-8">
-					<label for="services" class="hidden mb-2 text-sm font-medium text-white dark:text-white">Вид
+					<label for="services" class="hidden mb-2 text-sm font-medium text-white ">Вид
 						услуги</label>
 					<select id="services" class="block w-full p-4 text-base leading-tight border rounded-md focus:border-white/50 focus:ring-white/50 focus:outline-none bg-gray_light border-gray_border text-txt">
 						<option value="Вид услуги" selected="">Вид услуги</option>

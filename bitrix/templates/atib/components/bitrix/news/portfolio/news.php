@@ -30,15 +30,13 @@ $this->setFrameMode(true);
 	<div class="w-full md:w-2/3 mb-11">
 		<p class="text-xl leading-tight  text-txt text-balance">Наши проекты объединяют в себе эстетику и функциональность для достижения оптимальных результатов.</p>
 	</div>
-	<div class="flex justify-between mb-7">
-		<div class="relative">
-			<div class="items-center hidden gap-4 sm:flex">
+	
 				<? $APPLICATION->IncludeComponent(
 					"bitrix:catalog.section.list",
 					"portfolio",
 					array(
 						"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-						"ADD_SECTIONS_CHAIN" => "Y",
+						"ADD_SECTIONS_CHAIN" => "N",
 						"CACHE_FILTER" => "N",
 						"CACHE_GROUPS" => "Y",
 						"CACHE_TIME" => "7200",
@@ -51,54 +49,23 @@ $this->setFrameMode(true);
 						"IBLOCK_ID" => "4",
 						"IBLOCK_TYPE" => "CONTENT",
 						"SECTION_CODE" => "",
-						"SECTION_FIELDS" => array(0 => "", 1 => "",),
+						"SECTION_FIELDS" => array(
+							0 => "",
+							1 => "",
+						),
 						"SECTION_ID" => "",
 						"SECTION_URL" => "",
-						"SECTION_USER_FIELDS" => array(0 => "UF_COLOR", 1 => "",),
+						"SECTION_USER_FIELDS" => array(
+							0 => "UF_COLOR",
+							1 => "",
+						),
 						"SHOW_PARENT_NAME" => "Y",
-						"TOP_DEPTH" => "1",
+						"TOP_DEPTH" => "2",
 						"VIEW_MODE" => "LINE"
-					)
+					),
+					false
 				); ?>
-			</div>
-			<div class="flex sm:hidden">
-				<!-- Dropdown button -->
-				<button id="dropdownTabListButton" data-dropdown-toggle="dropdown" data-dropdown-on-hide="true" class="px-4 py-1 text-lg font-medium leading-tight text-white  border relative    inline-block border-white rounded-[20px]" type="button">Портфолио
-				</button>
-				<!-- Dropdown menu -->
-				<div id="dropdown" class="z-10 hidden py-2">
-					<? $APPLICATION->IncludeComponent(
-						"bitrix:catalog.section.list",
-						"portfolio",
-						array(
-							"ADDITIONAL_COUNT_ELEMENTS_FILTER" => "additionalCountFilter",
-							"ADD_SECTIONS_CHAIN" => "Y",
-							"CACHE_FILTER" => "N",
-							"CACHE_GROUPS" => "Y",
-							"CACHE_TIME" => "7200",
-							"CACHE_TYPE" => "A",
-							"COMPONENT_TEMPLATE" => "portfolio",
-							"COUNT_ELEMENTS" => "Y",
-							"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-							"FILTER_NAME" => "",
-							"HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
-							"IBLOCK_ID" => "4",
-							"IBLOCK_TYPE" => "CONTENT",
-							"SECTION_CODE" => "",
-							"SECTION_FIELDS" => array(0 => "", 1 => "",),
-							"SECTION_ID" => "",
-							"SECTION_URL" => "",
-							"SECTION_USER_FIELDS" => array(0 => "UF_COLOR", 1 => "",),
-							"SHOW_PARENT_NAME" => "Y",
-							"TOP_DEPTH" => "1",
-							"VIEW_MODE" => "LINE"
-						)
-					); ?>
-				</div>
-			</div>
-		</div>
-		<div class="items-center hidden gap-4 sm:flex slider__controls-btns"></div>
-	</div>
+			
 	<div id="portfolio-tab-content">
 		<? $APPLICATION->IncludeComponent(
 			"bitrix:news.list",
@@ -147,13 +114,13 @@ $this->setFrameMode(true);
 				"FILTER_NAME" => $arParams["FILTER_NAME"],
 				"HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
 				"CHECK_DATES" => $arParams["CHECK_DATES"],
-				"STRICT_SECTION_CHECK" => $arParams["STRICT_SECTION_CHECK"],
-
+				"STRICT_SECTION_CHECK" => "N",
 				"PARENT_SECTION" => $arResult["VARIABLES"]["SECTION_ID"],
 				"PARENT_SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
 				"DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["detail"],
 				"SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
 				"IBLOCK_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["news"],
+				"INCLUDE_SUBSECTIONS" => "Y",
 			),
 			$component
 		); ?>

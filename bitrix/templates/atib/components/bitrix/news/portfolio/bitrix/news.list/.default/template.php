@@ -30,7 +30,7 @@ if (!empty($arSections)) :
 		$this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], $strSectionDelete, $arSectionDeleteParams);
 ?>
 		<div class="hidden portfolio__item" id="portfolio-<?= $arSection['ID']; ?>" role="tabpanel" aria-labelledby="portfolio-<?= $arSection['ID']; ?>-tab">
-			<div class="-mx-4 branding__slider slider">
+			<div class="-mx-4 <?= $arSection['CODE']; ?>__slider slider">
 				<?
 				foreach ($arResult["ITEMS"] as $arItem) :
 					if ($arItem["IBLOCK_SECTION_ID"] == $arSection['ID']) :
@@ -63,5 +63,28 @@ if (!empty($arSections)) :
 				<? endforeach;				?>
 			</div>
 		</div>
+		<script>
+			$(document).ready(function() {
+
+				$('.<?= $arSection['CODE']; ?>__slider').slick({
+					infinite: true,
+					speed: 500,
+					autoplay: false,
+					autoplaySpeed: 5000,
+					swipe: true,
+					arrows: true,
+					cssEase: 'linear',
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					appendArrows: $('.<?= $arSection['CODE']; ?>-slider__controls-btns'),
+					responsive: [{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+						},
+					}, ],
+				})
+			})
+		</script>
 	<? endforeach;	?>
 <? endif; ?>
